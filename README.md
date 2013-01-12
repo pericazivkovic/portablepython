@@ -1,4 +1,6 @@
 Portable Python
 ==============
 
-Here you can find latest scripts and configurations needed to build Portable Python distribution.
+Welcome to the project page of the Portable Python distribution.
+
+http://www.PortablePython.com
