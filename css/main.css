@@ -61,8 +61,8 @@ textarea {
    ========================================================================== */
 body {
     -webkit-font-smoothing: antialiased;
-    background-color: rgb(246, 246, 246);
-    color: rgb(68, 68, 68);
+    background-color: #F6F6F6;
+    color: #444444;
     display: block;
     font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 14px;
@@ -77,9 +77,9 @@ body {
 }
 
 .sitewide {
-    background-color: rgb(252, 252, 252);
+    background-color: #FCFCFC;
     background-image: none;
-    box-shadow: rgb(172, 172, 172) 0px 1px 3px 0px;
+    box-shadow: #ACACAC 0px 1px 3px 0px;
     height: 60px;
     margin-bottom: 75px;
     padding-top: 10px;
@@ -91,11 +91,11 @@ body {
 
 a:link, a:hover, a:visited, a:active {
     text-decoration: none;
-    color: rgb(60, 122, 174);
+    color: #3C7AAE;
 }
 
 .sitewide:hover {
-    box-shadow: rgb(60, 122, 174) 0px 1px 3px 0px;
+    box-shadow: #3C7AAE 0px 1px 3px 0px;
     background-image:url('logo.png');
 }
 
@@ -103,7 +103,7 @@ a:link, a:hover, a:visited, a:active {
     height: 60px;
     margin-left: auto;
     margin-right: auto;
-    width: 700px;
+    width: 750px;
 }
 
 header h1 {
