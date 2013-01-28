@@ -115,12 +115,12 @@ a:link, a:hover, a:visited, a:active {
     float: right;
 }
 
-.promotion div {
+.framed-box {
     margin: 5px;
     margin-top: 20px;
 }
 
-.promotion div span {
+.frame-header {
     background-color: #ACACAC;
     font-size: 10px;
     font-family: Arial, sans-serif;
