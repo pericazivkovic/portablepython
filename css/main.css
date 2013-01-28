@@ -118,7 +118,7 @@ a:link, a:hover, a:visited, a:active {
 
 .framed-box {
     margin-right: 10px;
-    margin-bottom: 20px;
+    margin-top: 20px;
     text-align: center;
     font-size: 12px;
     border: 1px solid #ACACAC;
