@@ -115,6 +115,29 @@ a:link, a:hover, a:visited, a:active {
     float: right;
 }
 
+.promotion div {
+    margin: 5px;
+    margin-top: 20px;
+}
+
+.promotion div span {
+    background-color: #ACACAC;
+    font-size: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.supported {
+    text-align: center;
+    border: 1px solid #ACACAC;
+}
+
+.donate {
+    text-align: center;
+    border: 1px solid #ACACAC;
+    font-size: 10pt;
+    padding: 5px;
+}
+
 header h1 {
     font-family: tahoma, arial, sans-serif;
     font-size: 20px;
