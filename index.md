@@ -12,13 +12,6 @@ New release of Portable Python based on Python 2.7.3 is available. This is one o
 
 > Download [Portable Python 2.7.3.2]({{site.url}}/wiki/Download/ "Download")
 
-
-		  Quick download: <br /><br />
-                	<a href="http://portablepython.com/wiki/PortablePython3.2.1.1">Portable Python 3.2.1.1</a><br />
-                	<a href="http://portablepython.com/wiki/PortablePython2.7.3.2">Portable Python 2.7.3.2</a><br />
-
-
-
 https://portablepython.uservoice.com
 
-Contact: ![Email me](email.png)
+

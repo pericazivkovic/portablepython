@@ -108,6 +108,7 @@ a:link, a:hover, a:visited, a:active {
 .content {
     width: 600px;
     float: left;
+    margin-right: 10px;
 }
 
 .promotion {
@@ -116,26 +117,19 @@ a:link, a:hover, a:visited, a:active {
 }
 
 .framed-box {
-    margin: 5px;
-    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 12px;
+    border: 1px solid #ACACAC;
 }
 
 .frame-header {
+    margin-bottom: 10px;
     background-color: #ACACAC;
     font-size: 10px;
     font-family: Arial, sans-serif;
-}
-
-.supported {
-    text-align: center;
-    border: 1px solid #ACACAC;
-}
-
-.donate {
-    text-align: center;
-    border: 1px solid #ACACAC;
-    font-size: 10pt;
-    padding: 5px;
+    line-height: 14px;
 }
 
 header h1 {
