@@ -100,10 +100,19 @@ a:link, a:hover, a:visited, a:active {
 }
 
 .container {
-    height: 60px;
     margin-left: auto;
     margin-right: auto;
-    width: 750px;
+    width: 800px;
+}
+
+.content {
+    width: 600px;
+    float: left;
+}
+
+.promotion {
+    width: 190px;
+    float: right;
 }
 
 header h1 {
