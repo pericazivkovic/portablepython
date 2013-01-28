@@ -81,7 +81,7 @@ body {
     background-image: none;
     box-shadow: #ACACAC 0px 1px 3px 0px;
     height: 60px;
-    margin-bottom: 75px;
+    margin-bottom: 50px;
     padding-top: 10px;
 
     background-image:url('logobw.png');
@@ -114,6 +114,7 @@ a:link, a:hover, a:visited, a:active {
 .promotion {
     width: 190px;
     float: right;
+    margin-top: -20px;
 }
 
 .framed-box {
