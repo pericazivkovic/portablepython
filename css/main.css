@@ -179,6 +179,16 @@ blockquote {
   border-left: 3px solid #ccc;
 } 
 
+thead {
+    border: 1px solid #ACACAC;
+    font-style: italic;
+}
+
+td {
+    border: 1px solid #ACACAC;
+    padding: 5px;
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
