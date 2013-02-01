@@ -35,10 +35,10 @@ Package file hash:
 
 Download this package by using one of the mirrors:
 
-| ''Country'' | ''Mirror'' | ''Type'' |
+| Country | Mirror | Type |
 |-------------|------------|----------|
-| Belgium | [http://www.belnet.be](Belnet.be) | [http://ftp.belnet.be/PortablePython/v2.7/PortablePython_2.7.3.2.exe](HTTP) [ftp://ftp.belnet.be/mirror/PortablePython/v2.7/PortablePython_2.7.3.2.exe](FTP) |
-| Ireland | [http://www.HEAnet.ie](HEAnet.ie) | [http://ftp.heanet.ie/pub/portablepython/v2.7/PortablePython_2.7.3.2.exe](HTTP) [ftp://ftp.heanet.ie/pub/portablepython/v2.7/PortablePython_2.7.3.2.exe](FTP) |
-| Netherlands | [http://www.NLUUG.nl](NLUUG.nl) | [http://ftp.nluug.nl/languages/python/portablepython/v2.7/PortablePython_2.7.3.2.exe](HTTP) [ftp://ftp.nluug.nl/pub/languages/python/portablepython/v2.7/PortablePython_2.7.3.2.exe](FTP) |
-| USA | [http://osuosl.org/](OSUOSL.org) | [http://ftp.osuosl.org/pub/portablepython/v2.7/PortablePython_2.7.3.2.exe](HTTP) [ftp://ftp.osuosl.org/pub/portablepython/v2.7/PortablePython_2.7.3.2.exe](FTP)|
-| USA | [http://www.Rowan.edu](Rowan.edu) | [http://elvis.rowan.edu/mirrors/portablepython/v2.7/PortablePython_2.7.3.2.exe](HTTP) |
+| Belgium | [Belnet.be](http://www.belnet.be) | [HTTP](http://ftp.belnet.be/PortablePython/v2.7/PortablePython_2.7.3.2.exe) (ftp://ftp.belnet.be/mirror/PortablePython/v2.7/PortablePython_2.7.3.2.exe)[FTP] |
+| Ireland | [HEAnet.ie](http://www.HEAnet.ie) | [HTTP](http://ftp.heanet.ie/pub/portablepython/v2.7/PortablePython_2.7.3.2.exe) [FTP](ftp://ftp.heanet.ie/pub/portablepython/v2.7/PortablePython_2.7.3.2.exe) |
+| Netherlands | [NLUUG.nl](http://www.NLUUG.nl) | [HTTP](http://ftp.nluug.nl/languages/python/portablepython/v2.7/PortablePython_2.7.3.2.exe) [FTP](ftp://ftp.nluug.nl/pub/languages/python/portablepython/v2.7/PortablePython_2.7.3.2.exe) |
+| USA | [OSUOSL.org](http://osuosl.org/) | [HTTP](http://ftp.osuosl.org/pub/portablepython/v2.7/PortablePython_2.7.3.2.exe) [FTP](ftp://ftp.osuosl.org/pub/portablepython/v2.7/PortablePython_2.7.3.2.exe) |
+| USA | [Rowan.edu](http://www.Rowan.edu) | [HTTP](http://elvis.rowan.edu/mirrors/portablepython/v2.7/PortablePython_2.7.3.2.exe) |
