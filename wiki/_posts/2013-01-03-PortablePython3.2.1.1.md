@@ -23,6 +23,7 @@ Package file hash:
 Download this package by using [torrent network](http://www.legittorrents.info/download.php?id=0b59d768938db43846f3c581965455e12de2894d&f=Portable%20Python%203.2.1.1.torrent) (recommended), or select one of the mirrors listed below:
 
 | ''Country'' | ''Mirror'' | ''Type'' |
+|-------------|------------|----------|
 | Belgium | [Belnet.be](http://www.belnet.be) | [HTTP](http://ftp.belnet.be/PortablePython/v3.2/PortablePython_3.2.1.1.exe) [FTP](ftp://ftp.belnet.be/mirror/PortablePython/v3.2/PortablePython_3.2.1.1.exe) |
 | Ireland | [HEAnet.ie](http://www.HEAnet.ie) | [HTTP](http://ftp.heanet.ie/pub/portablepython/v3.2/PortablePython_3.2.1.1.exe) [FTP](ftp://ftp.heanet.ie/pub/portablepython/v3.2/PortablePython_3.2.1.1.exe) |
 | Netherlands | [NLUUG.nl](http://www.NLUUG.nl) | [HTTP](http://ftp.nluug.nl/languages/python/portablepython/v3.2/PortablePython_3.2.1.1.exe) [FTP](ftp://ftp.nluug.nl/pub/languages/python/portablepython/v3.2/PortablePython_3.2.1.1.exe) |
