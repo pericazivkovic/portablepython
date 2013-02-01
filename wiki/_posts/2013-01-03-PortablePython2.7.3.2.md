@@ -37,7 +37,7 @@ Download this package by using one of the mirrors:
 
 | Country | Mirror | Type |
 |-------------|------------|----------|
-| Belgium | [Belnet.be](http://www.belnet.be) | [HTTP](http://ftp.belnet.be/PortablePython/v2.7/PortablePython_2.7.3.2.exe) (ftp://ftp.belnet.be/mirror/PortablePython/v2.7/PortablePython_2.7.3.2.exe)[FTP] |
+| Belgium | [Belnet.be](http://www.belnet.be) | [HTTP](http://ftp.belnet.be/PortablePython/v2.7/PortablePython_2.7.3.2.exe) [FTP](ftp://ftp.belnet.be/mirror/PortablePython/v2.7/PortablePython_2.7.3.2.exe) |
 | Ireland | [HEAnet.ie](http://www.HEAnet.ie) | [HTTP](http://ftp.heanet.ie/pub/portablepython/v2.7/PortablePython_2.7.3.2.exe) [FTP](ftp://ftp.heanet.ie/pub/portablepython/v2.7/PortablePython_2.7.3.2.exe) |
 | Netherlands | [NLUUG.nl](http://www.NLUUG.nl) | [HTTP](http://ftp.nluug.nl/languages/python/portablepython/v2.7/PortablePython_2.7.3.2.exe) [FTP](ftp://ftp.nluug.nl/pub/languages/python/portablepython/v2.7/PortablePython_2.7.3.2.exe) |
 | USA | [OSUOSL.org](http://osuosl.org/) | [HTTP](http://ftp.osuosl.org/pub/portablepython/v2.7/PortablePython_2.7.3.2.exe) [FTP](ftp://ftp.osuosl.org/pub/portablepython/v2.7/PortablePython_2.7.3.2.exe) |
