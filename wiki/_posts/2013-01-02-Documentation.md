@@ -5,11 +5,10 @@ title: "Documentation page"
 ## Documentation
 
 Table of content:
-* FAQ
-* Installation
-* Adding libraries/packages
-* Portable Python 2.x.x.x documentation
-* Portable Python 3.x.x.x documentation
+* [FAQ]({{site.url}}/wiki/FAQ)
+* [Installation]({{site.url}}/wiki/Installation)
+* [Portable Python 2.x.x.x documentation]({{site.url}}/doc/2.7)
+* [Portable Python 3.x.x.x documentation]({{site.url}}/doc/3.2)
 
 ### Additional docs, books and links
 
