@@ -10,7 +10,7 @@ Table of content:
 * [Portable Python 2.x.x.x documentation]({{site.url}}/doc/2.7)
 * [Portable Python 3.x.x.x documentation]({{site.url}}/doc/3.2)
 
-### Additional docs, books and links
+### Additional documentation, books and links
 
 * [Python documentation](http://www.python.org/doc/)
 * [Dive into Python](http://www.diveintopython.net/)
