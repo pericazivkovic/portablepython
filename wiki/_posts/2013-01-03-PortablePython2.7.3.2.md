@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Download page"
+title: "Portable Python 2.7.3.2 - Download page"
 ---
 ## Portable Python 2.7.3.2
 
@@ -42,3 +42,5 @@ Download this package by using one of the mirrors:
 | Netherlands | [NLUUG.nl](http://www.NLUUG.nl) | [HTTP](http://ftp.nluug.nl/languages/python/portablepython/v2.7/PortablePython_2.7.3.2.exe) [FTP](ftp://ftp.nluug.nl/pub/languages/python/portablepython/v2.7/PortablePython_2.7.3.2.exe) |
 | USA | [OSUOSL.org](http://osuosl.org/) | [HTTP](http://ftp.osuosl.org/pub/portablepython/v2.7/PortablePython_2.7.3.2.exe) [FTP](ftp://ftp.osuosl.org/pub/portablepython/v2.7/PortablePython_2.7.3.2.exe) |
 | USA | [Rowan.edu](http://www.Rowan.edu) | [HTTP](http://elvis.rowan.edu/mirrors/portablepython/v2.7/PortablePython_2.7.3.2.exe) |
+
+Back to the [download page]({{site.url}}/wiki/Download/).

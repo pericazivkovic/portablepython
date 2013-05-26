@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Download page"
+title: "Portable Python 3.2.1.1 - Download page"
 ---
 ## Portable Python 3.2.1.1
 
@@ -29,3 +29,5 @@ Download this package by using [torrent network](http://www.legittorrents.info/d
 | Netherlands | [NLUUG.nl](http://www.NLUUG.nl) | [HTTP](http://ftp.nluug.nl/languages/python/portablepython/v3.2/PortablePython_3.2.1.1.exe) [FTP](ftp://ftp.nluug.nl/pub/languages/python/portablepython/v3.2/PortablePython_3.2.1.1.exe) |
 | USA | [Rowan.edu](http://www.Rowan.edu) | [HTTP](http://elvis.rowan.edu/mirrors/portablepython/v3.2/PortablePython_3.2.1.1.exe) |
 | USA | [OSUOSL.org](http://osuosl.org/) | [HTTP](http://ftp.osuosl.org/pub/portablepython/v3.2/PortablePython_3.2.1.1.exe) [FTP](ftp://ftp.osuosl.org/pub/portablepython/v3.2/PortablePython_3.2.1.1.exe) |
+
+Back to the [download page]({{site.url}}/wiki/Download/).
