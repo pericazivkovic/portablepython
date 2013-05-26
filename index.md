@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Welcome"
+title: "Portable Python"
 ---
 ## What is Portable Python?
 Portable Python is a [Python® programming language](http://Python.org/ "Python® programming language") pre-configured to run directly from any USB storage device, enabling you to have, at any time, a portable programming environment. Just download it, extract to your portable storage device or hard drive and in 10 minutes you are ready to create your next Python® application.
