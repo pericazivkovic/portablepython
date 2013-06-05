@@ -1,37 +1,37 @@
 ---
 layout: default
-title: "Portable Python 2.7.3.2 - Download page"
+title: "Portable Python 2.7.3.1 - Download page"
 ---
-## Portable Python 2.7.3.2
+## Portable Python 2.7.3.1
 
 This package contains following applications/libraries:
 
 * PyScripter v2.5.3
-* NymPy 1.6.2
-* SciPy 0.11.0
-* Matplotlib 1.1.1
-* PyWin32 218
-* Django 1.4.3
+* NymPy 1.6.1
+* SciPy 0.10.0
+* Matplotlib 1.1.0
+* PyWin32 216
+* Django 1.4
 * PIL 1.1.7
 * Py2Exe 0.6.9
-* wxPython 2.9.4.0
-* NetworkX 1.7
+* wxPython 2.9.3.1
+* NetworkX 1.6
 * Lxml 2.3
 * PySerial 2.5
-* PyODBC 3.0.6
+* PyODBC 3.0.2
 * PyGame 1.9.1
 * PyGTK 2.24.2
-* PyQt 4.9.6-1
+* PyQt 4.9.1-1
 
-Package file size (compressed): 97MB
+Package file size (compressed): 90MB
 
-Installed size: based on selected packages, between 49MB and 505MB
+Installed size: based on selected packages, between 49MB and 480MB
 
 Warning: default installation installs all packages and this can be a long process especially if the target location is USB drive. Packages can be selected/deselected during the installation process.
 
 Package file hash:
-* MD5 - 9554e7647e9aed7244e29ce83116a0d8
-* SHA1 - 01981b866c5f17075646c0ee8a1cc7c5971e03cc
+* MD5 - 10b27b73915020ce4d8e4a3447b31004
+* SHA1 - 2c557c4f9055dfa0a29eb9f40f5c00cb1fd3d4ce
 
 Download this package from our archives:
 

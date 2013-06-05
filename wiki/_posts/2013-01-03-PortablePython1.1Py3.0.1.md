@@ -1,24 +1,18 @@
 ---
 layout: default
-title: "Portable Python 3.2.1.1 - Download page"
+title: "Portable Python 1.1 based on Python 3.0.1 - Download page"
 ---
-## Portable Python 3.2.1.1
+## Portable Python 1.1 based on Python 3.0.1
 
 This package contains following applications/libraries (alphabetical order):
 
-* NetworkX v1.4
-* PySerial 2.5
-* PyScripter v2.4.1
-* PyWin32 v.216
-* RPyC-3.0.7
+* PyScripter v1.9.9.6
+* RPyc-2.60
 
-Package file size (compressed): 22MB
-
-Installed size: based on selected packages, between 47MB and 80MB
+Package file size (compressed): 19MB
 
 Package file hash:
-* MD5 - da0932f84879acc29b8e909276e9b683
-* SHA1 - a594000285e8fe2d57a3c4bc344f6b4b66b88f70
+* MD5 - 93ecb87ba61d5381e43f5958aa1e79fd
 
 Download this package from our archives:
 

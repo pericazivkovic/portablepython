@@ -1,24 +1,28 @@
 ---
 layout: default
-title: "Portable Python 3.2.1.1 - Download page"
+title: "Portable Python 2.7.2.1 - Download page"
 ---
-## Portable Python 3.2.1.1
+## Portable Python 2.7.2.1
 
-This package contains following applications/libraries (alphabetical order):
+This package contains following applications/libraries:
 
-* NetworkX v1.4
-* PySerial 2.5
 * PyScripter v2.4.1
-* PyWin32 v.216
-* RPyC-3.0.7
+* NymPy 1.6.0
+* SciPy 0.90
+* Matplotlib 1.0.1
+* PyWin32 216
+* Django 1.3
+* PIL 1.1.7
+* Py2Exe 0.6.9
+* wxPython 2.8.12.0
 
-Package file size (compressed): 22MB
+Package file size (compressed): 45MB
 
-Installed size: based on selected packages, between 47MB and 80MB
+Installed size: based on selected packages, between 69MB and 202MB
 
 Package file hash:
-* MD5 - da0932f84879acc29b8e909276e9b683
-* SHA1 - a594000285e8fe2d57a3c4bc344f6b4b66b88f70
+* MD5 - bf6683be6902d3b368d7ba207fdc3fce
+* SHA1 - a4e57ac46f5a6c6666e56d0dbd8abdf52dfe485e
 
 Download this package from our archives:
 
