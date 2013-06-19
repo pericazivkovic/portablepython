@@ -1,0 +1,95 @@
+                      Booz 2.0 -- Barebones Ooz
+                                  a
+                         Zoo Extractor/Lister
+                                  by
+                             Rahul Dhesi
+
+Booz 2.0 is a small, memory-efficient, public domain Zoo archive
+extractor/lister. It is not fancy.  It does not recognize the advanced
+features available in current versions of Zoo, such as long filenames,
+directory names, comments, and multiple file generations.  Extraction
+always uses a short MS-DOS format filename and all extracted files go
+into the current directory.
+
+But Booz 2.0 is simple and portable and can be implemented in about
+fifteen minutes on any system with a reasonably good C compiler that
+provides very basic string and input/output functions.  And it will
+extract all archives created by all versions of zoo including version
+2.1, which uses a newer compression method.
+
+
+                         COMPILING BOOZ 1.02
+
+1.
+Make sure that the two macros OPEN and CREATE are correctly defined
+for your system in the file `booz.h'.  Some sample macros are provided. 
+The macros must be defined to open files in binary mode (i.e.,
+without newline conversions).
+
+The macro OPEN is supplied a filename and it must open the file for
+reading and return an open file pointer, or NULL if the open fails. 
+It is used to open the archive being extracted or listed, and to test
+the existence of a file about to be extracted.
+
+The macro CREATE is supplied a filename and it must create a new file
+for writing and return an open file pointer, or NULL if the create
+fails.  It is used for creating each file that is extracted.
+
+2.
+Make sure that a symbol T_UINT16 is defined in `booz.h' that is an 
+unsigned data type whose size is exactly 16 bits.  In most cases this
+will be "unsigned short".
+
+3.
+If your C library does not provide the unlink() function (which
+deletes a file given its name), define an empty function by that
+name, or define a suitable macro by that name in file `booz.h.h'.
+
+4.
+Compile and link all the C files.  A **IX-compatible makefile is
+supplied.
+
+                          MACHINE DEPENDENCE
+
+Booz is relatively independent of machine architecture, except that
+(a) the machine must be a 2's complement machine (all modern machines
+are) and (b) `char' must be exactly 8 bits, `int' must be 16 bits or
+larger, and `long' must be 32 bits or larger, and there must be some
+unsigned data type (e.g. "unsigned short") holding exactly 16 bits.
+
+Booz makes no assumptions about the filename syntax of the host
+machine, except that it assumes that a dot "." is used to separate
+the extension "zoo" from the rest of the name of the archive.  It
+will append ".zoo" to the archive name if it contains no dot.  (This
+fails if an archive name of the type "../junk" is specified.)
+
+If your system uses a different filename syntax, you may need to
+change the code.  Also, if your system cannot accept some of the
+characters legal in MS-DOS filenames, you may need to add a function
+that will fix the filename before extraction.  A sample function
+`fixfname()' is included in the file `oozext.c'.  It becomes activated
+only if the preprocessor symbol FIXFNAME is defined.
+
+This program does not attempt to be case-insensitive.  Therefore you
+will need to type names of files to be extracted in the correct
+case.
+
+			   REVISION HISTORY
+
+Version 1.00
+     Corresponded to just the Tiny booz 1.02
+
+Version 1.01
+     Included TINY, SMALL, BIG compilation options.  Had a bug in
+     function needed() that sometimes cause file extraction to fail.
+
+Version 1.02
+     Fixed bug in function needed().  Added support for Turbo C 1.0.
+     Revised this documentation and some comments in the source code.
+
+Version 2.00
+     Revised to extract archives crated with zoo 2.1.  Deleted TINY,
+     SMALL, and BIG options;  it's all BIG now.  Deleted low-level
+     I/O (read/write) and replaced it with stdio (fread/fwrite).
+
+                                -- Rahul Dhesi 1991/07/08

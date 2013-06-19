@@ -1,0 +1,26 @@
+       XAce Plus v2.6, Extractor for
+Ace,  Arj,  Cab,  Lzh,  Rar and Zip files
+*  *  *  *  -=< FREEWARE >=-  *  *  *  *
+-----------------------------------------
+ --=   Win 95/98/ME/NT 4.x,2000,XP   =--
+(C)1998-2003, Marcel Lemke & e-merge GmbH
+-----------------------------------------
+        May be distributed freely.
+-----------------------------------------
+XAce Plus is  a   small  and   convenient
+extractor  for archives created with  Ace
+or  WinAce,   a  new  and  widely popular
+compression  utility.  If you use Ace  to
+compress  the  files  on  your website or
+in  your  BBS, provide a link to the Xace
+homepage for your users to get the latest
+version.
+
+* supports ace/arj/cab/lzh/rar and zip
+* multi volumes
+* password encrypted files
+* Windows Shell Extension
+* includes X-Folders
+-----------------------------------------
+e-mail:  ace@winace.com
+Website: http://www.winace.com/xace.html

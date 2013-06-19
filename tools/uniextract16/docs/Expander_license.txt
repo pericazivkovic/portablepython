@@ -1,0 +1,56 @@
+Aladdin StuffIt Expander(tm) License Agreement
+
+This is a legal agreement between you and Aladdin Systems, Inc.
+covering your use of Aladdin StuffIt Expander. Be sure to read
+the following agreement before using the software. IF YOU DO NOT
+AGREE TO THE TERMS OF THIS AGREEMENT, DO NOT USE THE 
+SOFTWARE AND DESTROY ALL COPIES OF IT.
+
+This copyright software is distributed as freeware. You may use
+this software without any charge and may distribute to others.
+The software is owned by Aladdin Systems and is protected by
+United States copyright laws and international treaty provisions.
+Therefore, you must treat the software like any other copyrighted
+material (e.g., a book or musical recording).
+
+Commercial distribution of the software is restricted without
+permission of Aladdin. We are more than happy to allow you to
+distribute our software, but you must first have a license to do
+so. Contact Aladdin Systems for details on obtaining a license.
+
+You may not rent or lease the software, nor may you modify,
+adapt, translate, reverse engineer, decompile, or disassemble the
+software. If you violate any part of this agreement, your right
+to use this software terminates automatically and you then must
+destroy all copies of this software in your possession.
+
+The software and related documentation are provided "AS IS" and
+without warranty of any kind and Aladdin Systems expressly
+disclaims all other warranties, express or implied, including,
+but not limited to, the implied warranties of merchantability and
+fitness for a particular purpose. Under no circumstances shall
+Aladdin Systems be liable for any incidental, special or
+consequential damages that result from the use or inability to
+use the software or related documentation, even if Aladdin
+Systems has been advised of the possibility of such damages.
+
+This Agreement shall be governed by the laws of the State of
+California. If for any reason a court of competent jurisdiction
+finds any provision of this Agreement, or portion thereof, to be
+unenforceable, that provision of the Agreement shall be enforced
+to the maximum extent permissible so as to effect the intent of
+the parties, and the remainder of this Agreement shall continue
+in full force and effect.
+
+The software and documentation are provided with RESTRICTED
+RIGHTS. Use, duplication, or disclosure by the Government is
+subject to restrictions as set forth in subdivision (b)(3)(ii) of
+the ASPR Rights in Technical Data and Computer Software clause at
+252.227-7013. Manufacturer is Aladdin Systems, Inc., 245
+Westridge Drive, Watsonville, California 95076.
+
+Aladdin Systems, Inc., 245 Westridge Drive, Watsonville,
+California 95076, United States of America, Phone: (831)
+761-6200, Fax: (831) 761-6206.
+
+All trademarks are held by their respective owners

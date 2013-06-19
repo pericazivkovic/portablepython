@@ -1,0 +1,286 @@
+1.6 (10/17/2008):
+
+  Added support for individual user preferences for better Vista support;
+        by default, this is enabled for standalone, disabled for installed
+        when enabled, UniExtract uses single .ini file as with previous version
+        when disabled, individual prefs/history are saved to registry in HKCU
+        this can be changed by modifying globalprefs setting in .ini file
+  Added menu bar to main GUI;
+        includes options to quit, edit preferences, and visit UniExtract website
+  Added separate preferences GUI to provide easy access to all options;
+        can be invoked through Edit menu or through '/prefs' argument
+  Added support for DiscJuggler CDI CD-ROM images via cdirip.exe
+  Added support for FEAD Optimizer packages (eg, Adobe Reader installers)
+  Added support for LZMA compressed files via lzma
+  Added support for LZX compressed files via unlzx
+  Added support for Nero NRG CD-ROM images (data only) via nrg2iso
+  Added support for Reflexive Arcade installer wrapper via RAIU
+  Added support for RoboForm installers
+  Added support for WIM (Windows Imaging Format) images via 7-Zip
+  Added "Not an InstallShield installer" option to InstallShield method select
+        dialog to force UniExtract to handle TrID InstallShield false positives
+  Added components section to installer; makes installation of
+        docs, languages, and certain (large) binaries optional
+  Added SendTo icon option to installer
+  Added internationalization support for decompressed ASPack and UPX files
+  Added Croatian, Dutch, Hungarian, Portuguese, Romanian, Taiwanese, Turkish,
+        and Valencian (Catalan) translations
+  Added return codes to indicated status of extraction (actually added in 1.5):
+        0 = successful exit or user-initiated cancel
+        1 = supposedly supported file, but extraction failed
+        2 = debug file is not writable, aborted
+        3 = unknown executable - cannot be extracted
+        4 = unknown filetype - cannot be extracted
+        5 = invalid output directory specified
+  Fixed bug that displayed debugging message box during Inno Setup extraction
+  Fixed bug in InstallShield CAB file support; now properly extracts files
+        with spaces in the filename
+  Fixed support for (non-tar) gzip files
+  Fixed support for Microsoft hotfixes (again)
+  Fixed support for relative paths
+  Fixed support for UNC paths
+  Fixed missing Spanish language option during installation
+  Removed support for Windows 9x due to new Unicode version of AutoIt;
+          9x was never officially supported, but it will not even execute now
+  Removed Adobe-specific report (now handled by generic FEAD support)
+  Updated UniExtract to prompt user before executing files for extraction;
+          can be disabled via warnexecute option
+  Updated UniExtract to make ACE, KGB, Pea, and StuffIt support optional
+  Updated UniExtract to read English.ini from root install directory
+  Updated UniExtract to output debug files to %temp% by default
+  Updated UniExtract to verify that debug file location can be written to;
+          user's temp directory will be used if selected dir fails test
+  Updated UniExtract to disable appendext option by default
+  Updated UniExtract changelog to add notice of Vietnamese translation in 1.5
+  Updated TrID detection of MS Self-Extracting CAB (Type 1) archives
+  Updated TrID detection of Windows Installer (MSI) packages
+  Updated TrID detection of Zip Self-Extracting archives
+  Updated CD-ROM image support to bypass TrID detection and rely on extensions
+  Updated Inno Setup support for increased detection reliability
+  Updated Inno Setup support to extract all files, including renamed duplicates
+  Updated UHARC support to detect and extract SFX files
+  Updated Windows Install patch (.msp) to include pure 7-zip option
+  Updated installer to use Start Menu icons page and include uninstall icon
+  Updated installer language initialization code for simplicity
+  Updated installer to require administrative privileges;
+          non-admin users should use binary archive (portable) version,
+          or use a copy installed by the system administrator
+  Updated installer to require Windows NT-based systems; 9x will not work
+  Updated installer to prevent association with CHM files under Vista
+  Updated installer to support new /nowarnexecute paramater
+  Updated installer to support reversed appendext default preference;
+          now use /appendext to enable instead of /noappendext to disable
+  Updated installer to add {app} in addition to {app}\bin to %PATH% if enabled;
+          restores ability easily to call UniExtract.exe from command line
+  Updated 7-Zip to 4.57
+  Updated AutoIt to 3.2.10.0
+  Updated innounp to 0.20
+  Updated Inno Setup to 5.2.2
+  Updated msi2xml to 2.2.1.957
+  Updated Pea to 1.6 (cannot use newer version due to broken GUI controls)
+  Updated UnRAR to 3.80
+  Updated UPX to 3.03
+  Updated bin2iso to 1.95
+
+
+1.5 (02/22/2007):
+
+  Added filetype signature scanning via TrID; no longer dependent on extensions
+  Added support for Adobe Reader 7.x and 8.x installers
+  Added support for Base64, Quoted-Printable, UUencoded, and yEnc files
+        via uudeview
+  Added support for Gentee, Installer VISE, and SetupFactory installers
+        via cmdTotal + InstallExplorer
+  Added support for InstallShield 3.x SFX installers via stix
+  Added support for InstallShield 5.x CAB files via i5comp
+  Added support for Itsy packages (.ipk)
+  Added support for Outlook Express (DBX) archives via cmdTotal + DBX Plugin
+  Added support for Pea archives
+  Added support for SIS (SymbianOS) installers via cmdTotal + PDunSIS
+  Added support for StuffIt packages (.sit, but not .sitx)
+  Added support for Windows Installer patch (.msp) files via 7-zip and
+        cmdTotal + MSI Plugin
+  Added support for Zoo archives via booz
+  Added support for files without an extension (eg, unknown files)
+  Added /noappendext, /noremovedupe, /noremovetemp parameters to installer
+  Added .dbx, .msp, .pea, and .sit file associations to installer
+  Added Polish, Russian, Slovak, Spanish, and Vietnamese translations
+  Fixed bug that prevented extraction of UPXed Zip and 7-Zip installers
+  Fixed bug in Inno Setup installer detection
+  Fixed potential file output bug in some installers, mainly InstallShield
+  Fixed ACE SFX error handling to continue processing if extraction fails
+  Fixed InstallShield cache mode handling to prevent hangs
+  Removed 'i6comp by group' option for InstallShield cabs
+  Removed expand.exe in favor of using 7-Zip for Microsoft Compressed files
+  Removed .in_, .oc_, .sr_, .1, .bin, .imf, .lib, and .wz file associations
+          from installer
+  Updated UniExtract to scan signatures by default; extensions used as backup
+  Updated UniExtract to display icon in system tray during extraction
+  Updated UniExtract to select Cancel by default on PEiD and log prompts
+  Updated UniExtract internationalization support to simplify translation
+  Updated UniExtract with many code changes to increase robustness, simplicity,
+          and efficiency wherever possible
+  Updated support for Inno Setup, NSIS, Wise Installer, and InstallShield
+          via cmdTotal + InstallExplorer
+  Updated ACE support to include non-PE ACE SFX archives
+  Updated BIN/CUE support with better conversion support and validation
+  Updated InstallShield 3.x archives support by adding STIX extraction option
+  Updated InstallShield CAB support to display progress dialog
+  Updated InstallShield cache extraction to support multiple nested MSIs
+  Updated InstallShield cache extraction to better detect installer window
+  Updated InstallShield support to provide choice of isxunpack or cache mode
+  Updated MHTML support to include option for extraction via
+          cmdTotal + MHT Packer Plugin
+  Updated Wise Installer support to include non-PE Wise installers
+  Updated Wise Installer support to include unzip option
+  Updated Wise Installer support to append missing file extensions
+  Updated Wise Installer support to provide option for removing temporary files
+  Updated Microsoft SFX CAB support for better detection and robustness
+  Updated Windows Installer support to append missing file extensions
+  Updated Windows Installer support to include option for extraction via
+          cmdTotal + MSI Packer Plugin
+  Updated AutoIt to 3.2.2.0
+  Updated bin2iso to 1.95
+  Updated Inno Setup to 5.1.9
+  Updated UnRAR to 3.62
+
+
+1.4.2 (11/28/2006):
+
+  Added preferences page to installer to set defeault UniExtract options
+  Added multilingual support to installer (using Inno Setup message files)
+  Added multilingual support for context menu entries and installer messages
+  Added Chinese (Traditional), Italian, Japanese, and Thai translations
+  Fixed UniExtract crash when selecting archive file to extract through GUI
+  Fixed support for Windows Installer 2.0
+  Fixed combo box bug in history and language lists under Windows 9x
+  Fixed path issue under Windows 9x
+  Fixed translation error for KGB Self-Extracting archives
+  Updated installer to Admin or Power User for context menu association
+  Updated innounp to 0.18
+  Updated Inno Setup installer to 5.1.8
+  Updated Inno Setup CLI Help to 1.1
+  Updated Chinese (Simplified) translation
+  Updated UniExtract to display status box higher on screen to prevent overlap
+
+
+1.4.1 (11/21/2006):
+
+  Added Chinese (Simplified), French, and German translations
+  Fixed bug in directory selection when archive name is passed to uniextract
+  Fixed .imf file association in installer
+  Updated UniExtract to allow dynamic GUI language selection
+  Updated UniExtract to allow dynamic GUI control positioning
+  Updated UniExtract to prevent 100% CPU utilization during GUI display
+
+
+1.4 (11/18/2006):
+
+  Added support for internationalization
+  Added option to disable history
+  Added option to specify location for debug file
+  Added ability to display log file if extraction fails
+  Added /d switch to @comspec calls to disable AutoRun conflicts
+  Added support for LIT (Microsoft ebook) files
+  Added support for Office 2007 beta installer
+  Added minor code optimizations
+  Changed UniExtract.exe to run from base directory rather than bin\
+  Changed UniExtract.exe to use .ini file for history rather than registry
+  Fixed typo in installer
+  Updated .exe file scanning process to speed up extraction
+  Updated installer to only offer system path option to Admin or Power Users
+  Updated KGB decompressor to 1.2.1.24
+  Updated UPX to 2.0.3
+
+
+1.3.1 (09/27/2006):
+
+  Added Start Menu, Dersktop, Quick Launch icon options to installer
+  Fixed 7-Zip and InfoZip checks on unknown executables
+  Fixed 7-Zip extraction - now bypasses user input to prevent program hangs
+  Fixed Windows 9x compatability issues
+  Fixed .wz file association
+  Updated InstallShield support to recognize additional installers
+  Updated UnRAR to 3.61
+
+
+1.3 (09/15/2006):
+
+  Added support for UHARC archives
+  Added support for KGB archives, including encrypted and SFX archives
+  Added support for MHTML (.mht) files
+  Added support for Wise for Windows Installer installers
+  Added support for InstallShield 3.x archives (.z, .1, and .lib) via i3comp
+  Added support for decompressing UPX and ASpack files, including .dll files
+  Added additional support for MSI files
+  Added additional scanning options for PEiD
+  Added external database support for PEiD
+  Added ability to choose context menu items in installer
+  Added support for compressed files (.??_) to installer
+  Added command line usage information to installer (run with /?)
+  Added support for McAfee SuperDAT updater and CMenu installer
+  Fixed support for Microsoft hotfixes
+  Fixed miscellaneous typos
+  Fixed RPM file association in installer
+  Fixed miscellaneous file association bugs in installer
+  Updated PEiD to 0.94
+  Updated 7-zip to 4.42 (still using 4.40 nsis.dll)
+  Updated UnRAR to 3.60
+  Updated Inno Setup unpacking to include embedded files
+  Updated Inno Setup support to include newer versions
+  Updated InstallShield support to include support files with cache option
+  Updated file scanning to speed up filetype detection
+  Updated Zip support to include files compressed with bzip2
+  Updated Zip support to include .wz extension
+  Updated Microsoft CAB support to include .imf extension
+  Updated Wise and InstallShield filetype detection for accuracy
+
+
+1.2.1 (05/03/2006):
+
+  Fixed bug in Wise Installer support
+
+
+1.2 (05/02/2006):
+
+  Added preliminary support for NSIS installers
+  Added support for new-style MS SFX installers
+  Fixed potential bug in InstallShield  cache method extraction
+  Updated 7-zip to 4.40 beta
+
+
+1.1 (04/20/2006):
+
+  Added support for ISO CD-ROM images, including boot image extraction
+  Added support for BIN/CUE CD-ROM images
+  Added support for IMG disk images
+  Added GUI file and directory history
+  Added GUI drag-and-drop support
+  Fixed i6comp bug for InstallShield CAB files
+  Updated installer to add UniExtract hooks to all supported formats
+  Updated GUI default directory selection behavior
+  Updated 7-zip to 4.39 beta
+  Updated AutoIt to 3.1.1.119 beta
+
+
+1.0 (01/16/2006):
+
+  Added GUI for file and directory selection
+  Added ability to specify destination directory
+  Added proper file association options to installer
+  Added multiple methods for extracting Wise Installer packages
+  Added multiple methods for extracting InstallShield Installer packages
+  Added syntax help (UniExtract.exe /help)
+  Added additional checks for supported, but unidentified, executables
+  Added better output validation
+  Added support for .001 RAR archives and .xpi ZIP archives
+  Fixed hang error when scanning .exe files
+  Fixed registry key causing long file name problems with context integration
+  Updated 7-Zip to 4.32
+  Updated HWUN to WUN 0.90a
+  Updated Is7unpack to IsXunpack 0.99
+
+
+0.8 (12/06/2005):
+
+  Initial release

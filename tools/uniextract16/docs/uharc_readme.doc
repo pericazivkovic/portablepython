@@ -1,0 +1,722 @@
+
+ UHARC 0.6b         high compression multimedia archiver           BETA version
+ ==============================================================================
+
+      ####    ####  ####    ####    ########    ###########    ##########
+      ####    ####  ####    ####   ##########   ############  ############
+      ####    ####  ####    ####  ####    ####  ####    ####  ####
+      ####    ####  ############  ############  ###########   ####
+      ####    ####  ############  ############  ###########   ####
+      ####    ####  ####    ####  ####    ####  ####    ####  ####
+      ############  ####    ####  ####    ####  ####    ####  ############
+       ##########   ####    ####  ####    ####  ####    ####   ##########
+
+ ==============================================================================
+ Copyright(c) 1997-2005 by Uwe Herklotz     All rights reserved     01 Oct 2005
+
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  !!!!!!     THIS IS A BETA VERSION AND MAY CONTAIN BUGS.  USE THIS     !!!!!!
+ !!!!!!      ARCHIVER AT YOUR OWN RISK. UWE HERKLOTZ, THE AUTHOR OF      !!!!!!
+ !!!!!!      UHARC, WILL NOT TAKE ANY RESPONSIBILITY FOR ANY DAMAGE      !!!!!!
+  !!!!!!     OR DATA LOSS CAUSED BY USING OR MISUSING THIS SOFTWARE.    !!!!!!
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+ ===< 0. Contents >============================================================
+
+
+   1. Introduction
+   2. Usage
+      2.1. Commands
+      2.2. Switches
+      2.3. Environment variable
+   3. Examples
+   4. History
+   5. Legal info / Registration
+   6. Contact info
+
+
+
+ ===< 1. Introduction >========================================================
+
+
+  UHARC is a high performance file archiver. This package contains 7 files:
+
+    LICENSE.DOC    License information
+    UHARC.EXE      program version for Win32 systems
+    UHARCD.EXE     program version for Dos32 systems
+    UHARCSFX.EXE   Sfx-Stub for Win32 systems
+    UHARC.DOC      this documentation file
+    UNUHARC.EXE    free extraction program for Win32 systems
+    UNUHARCD.EXE   free extraction program for Dos32 systems
+
+  What's new in version 0.6b ?
+
+    - free extraction programs for Win32/Dos32 added - these programs can be
+      used and distributed freely without any restrictions
+
+  Note: UHARC 0.6b archives are compatible with v0.6 and v0.6a archives but
+        NOT compatible with any previous version (version number < 0.6)!
+
+  This program will run on any 386 or better computer. Memory requirements
+  depend on selected compression mode. The number of files in one operation
+  is only limited by available memory, however current version can't handle
+  archives with more than 2 GB total unpacked size.
+
+
+
+ ===< 2. Usage >===============================================================
+
+
+  Usage: UHARC command [-switch..] archive[.uha] [file..@listfile..!exclude..]
+
+  Commands:
+  ~~~~~~~~~
+    a   Create archive/Add files           e   Extract files to current dir
+    m   Create archive/Move files          x   Extract files with full path
+    l   List files in archive              t   Test files in archive
+
+  Switches:
+  ~~~~~~~~~
+    ac[-,+]     Clear file archive attr    ae<attr>  Set attr exclusion mask
+    b<n>        Set max filebuffer size    bpb[-,+]  bpb instead of % ratio
+    d<0..2>     Set display mode           ed[-,+]   Store empty directories
+    idle        Set idle process priority  lg<file>  Log output to <file>
+    m<0..3,x,z> Set compression mode       md<n>     Set dictionary size
+    mm[-,+]     MM-detection on/off        o[-,+,p]  Set overwrite mode
+    pw[passwd]  Set password               p<-,r,f>  Set path handling
+    r[-,+]      Recurse subdirectories     t<dir>    Set extract target dir
+    vm[-,+]     Set virtual memory usage   y[-,+]    Assume yes on all queries
+
+
+  * For commandline help type "UHARC" without any parameter.
+
+  * The command character must be placed immediately after "UHARC".
+
+  * The switches, if any, must follow the command character. UHARC supports
+    the use of either "-" or "/" as the switch option character.
+
+  * The UHARC archive name must be the first filename on the commandline.
+    If there is no archive file extension specified, UHARC will add the
+    default (".UHA") extension.
+
+  * After the archive filename come the list of files for the given
+    operation. One or more files containing a list of files to process
+    can also be used by prefixing the list's filename with "@". It's
+    possible to mix filenames and list files in any order. If a filename
+    on commandline or in a list file has prefix "!", this means it will
+    be excluded in processing. Allowed delimiters for filenames in list
+    files are space, tab and newline. Filenames with spaces must be
+    enclosed in double-quotes. The line size in list file must not
+    exceed 4095 characters.
+
+  * Filename wildcards are allowed in commandline and in list files,
+    but not for archive filename. The use of wildcards follow MS-DOS
+    convention. "*.*" means all files. "*.txt" means all files with an
+    extension of ".TXT". "?B*.*" means all files with a second character
+    of "B".
+
+  * If there are no files specified at all, all files ("*.*") will be
+    processed (use "-r" to recurse subdirectories).
+
+  * UNUHARC versions have same commandline options like UHARC but support
+    extraction and test commands only.
+
+
+
+ ---< 2.1. Commands >----------------------------------------------------------
+
+
+   a    Create archive and add matching files.
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        If a file with the archive name already exists, UHARC will ask
+        before overwriting this file, unless you change the default
+        overwrite mode or use "-y".
+
+        Following switches have effect: ac ae b bpb d ed lg m md mm o p pw r y
+
+
+   e    Extract matching files to current directory.
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Stored pathnames will be ignored. Using the switch "-t", you can
+        change the current directory for extracting.
+
+        Following switches have effect: b d lg o pw t y
+
+
+   l    List matching files in archive.
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Using switch "-y", UHARC will not pause after one page, else you
+        can use the following keys:
+             ESCAPE      =  Cancel (quit program)
+             TAB         =  Disable pause
+             RETURN      =  Next line
+             other keys  =  Next page
+
+        Using switch "-d2", filenames are not shortened and more
+        information are displayed.
+
+        Following switches have effect: b bpb d lg pw y
+
+
+   m    Create archive and move matching files.
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        If a file with the archive name already exists, UHARC will ask
+        before overwriting this file, unless you change the default
+        overwrite mode or use "-y". If compression was successful, UHARC
+        will delete matching files on disk (but no directories).
+
+        Following switches have effect: ae b bpb d ed lg m md mm o p pw r y
+
+
+   t    Test integrity of ALL files in archive.
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Following switches have effect: b d lg pw y
+
+
+   x    Extract matching files with full pathnames.
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        UHARC will use the pathnames stored in archive for extraction (if
+        the archive was created with option "-pf", this also includes drive
+        letters). Using the switch "-t", you can select the root-directory
+        for all extracted dirs/files.
+
+        Following switches have effect: b d lg o pw t y
+
+
+   Note:  During all operations it's possible to terminate the process
+          by pressing ESCAPE and answering the following question with
+          "Y" (when listing files, there is no additional query).
+
+
+
+ ---< 2.2. Switches >----------------------------------------------------------
+
+
+  --           Stop switches scanning
+               ~~~~~~~~~~~~~~~~~~~~~~
+               This switch tells UHARC that there are no more switches to be
+               processed. It's necessary if the archive name starts with a
+               "-" character. Without "--" switch such name would be treated
+               as a switch.
+
+
+  -!<char>     Set exclude mask specifier
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~
+               Defines the character that is used as exclude mask specifier.
+               It should be used if a file name given in commandline or in
+               list file starts with the default exclude mask character "!".
+               If no character is given ("-!") then exclude mask processing
+               will be disabled. This option should be used carefully.
+
+               DEFAULT: -!!
+
+
+  -@<char>     Set list file specifier
+               ~~~~~~~~~~~~~~~~~~~~~~~
+               Defines the character that is used as list file specifier.
+               It should be used if a file name given in commandline or in
+               list file starts with the default list file character "@".
+               If no character is given ("-@") then list file processing
+               will be disabled. This option should be used carefully.
+
+               DEFAULT: -@@
+
+
+  -ac[-,+]     Clear file archive attribute
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 -ac[+]  Clear archive attribute of files stored in archive.
+                 -ac-    Don't clear archive attribute.
+
+               If this option is enabled and compression was successful,
+               UHARC will clear the archive attribute of all files which
+               are stored in archive (directories are not affected).
+
+               This option has effect with add command only.
+
+               DEFAULT: -ac-
+
+
+  -ae<attr>    Set attribute exclusion filter
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+               Defines the filter for exclusion based on file attributes.
+               Files are excluded if specified attributes are set "+" or
+               cleared "-". File attributes are:
+
+                 "A"     archive attribute
+                 "H"     hidden file attribute
+                 "R"     read-only attribute
+                 "S"     system file attribute
+
+               Example: switch "-aeA-H+" means that files with archive
+               attribute cleared or hidden attribute set are not included
+               in the processing list.
+
+               This option has effect with add or move commands only.
+
+               DEFAULT: not specified
+
+
+  -b<n>        Set maximum file buffer size (in KB).
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+               After allocating all structures for (de)compression the
+               remaining memory is used for file buffers, but never more
+               than <n>. The minimum buffer size is 50 KB.
+
+               DEFAULT: -b1024
+
+
+  -bpb[-,+]    Show bpb instead of % ratio
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 -bpb[+] Show compression ratio in bpb.
+                 -bpb-   Show compression ratio in %.
+
+               DEFAULT: -bpb-
+
+
+  -d<0..2>     Set display mode.
+               ~~~~~~~~~~~~~~~~~
+                 -d0     Quiet mode (no process information, except queries).
+                 -d1     Display some process information.
+                 -d2     Show more information (file info, verbose listing).
+
+               DEFAULT: -d1
+
+
+  -ed[-,+]     Store empty directories
+               ~~~~~~~~~~~~~~~~~~~~~~~
+                 -ed[+]  Store also empty directories.
+                 -ed-    Don't store empty directories.
+
+               This option has effect with add or move commands only.
+
+               DEFAULT: -ed-
+
+
+  -idle        Set idle process priority (Win32 only)
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+               This option forces UHARC to set its process in IDLE priority
+               class, which means UHARC is executed as background task with
+               only small effect on normal system operation (assumed there
+               is enough memory available). This way UHARC can process very
+               large data sets without blocking the system for long time.
+
+               DEFAULT: not specified
+
+
+  -lg<file>    Log UHARC output to specified <file>.
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+               If UHARC fails to open <file>, no log is created (without an
+               error message). The display mode setting has effect on log,
+               too.
+
+               DEFAULT: no log file
+
+
+  -m<0..3>     Set compression mode.
+               ~~~~~~~~~~~~~~~~~~~~~
+                 -m0     Store files without compression.
+                 -m1     Use ALZ:1 (fast) compression mode.
+                 -m2     Use ALZ:2 (norm) compression mode.
+                 -m3     Use ALZ:3 (best) compression mode.
+                 -mx     Use PPM compression mode.
+                 -mz     Use LZP compression mode.
+
+               ALZ uses advanced LZ77 compression algorithm with arithmetic
+               entropy coder. "-m1" is the fastest ALZ mode, sacrificing
+               compression ratio to gain better speed. Mode "-m3" achieves
+               best compression and needs most time. "-m2" is a compromise
+               ratio/speed and is used as default mode. The decompression
+               speed is nearly the same for all ALZ modes and it is much
+               faster than compression.
+
+               PPM mode uses an order-4-2-1-0 model with preliminary LZP
+               pass. In most cases this mode provides the best compression
+               results.
+
+               LZP mode uses the same dictionary compression as in PPM mode
+               but with much simpler order-1-0 literal model.
+
+               There are also two extra modes (may be not supported in
+               future versions):
+                 -mr     Use simple RLE compression.
+                 -mw     Use LZ78 with selectable dictionary size.
+
+               DEFAULT: -m2
+
+
+  -md<n>       Set maximum dictionary size (in KB).
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+               If dictionary is disabled, this setting has no effect.
+               Valid sizes:
+                 -m1..3,-mx,-mz   n = power of 2 from 1 to 32768 or "a".."p"
+                 -mw              n = power of 2 from 1 to 32    or "a".."f"
+
+               A one-character shortcut can be used instead of size number,
+               e.g. "-mda" instead of "-md1" or "-mdk" instead of "-md1024".
+
+               Dictionary size selection:
+                 1. Using option "-md<n>", UHARC will never select a
+                    dictionary size greater than <n>. If "-md<n>" is not
+                    used, UHARC will try to use default dictionary (n=4096).
+                 2. If data stream size is smaller than <n>, UHARC will use
+                    the smallest dictionary size which is greater than the
+                    data stream.
+                 3. If there is not enough memory for current selection,
+                    UHARC will use the largest dictionary size which is
+                    possible with available memory.
+
+               DEFAULT: -md4096
+
+
+  -md[-,+]     Disable/enable dictionary-based compression.
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+               This has effect only with modes "-m1", "-m2", "-m3" and "-mx".
+
+                 -md[+]  Enable dictionary-based compression.
+                 -md-    Disable dictionary-based compression.
+
+               Generally, it's NOT RECOMMENDED to disable dictionary-based
+               compression. Without dictionary, the compression ratio is
+               almost always worse. But for some data types (e.g. waveform
+               sounds or photographic true-color pictures), the compression
+               isn't affected much by dictionary. Using "-md-" in such cases
+               will speed up the compression process considerably.
+               If dictionary-based compression is disabled, there are nearly
+               no differences between the three modes "-m1", "-m2" and "-m3".
+
+               DEFAULT: -md+
+
+
+  -mm[-,+]     Disable/enable built-in multimedia detection/compression.
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 -mm[+]  Enable multimedia detection/compression.
+                 -mm-    Disable multimedia detection/compression.
+
+               UHARC multimedia detection/compression supports many data
+               types (8/16-bit mono/stereo waveforms, 24-bit true color
+               pictures and many other types using 8/16/24/32-bit record
+               sizes). It's also possible to detect multimedia-like data
+               in other file types (e.g. in executables). Therefore it's
+               NOT RECOMMENDED to disable multimedia detection/compression
+               unless the user knows, that there is absolutely no chance
+               to use multimedia compression (e.g. compressing text only).
+
+               DEFAULT: -mm+
+
+
+  -o[-,+,p]    Set overwrite mode.
+               ~~~~~~~~~~~~~~~~~~~
+                 -op     Prompt user before overwriting files.
+                 -o[+]   Always overwrite files without asking.
+                 -o-     Never overwrite existing files.
+
+               Using -op with -y has the same effect as -o[+].
+               If UHARC shows an overwrite query, the user can select one of
+               the following options:
+                 "Y"     Yes, overwrite current file.
+                 "N"     No, don't overwrite current file.
+                 "A"     Always Yes, overwrite current file and auto-answer
+                         all following overwrite queries with "Y".
+                 "C"     Cancel, don't overwrite and quit process.
+
+               DEFAULT: -op
+
+
+  -p<-,r,f,e>  Set path mode.
+               ~~~~~~~~~~~~~~
+                 -p-     Store no paths (exclude paths from names).
+                 -pr     Store relative paths.
+                 -pf     Store full paths including drive letter.
+                 -pe     Store relative paths but exclude all paths
+                         specified in commandline or in list file.
+
+               Using option "-pr", paths are stored in relation with the
+               current directory of each drive (drive letter isn't stored).
+               With option "-pf" it's possible to backup data from different
+               drives into one archive and restore all data correctly.
+               Option "-pe" is the same as "-pr" but any path specified in
+               commandline or list file is excluded from the path stored in
+               archive.
+
+               DEFAULT: -pr
+
+
+  -ph[-,+]     Archive header encryption
+               ~~~~~~~~~~~~~~~~~~~~~~~~~
+                 -ph[+]  Encyrpt archive header.
+                 -ph-    Don't encyrpt archive header.
+
+               The archive header contains folder and file names, sizes etc.
+               of the complete archive. If this header is encrypted then the
+               correct password is needed even to read the archive content.
+
+               DEFAULT: -ph+
+
+
+  -pw[passwd]  Set encryption password
+               ~~~~~~~~~~~~~~~~~~~~~~~
+                 -pw     Request user to enter password.
+                 -pw<s>  Use "s" as password.
+
+               With switch "-pw" the user is requested to enter the password
+               twice for safety reasons (input will not be echoed on screen).
+
+               DEFAULT: not specified
+
+
+  -px          Pause before program exit
+               ~~~~~~~~~~~~~~~~~~~~~~~~~
+               This switch tells UHARC to wait for a key stroke before exit.
+               It could be useful if the console window will be closed
+               automatically after program finish.
+
+
+  -r[-,+]      Set subdir recursion mode.
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~
+                 -r[+]   Recurse subdirectories.
+                 -r-     Don't recurse subdirectories.
+
+               If recursion is enabled, matching files are also searched
+               in all subdirectories (regardless of directory names and
+               attributes) of all specified directories (commandline and
+               list files).
+
+               DEFAULT: -r-
+
+
+  -sfx[stub]   Create self-extracting archive (Win32 version ONLY !).
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+               With this option UHARC will create a self-extracting archive
+               (SFX). A self-extracting archive is a Win32 executable with
+               appended UHARC archive. Running a SFX archive without any
+               options will extract ("x" command) the archive content to
+               current directory. The SFX program supports "x", "e" and "t"
+               commands for any UHARC archive (self-extracting and normal
+               ones) with same command-line options as UHARC program. Other
+               commands are not supported.
+
+               [stub] is an optional parameter specifying the stub program
+               used to create the SFX archive. By default stub UHARCSFX.EXE
+               is used which must be located in current directory or in the
+               directory where UHARC.EXE is running from.
+
+               The SFX option is applicable only if new archive is created.
+               The following DOS command can be used in order to transform
+               an existing UHARC archive into SFX:
+                 COPY /B UHARCSFX.EXE+"archive.uha" "archive.exe"
+
+
+  -t<dir>      Set extract target directory.
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+               UHARC will store all extracted files in directory <dir>.
+               If <dir> doesn't already exist, UHARC will create it.
+
+               Using this option with the "e" command, <dir> will be the
+               'current directory' for extracting. Using this option with
+               the "x" command, <dir> will be the root-directory for all
+               extracted dirs/files.
+
+               DEFAULT: not specified
+
+
+  -vm[-,+]     Set virtual memory usage
+               ~~~~~~~~~~~~~~~~~~~~~~~~
+                 -vm[+]  Use virtual memory.
+                 -vm-    Don't use virtual memory.
+
+               With virtual memory usage disabled UHARC checks free physical
+               memory at program start and will not use compression modes
+               that require more memory. Proper work of this option is not
+               guaranteed if it is used in multitasking systems.
+
+               DEFAULT: -vm-
+
+
+  -y[-,+]      Set auto-answer mode.
+               ~~~~~~~~~~~~~~~~~~~~~
+                 -y[+]   Assume YES on all queries.
+                 -y-     Don't auto-answer queries.
+
+               Using the option -y[+], all queries, except critical error
+               messages, don't appear on screen and are auto-answered
+               with "Y".
+
+               DEFAULT: -y-
+
+
+
+ ---< 2.3. Environment variable >----------------------------------------------
+
+
+  It's possible to define default options in the environment variable
+  "UHARC_OPT". Whenever UHARC is executed, it first looks for this
+  environment variable and parses the values of this variable like
+  commandline switches. Any arguments in the environment variable
+  can be overridden on the commandline.
+
+  Example:
+  ~~~~~~~~
+    SET UHARC_OPT=-d2 -p- -lgc:\uharc.log
+
+    When UHARC is next executed, it will use verbose display mode,
+    store no paths and log all outputs to file "C:\UHARC.LOG" by default.
+
+  Note:  If the environment variable contains a log file switch, it's
+         not possible to disable log file directly. Use instead the switch
+         "-lgNUL" on commandline. This overrides the default log file and
+         write all log outputs to the NUL file (effective no output).
+
+
+
+ ===< 3. Examples >============================================================
+
+
+  1.    UHARC a archive *.dll @c:\list *.exe
+
+    This will compress all "*.DLL", "*.EXE" and the files listed in the file
+    "C:\LIST" to the archive file "ARCHIVE.UHA" using the default compression
+    mode.
+
+
+  2.    UHARC a -m3 -r -pf -o backup.arc c:\*.ini d:\*.ini c:\*.cfg d:\*.cfg
+
+    This will compress all "*.INI" and "*.CFG" files on drives "C:" and "D:"
+    to the archive file "BACKUP.ARC" using the ALZ:3 compression mode. UHARC
+    will store full paths including drive letter, so it will be possible
+    to restore all files on correct drives. If a file named "BACKUP.ARC"
+    already exists, UHARC will overwrite this file without asking.
+
+
+  3.    UHARC m -mz -md64 -mm- -r text c:\text\*.txt
+
+    This will move all "*.TXT" files in "C:\TEXT\" and its subdirectories
+    to archive file "TEXT.UHA" using LZP mode with max 64K dictionary and
+    without multimedia detection/compression.
+
+
+  4.    UHARC l -d2 -lguharc.lst archive a*.doc b*.doc
+
+    This will verbosely list all "*.DOC" files with a first character of
+    "A" or "B" in archive file "ARCHIVE.UHA" and log the output to file
+    "UHARC.LST".
+
+
+  5.    UHARC x -y arc.uha
+
+    This will extract all files in archive "ARC.UHA" with full paths. All
+    queries, except critical error messages, will be auto-answered with YES,
+    so if one of the files already exists, UHARC will overwrite this file
+    without asking the user.
+
+
+  6.    UHARC e -td:\temp archive readme.txt
+
+    This will extract the file "README.TXT" from archive "ARCHIVE.UHA" to
+    the directory "D:\TEMP\". If this directory doesn't already exist,
+    UHARC will create it.
+
+
+  7.    UHARC e -o- sounds @mysounds.lst
+
+    This will extract all files listed in "MYSOUNDS.LST" from archive
+    "SOUNDS.UHA" to the current directory. UHARC will not overwrite
+    existing files.
+
+
+  8.    UHARC t -d2 -lglog archive
+
+    This will test the integrity of all files in archive "ARCHIVE.UHA" and
+    log the verbose output to file "LOG".
+
+
+  9.    UHARC a -m3 -r -sfx MyGame "Games\My Favourite Game\*.*"
+
+    This will compress the complete content of "Games\My Favourite Game\"
+    folder (including all subfolders) to the self-extracting archive file
+    "MyGame.exe" using the ALZ:3 compression mode.
+    Note: SFX and long file names are supported in Win32 version only!
+
+
+
+ ===< 4. History >=============================================================
+
+
+  Date       Version
+  ~~~~       ~~~~~~~
+  01.10.2005   0.6b  See chapter "Introduction".
+
+  06.02.2005   0.6a  What's new in version 0.6a ?
+                       - supports self-extracting archives (SFX / Win32 only)
+                       - using again PMODE/W DOS Extender
+
+  19.12.2004   0.6   What's new in version 0.6 ?
+                       - slightly improved compression (for PPM, ALZ and LZP)
+                       - several bug fixes
+
+  15.10.2002   0.5   Intermediate non-public version.
+
+  28.12.2001   0.4   What's new in version 0.4 ?
+                       - improved compression and new modes (PPM,LZP)
+                       - improved built-in detection of multimedia data types
+                       - support for long filenames (Win32 only)
+                       - encryption of archives
+                       - more archiver options (e.g. attribute filters or
+                         exclusion masks)
+                       - display output is written to stdout for better file
+                         manager integration
+                       - several bug fixes
+
+  05.03.2000   0.3   Intermediate non-public version.
+
+  21.12.1997   0.2   Initial public release.
+
+  26.06.1997   0.1   First working archiver version (still non-public).
+
+
+
+ ===< 5. Legal info / Registration >===========================================
+
+
+  Disclaimer:
+  ~~~~~~~~~~~
+  Uwe Herklotz, the author of UHARC, disclaims any liability for any damage
+  caused by using or misusing this software. The author cannot be held
+  responsible for data loss or other damages and any consequences from this
+  loss or damages.
+
+  !!  U S E   T H I S   P R O G R A M   A T   Y O U R   O W N   R I S K  !!
+
+  ----------------------------------------------------------------------------
+  This software is Copyright(c) 1997-2005 by Uwe Herklotz. All rights reserved
+  ----------------------------------------------------------------------------
+
+  UHARC is freeware for non-commercial use. UnUHARC programs can be freely
+  distributed without any restriction. See License.doc for details.
+  The current beta version is mainly intended for testing and evaluation,
+  so please ensure that the archiver can correctly extract if it is used
+  for any important data.
+
+  If you have any problems or questions then please feel free to contact
+  me at the e-mail address below.
+
+
+
+ ===< 6. Contact info >========================================================
+
+
+  If you have any advice, comments, bug reports or requests for info,
+  you can send e-mail to:
+
+                   Uwe.Herklotz@gmx.de
+
+  or mail to:      Uwe Herklotz
+                   Irkutsker Str. 111
+                   09119 Chemnitz
+                   Germany
+
+
+
+ ##############################################################################
+ UHARC Copyright(c) 1997-2005 by Uwe Herklotz               All rights reserved

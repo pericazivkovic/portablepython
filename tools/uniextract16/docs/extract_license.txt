@@ -1,0 +1,184 @@
+Extract 2.10
+
+NOTE :
+EXTRACT is now freeware. You can distribute EXTRACT (but include and don't
+modify this EXTRACT.TXT) on BBS, french minitel server, CDROM.
+YOU CAN NOW GIVE EXTRACT WITH COMMERCIAL PRODUCT. If you put disk image on a
+commercial CDROM (like Microsoft Windows 3.1 DDK), you can give extract.
+
+There is 4 files. If you distribute Extract, you must distribute at least one .EXE
+and EXTRACT.TXT.
+EXTRACT.EXE : MSDOS version and Win32 version
+EXTRACT.TXT : this file 
+FILE_ID.DIZ : file for BBS
+
+------------------------------------------------------------------------------
+FOR BBS:
+FILE_ID.DIZ content is :
+EXTRACT 2.10: Extracting files from disk image
+With PKUNZIP UNARJ like syntaxe, you can
+extract file from floppy image created by
+WinImage (same author), DCF, DF, Sabdu,
+and a lot of disk copy tool which make
+disk image. Versions for DOS and for NT.
+You can create image and inject file on it.
+NOW FREEWARE!
+
+------------------------------------------------------------------------------
+
+Extracting file from disk image
+Extract is a file in disk image extraction utility. An image is a file which 
+contains all the floppy data (file, FATs, boot sector, directory...). You can 
+create an image file with WinImage (a Windows 3.1 or Windows NT 
+shareware I wrote which create and manage image file, and has a large
+superset of Extract functionnality) and a lot of Dos based disk copy 
+utility : Wimage (in FdFormat utility) from C.H. Hochstätter, DrDos 6 and 
+OS/2 2.x diskimage utility, DCF (Disk Copy Fast) from Chang Ping Lee, 
+CopyVit from Sebastien Chatard, DF (Disk Image File Utility) from Mark Vitt, 
+Super-DiskCopy from Super Software, SabDu from S.A. Berman, 
+Disk-RW from K. Hartnegg, DiskDupe (from Micro System Design), internal disk 
+image utility from Microsoft and Lotus and MFMT sample Windows NT application 
+on the Windows NT SDK.
+
+80 % of the diskcopy tools which can make image I test are compatible 
+with Extract and WinImage.
+
+
+Using Extract
+
+Run Extract without parameters, and you see this :
+------------------------------------------------------------------------------
+Extract NT - Extract file in wImage - V 2.10 (c) 1991-94 Gilles Vollant
+
+
+Usage:
+      Extract -l <file> [<Files names>]             List file in an image
+      Extract -e <file> [x:outpath] [<Files names>] Extract files
+      Extract -x <file> [x:outpath] [<Files names>] eXtract files with pathname
+      Extract -i <file> [<Files names>] [-Fnnn]     Inject files on an image
+
+       Using -oe or -ox instead -e or -x extract Overwriting existing files
+       Using -it instead -i Truncate unused image part
+       -Fnnn : size of image you want create (360,720,120,144,172,288...)
+
+
+Utilities from Gilles VOLLANT - 13 rue Mansart 91540 MENNECY - FRANCE
+Internet : 100144.2636@compuserve.com
+
+
+Extract is a freeware, but if you like this software, you can send me
+$20 or 100 French Francs, and I send you WinImage, a very powerful
+Windows 3.1 and Windows NT shareware I wrote with a superset of 
+Extract functionnality.
+------------------------------------------------------------------------------
+
+
+Extract syntax is based on PKZIP/PKUNZIP and ARJ model.
+First parameter must be -i, -it, -l, -e, -o, -x, -oe or -ox. If the first 
+parameter is the image filenale, the -l (list option) is selected.
+Second parameter is the image filename. You can use wildcard with 
+Joker, and Extract use all the file it find with this joker.
+Third parameter is optionnal. It is the location where you want extract 
+your file. You must begin this parameter with x:, where x is the drive. If 
+you give only subdirectory name, extract don't consider it as a extract 
+location information.
+
+And after (if first is not -i or -it), you can specify somes wildcard 
+for choose files in images. You don't specifiy it, Extract use all 
+file in the image. If first is -i or -it, they specifie file you want 
+inject in image. (or -Fxxx to specifie the format of the image you want build)
+
+Exemples :
+We are in the C:\REP1 subdirectory, and we created C:\REP2 
+subdirectory. In C:\REP1; we have DISK1.IMA and DISK2.IMA 
+created with WinImage.
+
+DISK1.IMA is the image of a floppy with this files:
+DOC1.TXT
+DOC1.DOC
+DOC1A.TXT
+
+DISK2.IMA is the image of a floppy with this files:
+DOC2.TXT
+DOC2.DOC
+DOC2A.TXT
+a subdirectory named DOC2R and which contain:
+DOC2R\DOC2B.TXT
+
+
+if we launch:
+EXTRACT -L DISK?.IMA
+Extract list the directory of the DISK1.IMA and DISK2.IMA image.
+
+EXTRACT -E DISK?.IMA
+Extract create the files C:\REP1\DOC1.TXT, C:\REP1\DOC1.DOC, 
+C:\REP1\DOC1A.TXT, C:\REP1\DOC2.TXT, C:\REP1\DOC2.DOC, 
+C:\REP1\DOC2A.TXT, C:\REP1\DOC2B.TXT.
+
+EXTRACT -X DISK?.IMA
+Extract create the directory C:\REP1\DOC2R and the files 
+C:\REP1\DOC1.TXT, C:\REP1\DOC1.DOC, C:\REP1\DOC1A.TXT, 
+C:\REP1\DOC2.TXT, C:\REP1\DOC2.DOC, C:\REP1\DOC2A.TXT, 
+C:\REP1\DOC2R\DOC2B.TXT.
+
+EXTRACT -X DISK?.IMA C:\REP2 *.DOC DOC2B.TXT
+Extract create the directory C:\REP2\DOC2R and the files 
+C:\REP2\DOC1.DOC, C:\REP2\DOC2.DOC, 
+C:\REP2\DOC2R\DOC2B.TXT.
+
+EXTRACT -I NEWDISK.IMA C:\CONFIG.SYS C:\COMMAND.COM -F144
+Extract build a new image with 1.44 Mb size, and put file
+CONFIG.SYS and COMMAND.COM from hard disk to this image.
+
+EXTRACT -I DISK.IMA C:\AUTOEXEC.BAT
+Extract add file AUTOEXEC.BAT from hard disk to DISK.IMA.
+
+Using -E or -X; when Extract must delete existing file, it ask confirmation. 
+Using -OE or -OX, it don't
+
+
+
+Feedback :
+You can give me feedback, in french or english, at the adress:
+Internet adress : gilwin@email.teaser.com
+french BBS The Windows Manor
+french minitel server 3614-3615 TEASER, BAL GILWIN
+french minitel server 3614-3615 PICKUP, BAL GILWIN
+french server CALVALCOM, BAL GV44
+
+or by letter to :
+Gilles Vollant
+13, rue Mansart
+91540 Mennecy
+France
+
+If you want download WinImage or the last Extract :
+- http://ourworld.compuserve.com/homepages/gvollant/winimage.htm
+and http://ourworld.compuserve.com/homepages/gvollant/extract.htm
+- Try IBMHW (disk util library) or WINSHARE (disk util or Win NT util
+library) compuserve forum.
+- On the BBS The Windows Manor, with these phone number (Paris, France) :
+(33 1) 42437852, (33 1) 42432618 or (33 1) 42432458. Enter "J 25" 
+command to go on the WinImage area. You can download Extract, WinImage 
+or send me a message.
+
+------------------------------------------------------------------------------
+Few word about WinImage.
+
+The WinIma25.ZIP file_id.diz is :
+*WINIMAGE 2.50:POWERFUL WINDOWS DISK COPY TOOL
+*--> RUN IN BACKGOUND, WORK ON DISK IMAGE <--*
+make disk image from floppy, extract file from
+image, make an empty image, inject file on it 
+and put the image on blank disk. TRUE WINDOWS 
+APP: Toolbar,status Bar,3D-look, drag & drop 
+client and server. 2 versions: for Windows 3.1 
+and for WINDOWS NT. Change image format,defrag,
+delete file on it, Batch assistant.
+
+WinImage is a very powerful utility. With WinImage, you can make all 
+that you can make with Extract, and a lot of other thing. 
+This interface is a true professional Windows interface.
+By sample, with Batch assistant, you can ask, in a dialog box, extract
+file DISK1.IMA to DISK10.IMA on C:\REP\DISK1\ to C:\REP\DISK10\ 
+directory, or inject these 10 subdirectories on 10 images.
