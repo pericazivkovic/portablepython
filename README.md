@@ -1,14 +1,27 @@
-Portable Python
+## Portable Python development pages
 ==============
 
 #### What is Portable Python?
-Portable Python is a [Python® programming language](http://Python.org/ "Python® programming language") pre-configured to run directly from any USB storage device, enabling you to have, at any time, a portable programming environment. Just download it, extract to your portable storage device or hard drive and in 10 minutes you are ready to create your next Python® application.
+Portable Python is a [Python® programming language](http://Python.org/ "Python® programming language") pre-configured to run directly from any USB storage device, local or network location enabling you to have, at any time, a portable programming environment. 
 
-#### What is included?
-Large set of third party python libraries - NumPy, SciPy, Matplotlib, PyWin32, Django, PIL, wxPython, PyQt, PyGame, etc.  code editors - PyScripter and IDLE all packaged in a single installer.
+#### Licensing
+Portable Python build scripts are licensed under MIT license, other third party tools and packages are licensed by their respecitive projects/owners.
 
-#### Where can I use it?
-Portable Python is intended for use on all windows platforms and can be installed directly on USB, network or local hard drive. Its poverfull launchers do all the work of pre-configuring the Python environment before starting any of the built-in applicatoins.
+#### Usage
+Portable Python build scripts can be invoked from any MS Windows command prompt by using *build* command and specifying version to be created, e.g.:
 
-#### What can I do with it?
-Everything like with standard Python.org distribution and more as it includes additional libraries and tools. You can pack your Python web/desktop application together with the Portable Python on a USB stick and share with your friends, colleagues or customers.
+> [PP git root]> build 2.7 
+
+will download all components needed for building Portable Python based on the Python 2.7, unpack all packages to current user temp folder and create final installer.
+
+Configuration settings are specified per version, in this case settings.bat will be used in 2.7 folder.
+
+Other version specific files:
+ * descriptions.nsh - language strings per package needed for installer creation
+ * modules.bat - list of modules to be included and their specific rules for unpackaging/configuration
+ * modules.nsh - NSIS installer configuration
+ * settings.bat - list of modules to be included and their download locations
+
+[[More documentation|Home]] 
+
+
