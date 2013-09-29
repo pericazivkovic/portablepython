@@ -10,8 +10,8 @@ When you start Portable Python executable `Python-Portable.exe` without passing 
 
 {% highlight python linenos=table %}
 
-Python 2.7.5 (default, May 15 2013, 22:43:36) [MSC v.1500 32 bit (Intel)] on win32
-Type "help", "copyright", "credits" or "license" for more information.
+Python 2.7.5 (default, ..) [MSC v....] on win32
+Type "help", "copyright" ... for more information.
 Portable Python >>>
 
 {% endhighlight %}
@@ -20,8 +20,8 @@ In this mode variables are echoed after they are entered
 
 {% highlight python linenos=table %}
 
-Python 2.7.5 (default, May 15 2013, 22:43:36) [MSC v.1500 32 bit (Intel)] on win	32
-Type "help", "copyright", "credits" or "license" for more information.
+Python 2.7.5 (default, ..) [MSC v....] on win32
+Type "help", "copyright" ... for more information.
 Portable Python >>> 42
 42
 Portable Python >>> "Hello World"
@@ -60,7 +60,7 @@ raw_input("Press enter to continue...")
 
 we can execute it from windows command line by typing `Python-Portable.exe hello.py`. New command window will open and you will be prompted to enter value. After you enter some text or number, it will be printed back to the screen and program will end.
 
-{% highlight bat linenos=table %}
+{% highlight text linenos=table %}
 
 Hello world
 It is true!
