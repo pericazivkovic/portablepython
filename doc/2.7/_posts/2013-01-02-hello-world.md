@@ -37,7 +37,8 @@ Portable Python >>>
 
 {% endhighlight %}
 
-### Passing (executing) script files
+
+### Executing python script files
 Portable Python executable (`Python-Portable.exe`) can execute python script files if you pass them as parameters from the command line. For example if we save following code to file named `hello.py`
 
 {% highlight python linenos=table %}
@@ -72,3 +73,4 @@ Press enter to continue...
 {% endhighlight %} 
 
 Python built-in function `raw_input` is used in this case to get input from the user and to pause execution at the end of the script until user presses enter key.
+
