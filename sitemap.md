@@ -1,5 +1,5 @@
 ---
 title: "sitemap"
-permalink: /:title.xml
+permalink: sitemap.xml
 ---
 zzzzzzzzzzzzzz
