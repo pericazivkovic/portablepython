@@ -13,7 +13,7 @@ permalink: sitemap.xml
     {% for post in site.posts %}
     <url>
         <loc>{{site.url|xml_escape}}{{post.url|xml_escape}}</loc>
-        <lastmod>{{page.date|date_to_xmlschema}}</lastmod>
+        <lastmod>{{post.updated|date_to_xmlschema}}</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
