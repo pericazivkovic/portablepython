@@ -12,7 +12,7 @@ Large set of third party python libraries - NumPy, SciPy, Matplotlib, PyWin32, D
 Portable Python is intended for use on all windows platforms and can be installed directly on USB, network or local hard drive. Its poverfull launchers do all the work of pre-configuring the Python environment before starting any of the built-in applications.
 
 ### What can I do with it?
-Everything like with standard Python.org distribution and more as it includes additional libraries and tools. You can pack your Python web/desktop application together with the Portable Python on a USB stick and share with your friends, colleagues or customers.
+Everything like with standard Python.org distribution and more as it includes additional libraries and tools. You can pack your Python web/desktop application together with the Portable Python on a USB stick and share with your friends, colleagues or customers. You can even customize entire Portable Python build and create your own custom distribution.
 
 ## Download
 Portable Python is available in two flavors - based on Python 3 and Python 2. Distribution based on Python 3 usually contains less libraries due to the fact that support for Python 3 in the Python community is still work in progress.
