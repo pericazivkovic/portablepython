@@ -1,9 +1,10 @@
 ---
-permalink: sitemap.xml
+title: "sitemap"
+permalink: /:title.xml
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    {% for site_page in page.site_pages %}
+    <!--{% for site_page in page.site_pages %}
     <url>
         <loc>{{ site.uri | xml_escape }}{{site_page}}</loc>
         <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
@@ -18,5 +19,5 @@ permalink: sitemap.xml
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
-    {% endfor %}
+    {% endfor %}-->
 </urlset>
