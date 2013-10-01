@@ -10,7 +10,7 @@ Portable Python build scripts are licensed under MIT license, other third party 
 #### Usage
 Portable Python build scripts can be invoked from any MS Windows command prompt by using `build` command and specifying version to be created, e.g.:
 
-> build 2.7 
+`build 2.7` 
 
 will download all components needed for building Portable Python based on the Python 2.7, unpack all packages to current user temp folder and create final installer.
 
