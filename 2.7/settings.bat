@@ -23,13 +23,13 @@
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 set PY_VERSION=2.7
-set PP_VERSION=5.1
+set PP_VERSION=6.1
 set PY_SHORT_VERSION=27
 
 :: Core
-set PY_MSI_DOWNLOAD="http://python.org/ftp/python/2.7.5/python-2.7.5.msi"
-set PY_MSI_FILE=python-2.7.5.msi
-set PY_MSI_MD5=0006d6219160ce6abe711a71c835ebb0
+set PY_MSI_DOWNLOAD="http://python.org/ftp/python/2.7.6/python-2.7.6.msi"
+set PY_MSI_FILE=python-2.7.6.msi
+set PY_MSI_MD5=ac54e14f7ba180253b9bae6635d822ea
 
 :: Modules
 set PY_SETUPTOOLS_DOWNLOAD="http://pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11.win32-py2.7.exe"
