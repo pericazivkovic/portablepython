@@ -22,8 +22,8 @@
 :: http://PortablePython.com
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-set PY_VERSION=3.2
-set PP_VERSION=5.1
+set PY_VERSION=325
+set PP_VERSION=1.0.0
 set PY_SHORT_VERSION=32
 
 :: Modules
