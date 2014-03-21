@@ -25,6 +25,13 @@
 :: Include common functions
 set COMMON=.\..\common.bat
 
+:: CHECK Parameter, maybe only a subset of packages should be build 
+if [%1]==[] (SET _packagelist=All) ELSE (SET _packagelist=%*)
+for %%G in (%_packagelist%) do (call :Unpack%%G)
+goto:EOF
+
+:UnpackAll
+
 call :UnpackPython
 call :UnpackPyScripter 
 call :UnpackNumPy
