@@ -144,3 +144,39 @@ SectionGroup "Code editors"
 		File "${SOURCESFOLDER}\PyScripter-Portable.exe"
 	SectionEnd
 SectionGroupEnd
+
+; pip section is an extract from 
+; https://github.com/wheeler-microfluidics/microdrop_portable_python_base/blob/microdrop/2.7/modules.nsh
+; many thanks to Christian Frobel for these piece of work
+
+SectionGroup "`pip` packages"
+    Section "Prepare `easy_install` and `pip`"
+        Var /GLOBAL EasyInstall
+        Var /GLOBAL Pip
+        Var /GLOBAL PipInstallFlags
+        SectionIn 1 2 RO
+        StrCpy $EasyInstall '$INSTDIR\App\Scripts\easy_install.exe'
+        StrCpy $Pip '$INSTDIR\App\Scripts\pip.exe'
+        ; Use `--pre` argument to allow installation of [pre-release][1]
+        ; package versions.
+        ;
+        ; [1]: http://stackoverflow.com/questions/18230956/could-not-find-a-version-that-satisfies-the-requirement-pytz
+        StrCpy $PipInstallFlags ' --pre '
+    SectionEnd
+
+    Section "Install pip"
+        SectionIn 1 2 RO
+        nsExec::ExecToLog '$EasyInstall pip'
+    SectionEnd
+	
+    Section "Install ipython"  MODULE_IPYTHON
+        ;SectionIn 1
+	    ;not in section 'full', cause IPython 0.13.1 already included
+		;this is just an example, how packges could be installed via pip
+		;known problem: 
+		; - with pip installed scripts App\Scripts\iXYZ-script.py incudes "hard coded" python path
+		; - if the pp installation moves, these paths must be adapted manually
+        nsExec::ExecToLog '$Pip install ipython $PipInstallFlags'
+    SectionEnd
+	
+SectionGroupEnd
