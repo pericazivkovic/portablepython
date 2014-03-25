@@ -169,7 +169,7 @@ SectionGroup "`pip` packages"
         nsExec::ExecToLog '$EasyInstall pip'
     SectionEnd
 	
-    Section "Install ipython"  MODULE_IPYTHON
+    Section "Install ipython"  PIP_MODULE_IPYTHON
         ;SectionIn 1
 	    ;not in section 'full', cause IPython 0.13.1 already included
 		;this is just an example, how packges could be installed via pip
