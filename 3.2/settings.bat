@@ -85,3 +85,7 @@ set IPYTHON_MD5=43c1c567b920b718a38fffd1866a4392
 set PANDAS_DOWNLOAD="https://pypi.python.org/packages/3.2/p/pandas/pandas-0.11.0.win32-py3.2.exe"
 set PANDAS_FILE=pandas-0.11.0.win32-py3.2.exe
 set PANDAS_MD5=7f11d2f59284c5ba64e7d781e1023f95
+
+set PYCHARM_DOWNLOAD="http://download.jetbrains.com/python/pycharm-community-3.1.1.exe"
+set PYCHARM_FILE=pycharm-community-3.1.1.exe
+set PYCHARM_MD5=610522DA6E8092896CEDA4355C2DBFC6

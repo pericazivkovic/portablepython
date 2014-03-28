@@ -27,6 +27,7 @@ set COMMON=.\..\common.bat
 
 call :UnpackPython
 call :UnpackPyScripter
+call :UnpackPyCharm
 call :UnpackNumPy
 call :UnpackSciPy
 call :UnpackPyWin32
@@ -467,6 +468,61 @@ tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%PANDAS_FILE%" %UNPACK_FOLDER%\p
 
 :: Fix
 call COMMON :FixMSCRT %UNPACK_FOLDER%\pandas\
+
+endlocal&goto :EOF
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:UnpackPyCharm
+::
+:: By:   Krzysztof Cebulski
+:: Func: Downloads and extracts PyCharm Community Edition
+:: Args: none
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+setlocal ENABLEEXTENSIONS
+:: Download PyCharm
+call COMMON :DownloadFile %PYCHARM_DOWNLOAD%
+
+:: Verify 
+call COMMON :VerifyFile %PYCHARM_FILE% MD5 %PYCHARM_MD5%
+
+:: Unpack files
+call COMMON :LogMessage "Extracting PyCharm files"
+tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%PYCHARM_FILE%" %UNPACK_FOLDER%\pycharm-temp >NUL
+
+:: Copy files to PyCharm folder
+call COMMON :LogMessage "Copy files to PyCharm folder"
+RD %UNPACK_FOLDER%\pycharm-temp\$PLUGINSDIR /S /Q
+RD %UNPACK_FOLDER%\pycharm-temp\bin\$PLUGINSDIR /S /Q
+mkdir %UNPACK_FOLDER%\PyCharm
+mkdir %UNPACK_FOLDER%\PyCharm\App
+move /Y "%UNPACK_FOLDER%\pycharm-temp" "%UNPACK_FOLDER%\PyCharm\App\PyCharm"
+
+:: Patch PyCharm
+call COMMON :LogMessage "Patch PyCharm"
+del %UNPACK_FOLDER%\PyCharm\App\PyCharm\bin\idea.properties /Q
+tools\uniextract16\UniExtract.exe "patches\PyCharm.3.1.1.PPpatch" "%UNPACK_FOLDER%\PyCharm\App\PyCharm" >NUL
+
+:: Replace @PY_VERSION@ in jdk.table.xml.tmp to %PY_VERSION% jdk.table.xml
+setlocal ENABLEDELAYEDEXPANSION
+set filein="%UNPACK_FOLDER%\PyCharm\App\PyCharm\.PyCharm30\config\options\jdk.table.xml.tmp"
+set fileout="%UNPACK_FOLDER%\PyCharm\App\PyCharm\.PyCharm30\config\options\jdk.table.xml"
+set old=@PY_VERSION@
+set new=%PY_VERSION%
+for /f "tokens=* delims=¶" %%i in ( '"type %filein%"') do (
+	set str=%%i
+	set str=!str:%old%=%new%!
+	echo !str! >> %fileout%	
+)
+del %filein%
+
+:: Build Shortcut
+call COMMON :LogMessage "Build PyCharm shortcut"
+tools\nsis\makensis.exe /V0 /DSHORTCUTNAME=PyCharm /DPY_VERSION=%PY_VERSION% /DPP_VERSION=%PP_VERSION% shortcuts\shortcut.nsi
+
+:: Copy shortcuts
+call COMMON :LogMessage "Copy PyCharm shortcut"
+copy shortcuts\PyCharm-Portable.exe "%UNPACK_FOLDER%" >NUL
 
 endlocal&goto :EOF
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
