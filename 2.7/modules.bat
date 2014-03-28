@@ -674,7 +674,20 @@ move /Y "%UNPACK_FOLDER%\pycharm-temp" "%UNPACK_FOLDER%\PyCharm\App\PyCharm"
 :: Patch PyCharm
 call COMMON :LogMessage "Patch PyCharm"
 del %UNPACK_FOLDER%\PyCharm\App\PyCharm\bin\idea.properties /Q
-tools\uniextract16\UniExtract.exe patches\PyCharm.3.1.1.P275.PPpatch %UNPACK_FOLDER%\PyCharm\App\PyCharm >NUL
+tools\uniextract16\UniExtract.exe "patches\PyCharm.3.1.1.PPpatch" "%UNPACK_FOLDER%\PyCharm\App\PyCharm" >NUL
+
+:: Replace @PY_VERSION@ in jdk.table.xml.tmp to %PY_VERSION% jdk.table.xml
+setlocal ENABLEDELAYEDEXPANSION
+set filein="%UNPACK_FOLDER%\PyCharm\App\PyCharm\.PyCharm30\config\options\jdk.table.xml.tmp"
+set fileout="%UNPACK_FOLDER%\PyCharm\App\PyCharm\.PyCharm30\config\options\jdk.table.xml"
+set old=@PY_VERSION@
+set new=%PY_VERSION%
+for /f "tokens=* delims=¶" %%i in ( '"type %filein%"') do (
+	set str=%%i
+	set str=!str:%old%=%new%!
+	echo !str! >> %fileout%	
+)
+del %filein%
 
 :: Build Shortcut
 call COMMON :LogMessage "Build PyCharm shortcut"
