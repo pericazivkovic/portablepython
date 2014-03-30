@@ -386,7 +386,7 @@ call COMMON :VerifyFile %MATPLOTLIB_FILE% MD5 %MATPLOTLIB_MD5%
 
 :: Unpack files
 call COMMON :LogMessage "Extracting matplotlib files"
-tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%MATPLOTLIB_FILE%" %UNPACK_FOLDER%\matplotlib\
+tools\uniextract16\bin\7z.exe x "%BIN_FOLDER%\%MATPLOTLIB_FILE%" -o%UNPACK_FOLDER%\matplotlib\ -y >NUL
 
 :: Fix
 call COMMON :FixMSCRT %UNPACK_FOLDER%\matplotlib\
@@ -546,7 +546,7 @@ call COMMON :VerifyFile %PYQT_FILE% MD5 %PYQT_MD5%
 
 :: Unpack files
 call COMMON :LogMessage "Extracting PyQT files"
-tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%PYQT_FILE%" %UNPACK_FOLDER%\pyqt\
+tools\uniextract16\bin\7z.exe x "%BIN_FOLDER%\%PYQT_FILE%" -o%UNPACK_FOLDER%\pyqt\ -y >NUL
 
 :: Patch uic
 call COMMON :LogMessage "Patching PyQt4 uic"

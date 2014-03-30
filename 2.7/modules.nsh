@@ -55,12 +55,12 @@ SectionGroup "Modules"
 		SetOutPath "$INSTDIR\App\Lib\site-packages\networkx\"
 		File /r "${SOURCESFOLDER}\networkx\networkx\*.*"
 	SectionEnd
-	Section "Django 1.5.1" MODULE_DJANGO
+	Section "Django 1.6.1" MODULE_DJANGO
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\django\"
-		File /r "${SOURCESFOLDER}\django\Django-1.5.1\django\*.*"
+		File /r "${SOURCESFOLDER}\django\Django-1.6.1\django\*.*"
 		SetOutPath "$INSTDIR\App\Scripts"
-		File "${SOURCESFOLDER}\django\Django-1.5.1\django\bin\django-admin.py"
+		File "${SOURCESFOLDER}\django\Django-1.6.1\django\bin\django-admin.py"
 	SectionEnd
 	Section "PIL 1.1.7" MODULE_PIL
 		SectionIn 1
@@ -123,7 +123,7 @@ SectionGroup "Modules"
 	Section "IPython 0.13.1" MODULE_IPYTHON
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\IPython"
-		File /r "${SOURCESFOLDER}\ipython\IPython\*.*"
+		File /r "${SOURCESFOLDER}\ipython\\ipython-1.1.0\IPython\*.*"
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\pyreadline\pyreadline-1.7.1\*.*"
 		SetOutPath "$INSTDIR"
