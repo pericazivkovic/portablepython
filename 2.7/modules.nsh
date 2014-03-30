@@ -26,7 +26,7 @@
 InstType "Full"
 InstType "Minimal"
 
-Section "!Python 2.7.5 core" PYTHON_CORE
+Section "!Python 2.7.6 core" PYTHON_CORE
 	SectionIn 1 2 RO
 	SetOutPath "$INSTDIR"
 	File /r "${SOURCESFOLDER}\python-core\*.*"
@@ -35,12 +35,12 @@ Section "!Python 2.7.5 core" PYTHON_CORE
 	File "${SOURCESFOLDER}\IDLE-Portable.exe"
 SectionEnd
 SectionGroup "Modules"
-	Section "NumPy 1.7.1" MODULE_NUMPY
+	Section "NumPy 1.8.0" MODULE_NUMPY
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\numpy\PLATLIB\*.*"
 	SectionEnd
-	Section "SciPy 0.12.0" MODULE_SCIPY
+	Section "SciPy 0.13.2" MODULE_SCIPY
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\scipy\PLATLIB\*.*"
@@ -72,12 +72,12 @@ SectionGroup "Modules"
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\py2exe\PLATLIB\*.*"
 	SectionEnd
-	Section "wxPython 2.9.4.0" MODULE_WXPYTHON
+	Section "wxPython 3.0.0.0" MODULE_WXPYTHON
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\"
 		File /r "${SOURCESFOLDER}\wxpython\package\*.*"
 	SectionEnd
-	Section "matplotlib 1.2.1" MODULE_MATPLOTLIB
+	Section "matplotlib 1.3.1" MODULE_MATPLOTLIB
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\matplotlib\PLATLIB\*.*"
@@ -87,12 +87,12 @@ SectionGroup "Modules"
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\lxml\PLATLIB\*.*"
 	SectionEnd
-	Section "PySerial 2.5" MODULE_PY_SERIAL
+	Section "PySerial 2.7" MODULE_PY_SERIAL
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\pyserial\PURELIB\*.*"
 	SectionEnd
-	Section "PyODBC 3.0.6" MODULE_PYODBC
+	Section "PyODBC 3.0.7" MODULE_PYODBC
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\pyodbc\PLATLIB\*.*"
@@ -109,7 +109,7 @@ SectionGroup "Modules"
 		SetOutPath "$INSTDIR"
 		File "${SOURCESFOLDER}\Glade3-Portable.exe"
 	SectionEnd
-	Section "PyQT 4.10.1" MODULE_PYQT
+	Section "PyQT 4.10.3" MODULE_PYQT
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\"
 		File /r "${SOURCESFOLDER}\pyqt\Lib\*.*"
@@ -120,7 +120,7 @@ SectionGroup "Modules"
 		SetOutPath "$INSTDIR"
 		File "${SOURCESFOLDER}\QtDesigner-Portable.exe"
 	SectionEnd
-	Section "IPython 0.13.1" MODULE_IPYTHON
+	Section "IPython 0.1.1" MODULE_IPYTHON
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\IPython"
 		File /r "${SOURCESFOLDER}\ipython\\ipython-1.1.0\IPython\*.*"
@@ -129,7 +129,7 @@ SectionGroup "Modules"
 		SetOutPath "$INSTDIR"
 		File "${SOURCESFOLDER}\IPython-Portable.exe"
 	SectionEnd
-	Section "Pandas 0.11.0" MODULE_PANDAS
+	Section "Pandas 0.12.0" MODULE_PANDAS
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\pandas\PLATLIB\*.*"
