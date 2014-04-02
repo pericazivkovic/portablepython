@@ -35,12 +35,12 @@ Section "!Python 2.7.6 core" PYTHON_CORE
 	File "${SOURCESFOLDER}\IDLE-Portable.exe"
 SectionEnd
 SectionGroup "Modules"
-	Section "NumPy 1.8.0" MODULE_NUMPY
+	Section "NumPy 1.8.1" MODULE_NUMPY
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\numpy\PLATLIB\*.*"
 	SectionEnd
-	Section "SciPy 0.13.2" MODULE_SCIPY
+	Section "SciPy 0.13.3" MODULE_SCIPY
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\scipy\PLATLIB\*.*"
@@ -55,12 +55,12 @@ SectionGroup "Modules"
 		SetOutPath "$INSTDIR\App\Lib\site-packages\networkx\"
 		File /r "${SOURCESFOLDER}\networkx\networkx\*.*"
 	SectionEnd
-	Section "Django 1.6.1" MODULE_DJANGO
+	Section "Django 1.6.2" MODULE_DJANGO
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\django\"
-		File /r "${SOURCESFOLDER}\django\Django-1.6.1\django\*.*"
+		File /r "${SOURCESFOLDER}\django\Django-1.6.2\django\*.*"
 		SetOutPath "$INSTDIR\App\Scripts"
-		File "${SOURCESFOLDER}\django\Django-1.6.1\django\bin\django-admin.py"
+		File "${SOURCESFOLDER}\django\Django-1.6.2\django\bin\django-admin.py"
 	SectionEnd
 	Section "PIL 1.1.7" MODULE_PIL
 		SectionIn 1
@@ -109,7 +109,7 @@ SectionGroup "Modules"
 		SetOutPath "$INSTDIR"
 		File "${SOURCESFOLDER}\Glade3-Portable.exe"
 	SectionEnd
-	Section "PyQT 4.10.3" MODULE_PYQT
+	Section "PyQT 4.10.4" MODULE_PYQT
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\"
 		File /r "${SOURCESFOLDER}\pyqt\Lib\*.*"
@@ -120,16 +120,16 @@ SectionGroup "Modules"
 		SetOutPath "$INSTDIR"
 		File "${SOURCESFOLDER}\QtDesigner-Portable.exe"
 	SectionEnd
-	Section "IPython 0.1.1" MODULE_IPYTHON
+	Section "IPython 1.2.1" MODULE_IPYTHON
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\IPython"
-		File /r "${SOURCESFOLDER}\ipython\\ipython-1.1.0\IPython\*.*"
+		File /r "${SOURCESFOLDER}\ipython\\ipython-1.2.1\IPython\*.*"
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\pyreadline\pyreadline-1.7.1\*.*"
 		SetOutPath "$INSTDIR"
 		File "${SOURCESFOLDER}\IPython-Portable.exe"
 	SectionEnd
-	Section "Pandas 0.12.0" MODULE_PANDAS
+	Section "Pandas 0.13.1" MODULE_PANDAS
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\pandas\PLATLIB\*.*"

@@ -40,15 +40,15 @@ set PY_SCRIPTER_DOWNLOAD="http://pyscripter.googlecode.com/files/PyScripter-v2.5
 set PY_SCRIPTER_FILE=PyScripter-v2.5.3.zip
 set PY_SCRIPTER_SHA1=363226a2dc708bc5dd83eda9ccc36339b79a7345
 
-set NUMPY_DOWNLOAD="http://sourceforge.net/projects/numpy/files/NumPy/1.8.0/numpy-1.8.0-win32-superpack-python2.7.exe"
-set NUMPY_FILE=numpy-1.8.0-win32-superpack-python2.7.exe
-set NUMPY_FILE_NOSSE=numpy-1.8.0-nosse.exe
-set NUMPY_ZIP_MD5=21165c68743d6f6ecf2797cf63dd0b1e
+set NUMPY_DOWNLOAD="http://sourceforge.net/projects/numpy/files/NumPy/1.8.1/numpy-1.8.1-win32-superpack-python2.7.exe"
+set NUMPY_FILE=numpy-1.8.1-win32-superpack-python2.7.exe
+set NUMPY_FILE_NOSSE=numpy-1.8.1-nosse.exe
+set NUMPY_ZIP_MD5=47dcbfaba32a64f1e30927c219853fc1
 
-set SCIPY_DOWNLOAD="http://sourceforge.net/projects/scipy/files/scipy/0.13.2/scipy-0.13.2-win32-superpack-python2.7.exe"
-set SCIPY_FILE=scipy-0.13.2-win32-superpack-python2.7.exe
-set SCIPY_FILE_NOSSE=scipy-0.13.2-nosse.exe
-set SCIPY_ZIP_MD5=9508384442702c53d488b7b18e5a8a06  
+set SCIPY_DOWNLOAD="http://sourceforge.net/projects/scipy/files/scipy/0.13.3/scipy-0.13.3-win32-superpack-python2.7.exe"
+set SCIPY_FILE=scipy-0.13.3-win32-superpack-python2.7.exe
+set SCIPY_FILE_NOSSE=scipy-0.13.3-nosse.exe
+set SCIPY_ZIP_MD5=ab43e3022aa642bef49a1f92516a6fdf  
 
 set PYWIN32_DOWNLOAD="http://sourceforge.net/projects/pywin32/files/pywin32/Build 218/pywin32-218.win32-py2.7.exe"
 set PYWIN32_FILE=pywin32-218.win32-py2.7.exe
@@ -58,10 +58,10 @@ set NETWORKX_DOWNLOAD="http://networkx.lanl.gov/download/networkx/networkx-1.7-p
 set NETWORKX_FILE=networkx-1.7-py2.7.egg
 set NETWORKX_MD5=1d4c59f1e894f39f8928be8718905969
 
-set DJANGO_DOWNLOAD="https://pypi.python.org/packages/source/D/Django/Django-1.6.1.tar.gz"
-set DJANGO_FILE=Django-1.6.1.tar.gz
-set DJANGO_FILE_TAR=Django-1.6.1.tar
-set DJANGO_MD5=3ea7a00ea9e7a014e8a4067dd6466a1b
+set DJANGO_DOWNLOAD="https://pypi.python.org/packages/source/D/Django/Django-1.6.2.tar.gz"
+set DJANGO_FILE=Django-1.6.2.tar.gz
+set DJANGO_FILE_TAR=Django-1.6.2.tar
+set DJANGO_MD5=45d974c623b3bfbf9976f3d808fe1ee9
 
 set PIL_DOWNLOAD="http://effbot.org/downloads/PIL-1.1.7.win32-py2.7.exe"
 set PIL_FILE=PIL-1.1.7.win32-py2.7.exe
@@ -80,7 +80,7 @@ set MATPLOTLIB_MD5=08953f7c4b2ddd7c233b0e42db51f13a
 
 set LXML_DOWNLOAD="http://pypi.python.org/packages/2.7/l/lxml/lxml-2.3.win32-py2.7.exe"
 set LXML_FILE=lxml-2.3.win32-py2.7.exe
-
+	
 set PY_SERIAL_DOWNLOAD="http://sourceforge.net/projects/pyserial/files/pyserial/2.7/pyserial-2.7.win32.exe"
 set PY_SERIAL_FILE=pyserial-2.7.win32.exe
 set PY_SERIAL_MD5=21555387937eeb79126cde25abee4b35
@@ -96,14 +96,14 @@ set PYGTK_DOWNLOAD="http://ftp.gnome.org/pub/GNOME/binaries/win32/pygtk/2.24/pyg
 set PYGTK_FILE=pygtk-all-in-one-2.24.2.win32-py2.7.msi
 set PYGTK_MD5=4bddf847f81d8de2d73048b113da3dd5
 
-set PYQT_DOWNLOAD="http://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.10.3/PyQt4-4.10.3-gpl-Py2.7-Qt4.8.5-x32.exe"
-set PYQT_FILE=PyQt4-4.10.3-gpl-Py2.7-Qt4.8.5-x32.exe
-set PYQT_MD5=24fcc53d1888d490d16c4410467331e0
+set PYQT_DOWNLOAD="http://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.10.4/PyQt4-4.10.4-gpl-Py2.7-Qt4.8.5-x32.exe"
+set PYQT_FILE=PyQt4-4.10.4-gpl-Py2.7-Qt4.8.5-x32.exe
+set PYQT_MD5=4dbba5c9920a5fa5311c294d5975b65f
 
-set IPYTHON_DOWNLOAD="https://pypi.python.org/packages/source/i/ipython/ipython-1.1.0.zip"
-set IPYTHON_FILE=ipython-1.1.0.zip
-set IPYTHON_MD5=3b383afb9f367eb387d36e11f6e7c4cc
+set IPYTHON_DOWNLOAD="https://pypi.python.org/packages/source/i/ipython/ipython-1.2.1.zip"
+set IPYTHON_FILE=ipython-1.2.1.zip
+set IPYTHON_MD5=a4b36d55e2671c6e821018a63d50b8b1
 
-set PANDAS_DOWNLOAD="https://pypi.python.org/packages/2.7/p/pandas/pandas-0.12.0.win32-py2.7.exe"
-set PANDAS_FILE=pandas-0.12.0.win32-py2.7.exe
-set PANDAS_MD5=80b0b9b891842ef4bdf451ac07b368e5
+set PANDAS_DOWNLOAD="https://pypi.python.org/packages/2.7/p/pandas/pandas-0.13.1.win32-py2.7.exe"
+set PANDAS_FILE=pandas-0.13.1.win32-py2.7.exe
+set PANDAS_MD5=74b165f63d2675ac33acd5152f7c162f
