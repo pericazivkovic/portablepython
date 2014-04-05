@@ -47,6 +47,9 @@ call :UnpackPyQT
 call :UnpackIPython
 call :UnpackPandas
 call :UnpackSix
+call :UnpackXLrd
+call :UnpackXLwt
+call :UnpackXLUtils
 
 goto:EOF
 
@@ -720,6 +723,82 @@ tools\uniextract16\UniExtract.exe "%UNPACK_FOLDER%\SIX\dist\%SIX_FILE_TAR%" %UNP
 
 :: Fix
 call COMMON :FixMSCRT %UNPACK_FOLDER%\SIX\
+
+endlocal&goto :EOF
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:UnpackXLrd
+::
+:: By:   Perica Zivkovic
+:: Func: Downloads and extracts xlrd   
+:: Args: none
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+setlocal ENABLEEXTENSIONS
+
+:: Download 
+call COMMON :DownloadFile %XLRD_DOWNLOAD%
+
+:: Verify 
+call COMMON :VerifyFile %XLRD_FILE% MD5 %XLRD_MD5%
+
+:: Unpack files
+call COMMON :LogMessage "Extracting XLRD files"
+tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%XLRD_FILE%" %UNPACK_FOLDER%\XLRD\
+tools\uniextract16\UniExtract.exe "%UNPACK_FOLDER%\XLRD\dist\%XLRD_FILE_TAR%" %UNPACK_FOLDER%\XLRD\
+
+:: Fix
+call COMMON :FixMSCRT %UNPACK_FOLDER%\XLRD\
+
+endlocal&goto :EOF
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:UnpackXLwt
+::
+:: By:   Perica Zivkovic
+:: Func: Downloads and extracts xlwt   
+:: Args: none
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+setlocal ENABLEEXTENSIONS
+
+:: Download 
+call COMMON :DownloadFile %XLWT_DOWNLOAD%
+
+:: Verify 
+call COMMON :VerifyFile %XLWT_FILE% MD5 %XLWT_MD5%
+
+:: Unpack files
+call COMMON :LogMessage "Extracting XLWT files"
+tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%XLWT_FILE%" %UNPACK_FOLDER%\XLWT\
+
+:: Fix
+call COMMON :FixMSCRT %UNPACK_FOLDER%\XLWT\
+
+endlocal&goto :EOF
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:UnpackXLUtils
+::
+:: By:   Perica Zivkovic
+:: Func: Downloads and extracts xlutils   
+:: Args: none
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+setlocal ENABLEEXTENSIONS
+
+:: Download 
+call COMMON :DownloadFile %XLUTILS_DOWNLOAD%
+
+:: Verify 
+call COMMON :VerifyFile %XLUTILS_FILE% MD5 %XLUTILS_MD5%
+
+:: Unpack files
+call COMMON :LogMessage "Extracting XLUTILS files"
+tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%XLUTILS_FILE%" %UNPACK_FOLDER%\XLUTILS\
+
+:: Fix
+call COMMON :FixMSCRT %UNPACK_FOLDER%\XLUTILS\
 
 endlocal&goto :EOF
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::

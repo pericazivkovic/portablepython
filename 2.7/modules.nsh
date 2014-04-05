@@ -148,7 +148,22 @@ SectionGroup "Modules"
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File "${SOURCESFOLDER}\SIX\six-1.6.1\six.py"
-	SectionEnd 	
+	SectionEnd 
+	Section "XLUtils 1.7.0" MODULE_XLUTILS
+		SectionIn 1
+		SetOutPath "$INSTDIR\App\Lib\site-packages\xlutils\"
+		File /r "${SOURCESFOLDER}\XLUTILS\xlutils-1.7.0\xlutils\*.*"
+	SectionEnd
+	Section "xlrd 0.9.2" MODULE_XLRD
+		SectionIn 1
+		SetOutPath "$INSTDIR\App\Lib\site-packages\xlrd\"
+		File /r "${SOURCESFOLDER}\xlrd\xlrd-0.9.2\xlrd\*.*"
+	SectionEnd
+	Section "xlwt 0.7.5" MODULE_XLWT
+		SectionIn 1
+		SetOutPath "$INSTDIR\App\Lib\site-packages\xlwt\"
+		File /r "${SOURCESFOLDER}\xlwt\xlwt-0.7.5\xlwt\*.*"
+	SectionEnd
 SectionGroupEnd
 
 
@@ -172,4 +187,10 @@ Function .onSelChange
 	${Unless} ${SectionIsSelected} ${MODULE_SIX}
         !insertmacro UnselectSection ${MODULE_PANDAS}
 	${EndIf}
+	${Unless} ${SectionIsSelected} ${MODULE_XLRD}
+        !insertmacro UnselectSection ${MODULE_XLUTILS}
+	${EndIf}
+	${Unless} ${SectionIsSelected} ${MODULE_XLWT}
+        !insertmacro UnselectSection ${MODULE_XLUTILS}
+	${EndIf}		
 FunctionEnd

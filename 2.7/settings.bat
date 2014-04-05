@@ -121,3 +121,18 @@ set SIX_DOWNLOAD="https://pypi.python.org/packages/source/s/six/six-1.6.1.tar.gz
 set SIX_FILE=six-1.6.1.tar.gz
 set SIX_FILE_TAR=six-1.6.1.tar
 set SIX_MD5=07d606ac08595d795bf926cc9985674f
+
+set XLRD_DOWNLOAD="https://pypi.python.org/packages/source/x/xlrd/xlrd-0.9.2.tar.gz"
+set XLRD_FILE=xlrd-0.9.2.tar.gz
+set XLRD_FILE_TAR=xlrd-0.9.2.tar
+set XLRD_MD5=91a81ee76233e9f3115acaaa1b251b0e
+
+set XLWT_DOWNLOAD="https://pypi.python.org/packages/source/x/xlwt/xlwt-0.7.5.tar.gz"
+set XLWT_FILE=xlwt-0.7.5.tar.gz
+set XLWT_FILE_TAR=xlwt-0.7.5.tar
+set XLWT_MD5=59cb5efd55319465dfcd25e6a485f03c
+
+set XLUTILS_DOWNLOAD="https://pypi.python.org/packages/source/x/xlutils/xlutils-1.7.0.tar.gz"
+set XLUTILS_FILE=xlutils-1.7.0.tar.gz
+set XLUTILS_FILE_TAR=xlutils-1.7.0.tar
+set XLUTILS_MD5=4dfeb7be1929c187252a6ebd03076009
