@@ -78,6 +78,15 @@ set MATPLOTLIB_DOWNLOAD="http://sourceforge.net/projects/matplotlib/files/matplo
 set MATPLOTLIB_FILE=matplotlib-1.3.1.win32-py2.7.exe
 set MATPLOTLIB_MD5=08953f7c4b2ddd7c233b0e42db51f13a
 
+set DATEUTIL_DOWNLOAD="https://pypi.python.org/packages/source/p/python-dateutil/python-dateutil-2.2.tar.gz"
+set DATEUTIL_FILE=python-dateutil-2.2.tar.gz
+set DATEUTIL_FILE_TAR=python-dateutil-2.2.tar
+set DATEUTIL_MD5=c1f654d0ff7e33999380a8ba9783fd5c
+
+set PYPARSING_DOWNLOAD="https://pypi.python.org/packages/any/p/pyparsing/pyparsing-2.0.1.win32-py2.7.exe"
+set PYPARSING_FILE=pyparsing-2.0.1.win32-py2.7.exe
+set PYPARSING_MD5=e312e220208383c0b87f3c36996cf47a
+
 set LXML_DOWNLOAD="http://pypi.python.org/packages/2.7/l/lxml/lxml-2.3.win32-py2.7.exe"
 set LXML_FILE=lxml-2.3.win32-py2.7.exe
 	
@@ -104,6 +113,11 @@ set IPYTHON_DOWNLOAD="https://pypi.python.org/packages/source/i/ipython/ipython-
 set IPYTHON_FILE=ipython-1.2.1.zip
 set IPYTHON_MD5=a4b36d55e2671c6e821018a63d50b8b1
 
-set PANDAS_DOWNLOAD="https://pypi.python.org/packages/2.7/p/pandas/pandas-0.13.1.win32-py2.7.exe"
-set PANDAS_FILE=pandas-0.13.1.win32-py2.7.exe
-set PANDAS_MD5=74b165f63d2675ac33acd5152f7c162f
+set PANDAS_DOWNLOAD="https://pypi.python.org/packages/2.7/p/pandas/pandas-0.11.0.win32-py2.7.exe"
+set PANDAS_FILE=pandas-0.11.0.win32-py2.7.exe
+set PANDAS_MD5=aaefa25cc5042f0408834f4d1f74ed10
+
+set SIX_DOWNLOAD="https://pypi.python.org/packages/source/s/six/six-1.6.1.tar.gz"
+set SIX_FILE=six-1.6.1.tar.gz
+set SIX_FILE_TAR=six-1.6.1.tar
+set SIX_MD5=07d606ac08595d795bf926cc9985674f

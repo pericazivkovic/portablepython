@@ -134,7 +134,23 @@ SectionGroup "Modules"
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\pandas\PLATLIB\*.*"
 	SectionEnd 
+	Section "Dateutil 2.2" MODULE_DATEUTIL
+		SectionIn 1
+		SetOutPath "$INSTDIR\App\Lib\site-packages\dateutil\"
+		File /r "${SOURCESFOLDER}\dateutil\python-dateutil-2.2\dateutil\*.*"
+	SectionEnd 
+	Section "PyParsing 2.0.1" MODULE_PYPARSING
+		SectionIn 1
+		SetOutPath "$INSTDIR\App\Lib\site-packages\"
+		File /r "${SOURCESFOLDER}\pyparsing\PURELIB\*.*"
+	SectionEnd 
+	Section "Six 1.6.1" MODULE_SIX
+		SectionIn 1
+		SetOutPath "$INSTDIR\App\Lib\site-packages\"
+		File "${SOURCESFOLDER}\SIX\six-1.6.1\six.py"
+	SectionEnd 	
 SectionGroupEnd
+
 
 SectionGroup "Code editors"
 	Section "PyScripter 2.5.3" IDE_PYSCRIPTER
@@ -144,3 +160,16 @@ SectionGroup "Code editors"
 		File "${SOURCESFOLDER}\PyScripter-Portable.exe"
 	SectionEnd
 SectionGroupEnd
+
+; Section dependencies
+Function .onSelChange
+	${Unless} ${SectionIsSelected} ${MODULE_DATEUTIL}
+        !insertmacro UnselectSection ${MODULE_MATPLOTLIB}
+	${EndIf}
+	${Unless} ${SectionIsSelected} ${MODULE_PYPARSING}
+        !insertmacro UnselectSection ${MODULE_MATPLOTLIB}
+	${EndIf}
+	${Unless} ${SectionIsSelected} ${MODULE_SIX}
+        !insertmacro UnselectSection ${MODULE_PANDAS}
+	${EndIf}
+FunctionEnd

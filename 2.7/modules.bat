@@ -36,6 +36,8 @@ call :UnpackPIL
 call :UnpackPy2Exe
 call :UnpackWxPython
 call :UnpackMatplotlib
+call :UnpackDateutil
+call :UnpackPyParsing
 call :UnpackLXML
 call :UnpackPySerial
 call :UnpackPyODBC
@@ -44,6 +46,7 @@ call :UnpackPyGTK
 call :UnpackPyQT
 call :UnpackIPython
 call :UnpackPandas
+call :UnpackSix
 
 goto:EOF
 
@@ -395,6 +398,57 @@ endlocal&goto :EOF
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:UnpackDateutil
+::
+:: By:   Perica Zivkovic
+:: Func: Downloads and extracts Dateutil   
+:: Args: none
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+setlocal ENABLEEXTENSIONS
+
+:: Download 
+call COMMON :DownloadFile %DATEUTIL_DOWNLOAD%
+
+:: Verify 
+call COMMON :VerifyFile %DATEUTIL_FILE% MD5 %DATEUTIL_MD5%
+
+:: Unpack files
+call COMMON :LogMessage "Extracting dateutil files"
+tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%DATEUTIL_FILE%" %UNPACK_FOLDER%\dateutil\
+tools\uniextract16\UniExtract.exe "%UNPACK_FOLDER%\dateutil\dist\%DATEUTIL_FILE_TAR%" %UNPACK_FOLDER%\dateutil\
+
+:: Fix
+call COMMON :FixMSCRT %UNPACK_FOLDER%\dateutil\
+
+endlocal&goto :EOF
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:UnpackPyParsing
+::
+:: By:   Perica Zivkovic
+:: Func: Downloads and extracts pyparsing   
+:: Args: none
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+setlocal ENABLEEXTENSIONS
+
+:: Download 
+call COMMON :DownloadFile %PYPARSING_DOWNLOAD%
+
+:: Verify 
+call COMMON :VerifyFile %PYPARSING_FILE% MD5 %PYPARSING_MD5%
+
+:: Unpack files
+call COMMON :LogMessage "Extracting pyparsing files"
+tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%PYPARSING_FILE%" %UNPACK_FOLDER%\pyparsing\
+
+:: Fix
+call COMMON :FixMSCRT %UNPACK_FOLDER%\pyparsing\
+
+endlocal&goto :EOF
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 :UnpackLXML
 ::
 :: By:   Perica Zivkovic
@@ -640,6 +694,32 @@ tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%PANDAS_FILE%" %UNPACK_FOLDER%\p
 
 :: Fix
 call COMMON :FixMSCRT %UNPACK_FOLDER%\pandas\
+
+endlocal&goto :EOF
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:UnpackSix
+::
+:: By:   Perica Zivkovic
+:: Func: Downloads and extracts six   
+:: Args: none
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+setlocal ENABLEEXTENSIONS
+
+:: Download 
+call COMMON :DownloadFile %SIX_DOWNLOAD%
+
+:: Verify 
+call COMMON :VerifyFile %SIX_FILE% MD5 %SIX_MD5%
+
+:: Unpack files
+call COMMON :LogMessage "Extracting SIX files"
+tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%SIX_FILE%" %UNPACK_FOLDER%\SIX\
+tools\uniextract16\UniExtract.exe "%UNPACK_FOLDER%\SIX\dist\%SIX_FILE_TAR%" %UNPACK_FOLDER%\SIX\
+
+:: Fix
+call COMMON :FixMSCRT %UNPACK_FOLDER%\SIX\
 
 endlocal&goto :EOF
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
