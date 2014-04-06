@@ -87,8 +87,9 @@ set PYPARSING_DOWNLOAD="https://pypi.python.org/packages/any/p/pyparsing/pyparsi
 set PYPARSING_FILE=pyparsing-2.0.1.win32-py2.7.exe
 set PYPARSING_MD5=e312e220208383c0b87f3c36996cf47a
 
-set LXML_DOWNLOAD="http://pypi.python.org/packages/2.7/l/lxml/lxml-2.3.win32-py2.7.exe"
-set LXML_FILE=lxml-2.3.win32-py2.7.exe
+set LXML_DOWNLOAD="https://pypi.python.org/packages/2.7/l/lxml/lxml-3.3.4.win32-py2.7.exe"
+set LXML_FILE=lxml-3.3.4.win32-py2.7.exe
+set LXML_MD5=55384beefb503549675f752697c2095f
 	
 set PY_SERIAL_DOWNLOAD="http://sourceforge.net/projects/pyserial/files/pyserial/2.7/pyserial-2.7.win32.exe"
 set PY_SERIAL_FILE=pyserial-2.7.win32.exe

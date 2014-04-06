@@ -464,6 +464,9 @@ setlocal ENABLEEXTENSIONS
 :: Download 
 call COMMON :DownloadFile %LXML_DOWNLOAD%
 
+:: Verify
+call COMMON :VerifyFile %LXML_FILE% MD5 %LXML_MD5%
+
 :: Unpack files
 call COMMON :LogMessage "Extracting LXML files"
 tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%LXML_FILE%" %UNPACK_FOLDER%\lxml\

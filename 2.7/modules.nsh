@@ -82,7 +82,7 @@ SectionGroup "Modules"
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\matplotlib\PLATLIB\*.*"
 	SectionEnd
-	Section "lxml 2.3" MODULE_LXML
+	Section "lxml 3.3.4" MODULE_LXML
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\lxml\PLATLIB\*.*"

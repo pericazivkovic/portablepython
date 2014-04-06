@@ -62,7 +62,7 @@ class TestModuleImports(unittest.TestCase):
 
 	def test_lxml(self):
 		from lxml import etree
-		self.assertEqual(etree.LXML_VERSION, (2, 3, 0, 0))
+		self.assertEqual(etree.LXML_VERSION, (3, 3, 4, 0))
 
 	def test_pyserial(self):
 		import serial
@@ -91,6 +91,22 @@ class TestModuleImports(unittest.TestCase):
 	def test_pandas(self):
 		import pandas
 		self.assertEqual(pandas.__version__, "0.11.0")
+
+	def test_xlwt(self):
+		import xlwt
+		self.assertEqual(xlwt.__VERSION__, "0.7.5")
+
+	def test_xlrd(self):
+		import xlrd
+		self.assertEqual(xlrd.__VERSION__, "0.9.2")
+
+	def test_xlutils(self):
+		import xlutils
+		self.assertEqual(xlutils.__name__, "xlutils")
+
+	def test_openpyxl(self):
+		import openpyxl
+		self.assertEqual(openpyxl.__version__, "1.8.5")
 
 if __name__ == '__main__':
 	unittest.main()
