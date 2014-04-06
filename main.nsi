@@ -70,6 +70,9 @@ SetDatablockOptimize On
 ; MUI 1.67 compatible ------
 !include "MUI2.nsh"
 
+!include Sections.nsh
+!include LogicLib.nsh
+
 ; MUI Settings
 !define MUI_ABORTWARNING
 !define MUI_ICON "${NSISDIR}\Contrib\Graphics\Icons\modern-install.ico"

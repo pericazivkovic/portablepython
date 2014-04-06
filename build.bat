@@ -51,7 +51,7 @@ if not exist %1 (
 :: Load variables for specified version
 call .\%1\settings.bat 
 
-set TEMP_FOLDER=%TEMP%\PortablePython.v.%PY_VERSION%.%PP_VERSION%.Build
+set TEMP_FOLDER=%TEMP%PortablePython.v.%PY_VERSION%.%PP_VERSION%.Build
 set BIN_FOLDER=%TEMP_FOLDER%\binaries
 set UNPACK_FOLDER=%TEMP_FOLDER%\unpacked
 set OUTPUT_FOLDER=%TEMP_FOLDER%\output
