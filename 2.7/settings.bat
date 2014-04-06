@@ -136,3 +136,8 @@ set XLUTILS_DOWNLOAD="https://pypi.python.org/packages/source/x/xlutils/xlutils-
 set XLUTILS_FILE=xlutils-1.7.0.tar.gz
 set XLUTILS_FILE_TAR=xlutils-1.7.0.tar
 set XLUTILS_MD5=4dfeb7be1929c187252a6ebd03076009
+
+set OPENPYXL_DOWNLOAD="https://pypi.python.org/packages/source/o/openpyxl/openpyxl-1.8.5.tar.gz"
+set OPENPYXL_FILE=openpyxl-1.8.5.tar.gz
+set OPENPYXL_FILE_TAR=openpyxl-1.8.5.tar
+set OPENPYXL_MD5=6f2eca608c3129dbfd77982713565709

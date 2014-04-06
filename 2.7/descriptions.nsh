@@ -51,6 +51,7 @@ LangString DESC_MODULE_SIX ${LANG_ENGLISH} "Six is a Python 2 and 3 compatibilit
 LangString DESC_MODULE_XLRD ${LANG_ENGLISH} "Library for developers to extract data from Microsoft Excel (tm) spreadsheet files"
 LangString DESC_MODULE_XLWT ${LANG_ENGLISH} "Library to create spreadsheet files compatible with MS Excel 97/2000/XP/2003 XLS files, on any platform, with Python 2.3 to 2.7"
 LangString DESC_MODULE_XLUTILS ${LANG_ENGLISH} "Utilities for working with Excel files that require both xlrd and xlwt"
+LangString DESC_MODULE_OPENPYXL ${LANG_ENGLISH} "A Python library to read/write Excel 2007 xlsx/xlsm files"
 
 !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
   !insertmacro MUI_DESCRIPTION_TEXT ${PYTHON_CORE} $(DESC_PYTHON_CORE)
@@ -78,4 +79,5 @@ LangString DESC_MODULE_XLUTILS ${LANG_ENGLISH} "Utilities for working with Excel
   !insertmacro MUI_DESCRIPTION_TEXT ${MODULE_XLRD} $(DESC_MODULE_XLRD)
   !insertmacro MUI_DESCRIPTION_TEXT ${MODULE_XLWT} $(DESC_MODULE_XLWT)
   !insertmacro MUI_DESCRIPTION_TEXT ${MODULE_XLUTILS} $(DESC_MODULE_XLUTILS)
+  !insertmacro MUI_DESCRIPTION_TEXT ${MODULE_OPENPYXL} $(DESC_MODULE_OPENPYXL)
 !insertmacro MUI_FUNCTION_DESCRIPTION_END

@@ -164,6 +164,11 @@ SectionGroup "Modules"
 		SetOutPath "$INSTDIR\App\Lib\site-packages\xlwt\"
 		File /r "${SOURCESFOLDER}\xlwt\xlwt-0.7.5\xlwt\*.*"
 	SectionEnd
+	Section "OpenPyXL 1.8.5" MODULE_OPENPYXL
+		SectionIn 1
+		SetOutPath "$INSTDIR\App\Lib\site-packages\openpyxl\"
+		File /r "${SOURCESFOLDER}\openpyxl\openpyxl-1.8.5\openpyxl\*.*"
+	SectionEnd
 SectionGroupEnd
 
 

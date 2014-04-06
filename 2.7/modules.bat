@@ -50,6 +50,7 @@ call :UnpackSix
 call :UnpackXLrd
 call :UnpackXLwt
 call :UnpackXLUtils
+call :UnpackOpenPyXL
 
 goto:EOF
 
@@ -799,6 +800,32 @@ tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%XLUTILS_FILE%" %UNPACK_FOLDER%\
 
 :: Fix
 call COMMON :FixMSCRT %UNPACK_FOLDER%\XLUTILS\
+
+endlocal&goto :EOF
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:UnpackOpenPyXL
+::
+:: By:   Perica Zivkovic
+:: Func: Downloads and extracts openpyxl   
+:: Args: none
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+setlocal ENABLEEXTENSIONS
+
+:: Download 
+call COMMON :DownloadFile %OPENPYXL_DOWNLOAD%
+
+:: Verify 
+call COMMON :VerifyFile %OPENPYXL_FILE% MD5 %OPENPYXL_MD5%
+
+:: Unpack files
+call COMMON :LogMessage "Extracting OPENPYXL files"
+tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%OPENPYXL_FILE%" %UNPACK_FOLDER%\OPENPYXL\
+tools\uniextract16\UniExtract.exe "%UNPACK_FOLDER%\OPENPYXL\dist\%OPENPYXL_FILE_TAR%" %UNPACK_FOLDER%\OPENPYXL\
+
+:: Fix
+call COMMON :FixMSCRT %UNPACK_FOLDER%\OPENPYXL\
 
 endlocal&goto :EOF
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
