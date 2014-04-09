@@ -108,6 +108,6 @@ set PANDAS_DOWNLOAD="https://pypi.python.org/packages/2.7/p/pandas/pandas-0.11.0
 set PANDAS_FILE=pandas-0.11.0.win32-py2.7.exe
 set PANDAS_MD5=aaefa25cc5042f0408834f4d1f74ed10
 
-set PYCHARM_DOWNLOAD="http://download.jetbrains.com/python/pycharm-community-3.1.1.exe"
-set PYCHARM_FILE=pycharm-community-3.1.1.exe
-set PYCHARM_MD5=610522DA6E8092896CEDA4355C2DBFC6
+set PYCHARM_DOWNLOAD="http://download-cf.jetbrains.com/python/pycharm-community-3.1.2.exe"
+set PYCHARM_FILE=pycharm-community-3.1.2.exe
+set PYCHARM_MD5=4707668758b044bf5a4214557e7a15fa
