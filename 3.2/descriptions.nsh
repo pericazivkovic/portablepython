@@ -28,6 +28,7 @@
 
 LangString DESC_PYTHON_CORE ${LANG_ENGLISH} "Installs Python core engine. This component is required and can not be deselected."
 LangString DESC_IDE_PYSCRIPTER ${LANG_ENGLISH} "PyScripter is a free and open-source Python Integrated Development Environment (IDE)."
+LangString DESC_IDE_PYCHARM ${LANG_ENGLISH} "PyCharm Community is a free Python Integrated Development Environment (IDE)."
 LangString DESC_MODULE_PYWIN32 ${LANG_ENGLISH} "Python Extensions for Windows."
 LangString DESC_MODULE_NETWORKX ${LANG_ENGLISH} "Python package for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks."
 LangString DESC_MODULE_PY_SERIAL ${LANG_ENGLISH} "This module encapsulates the access for the serial port."
@@ -44,6 +45,7 @@ LangString DESC_MODULE_PANDAS ${LANG_ENGLISH} "Pandas is a Python package provid
 !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
   !insertmacro MUI_DESCRIPTION_TEXT ${PYTHON_CORE} $(DESC_PYTHON_CORE)
   !insertmacro MUI_DESCRIPTION_TEXT ${IDE_PYSCRIPTER} $(DESC_IDE_PYSCRIPTER)
+  !insertmacro MUI_DESCRIPTION_TEXT ${IDE_PYCHARM} $(DESC_IDE_PYCHARM)
   !insertmacro MUI_DESCRIPTION_TEXT ${MODULE_PYWIN32} $(DESC_MODULE_PYWIN32)
   !insertmacro MUI_DESCRIPTION_TEXT ${MODULE_NETWORKX} $(DESC_MODULE_NETWORKX)
   !insertmacro MUI_DESCRIPTION_TEXT ${MODULE_PY_SERIAL} $(DESC_MODULE_PY_SERIAL)

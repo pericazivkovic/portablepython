@@ -28,6 +28,7 @@
 
 LangString DESC_PYTHON_CORE ${LANG_ENGLISH} "Installs Python core engine. This component is required and can not be deselected."
 LangString DESC_IDE_PYSCRIPTER ${LANG_ENGLISH} "PyScripter is a free and open-source Python Integrated Development Environment (IDE)."
+LangString DESC_IDE_PYCHARM ${LANG_ENGLISH} "PyCharm Community is a free Python Integrated Development Environment (IDE)."
 LangString DESC_MODULE_NUMPY ${LANG_ENGLISH} "NumPy is the fundamental package needed for scientific computing with Python."
 LangString DESC_MODULE_SCIPY ${LANG_ENGLISH} "SciPy is open-source software for mathematics, science, and engineering"
 LangString DESC_MODULE_PYWIN32 ${LANG_ENGLISH} "Python Extensions for Windows"
@@ -56,6 +57,7 @@ LangString DESC_MODULE_OPENPYXL ${LANG_ENGLISH} "A Python library to read/write 
 !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
   !insertmacro MUI_DESCRIPTION_TEXT ${PYTHON_CORE} $(DESC_PYTHON_CORE)
   !insertmacro MUI_DESCRIPTION_TEXT ${IDE_PYSCRIPTER} $(DESC_IDE_PYSCRIPTER)
+  !insertmacro MUI_DESCRIPTION_TEXT ${IDE_PYCHARM} $(DESC_IDE_PYCHARM)
   !insertmacro MUI_DESCRIPTION_TEXT ${MODULE_NUMPY} $(DESC_MODULE_NUMPY)
   !insertmacro MUI_DESCRIPTION_TEXT ${MODULE_SCIPY} $(DESC_MODULE_SCIPY)
   !insertmacro MUI_DESCRIPTION_TEXT ${MODULE_PYWIN32} $(DESC_MODULE_PYWIN32)
