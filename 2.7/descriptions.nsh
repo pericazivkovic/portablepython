@@ -28,6 +28,7 @@
 
 LangString DESC_PYTHON_CORE ${LANG_ENGLISH} "Installs Python core engine. This component is required and can not be deselected."
 LangString DESC_IDE_PYSCRIPTER ${LANG_ENGLISH} "PyScripter is a free and open-source Python Integrated Development Environment (IDE)."
+LangString DESC_IDE_PYCHARM ${LANG_ENGLISH} "PyCharm Community is a free Python Integrated Development Environment (IDE)."
 LangString DESC_MODULE_NUMPY ${LANG_ENGLISH} "NumPy is the fundamental package needed for scientific computing with Python."
 LangString DESC_MODULE_SCIPY ${LANG_ENGLISH} "SciPy is open-source software for mathematics, science, and engineering"
 LangString DESC_MODULE_PYWIN32 ${LANG_ENGLISH} "Python Extensions for Windows"
@@ -45,11 +46,19 @@ LangString DESC_MODULE_PYGTK ${LANG_ENGLISH} "PyGTK lets you to easily create pr
 LangString DESC_MODULE_PYQT ${LANG_ENGLISH} "PYQT is a set of Python bindings for Nokia's Qt application framework implemented as a set of Python modules and contain over 300 classes and over 6,000 functions and methods."
 LangString DESC_MODULE_IPYTHON ${LANG_ENGLISH} "IPython provides a rich toolkit to help you make the most out of using Python interactively."
 LangString DESC_MODULE_PANDAS ${LANG_ENGLISH} "Pandas is a Python package providing fast, flexible, and expressive data structures designed to make working with structured (tabular, multidimensional, potentially heterogeneous) and time series data both easy and intuitive."
+LangString DESC_MODULE_DATEUTIL ${LANG_ENGLISH} "The dateutil module provides powerful extensions to the datetime module available in the Python standard library."
+LangString DESC_MODULE_PYPARSING ${LANG_ENGLISH} "The pyparsing module is an alternative approach to creating and executing simple grammars, vs. the traditional lex/yacc approach, or the use of regular expressions."
+LangString DESC_MODULE_SIX ${LANG_ENGLISH} "Six is a Python 2 and 3 compatibility library. It provides utility functions for smoothing over the differences between the Python versions with the goal of writing Python code that is compatible on both Python versions."
+LangString DESC_MODULE_XLRD ${LANG_ENGLISH} "Library for developers to extract data from Microsoft Excel (tm) spreadsheet files"
+LangString DESC_MODULE_XLWT ${LANG_ENGLISH} "Library to create spreadsheet files compatible with MS Excel 97/2000/XP/2003 XLS files, on any platform, with Python 2.3 to 2.7"
+LangString DESC_MODULE_XLUTILS ${LANG_ENGLISH} "Utilities for working with Excel files that require both xlrd and xlwt"
+LangString DESC_MODULE_OPENPYXL ${LANG_ENGLISH} "A Python library to read/write Excel 2007 xlsx/xlsm files"
 LangString DESC_PIP_MODULE_IPYTHON ${LANG_ENGLISH} "Alternative pip installation for IPython. IPython provides a rich toolkit to help you make the most out of using Python interactively."
 
 !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
   !insertmacro MUI_DESCRIPTION_TEXT ${PYTHON_CORE} $(DESC_PYTHON_CORE)
   !insertmacro MUI_DESCRIPTION_TEXT ${IDE_PYSCRIPTER} $(DESC_IDE_PYSCRIPTER)
+  !insertmacro MUI_DESCRIPTION_TEXT ${IDE_PYCHARM} $(DESC_IDE_PYCHARM)
   !insertmacro MUI_DESCRIPTION_TEXT ${MODULE_NUMPY} $(DESC_MODULE_NUMPY)
   !insertmacro MUI_DESCRIPTION_TEXT ${MODULE_SCIPY} $(DESC_MODULE_SCIPY)
   !insertmacro MUI_DESCRIPTION_TEXT ${MODULE_PYWIN32} $(DESC_MODULE_PYWIN32)
@@ -67,5 +76,15 @@ LangString DESC_PIP_MODULE_IPYTHON ${LANG_ENGLISH} "Alternative pip installation
   !insertmacro MUI_DESCRIPTION_TEXT ${MODULE_PYQT} $(DESC_MODULE_PYQT)
   !insertmacro MUI_DESCRIPTION_TEXT ${MODULE_IPYTHON} $(DESC_MODULE_IPYTHON)
   !insertmacro MUI_DESCRIPTION_TEXT ${MODULE_PANDAS} $(DESC_MODULE_PANDAS)
+<<<<<<< HEAD
   !insertmacro MUI_DESCRIPTION_TEXT ${PIP_MODULE_IPYTHON} $(DESC_PIP_MODULE_IPYTHON)
+=======
+  !insertmacro MUI_DESCRIPTION_TEXT ${MODULE_DATEUTIL} $(DESC_MODULE_DATEUTIL)
+  !insertmacro MUI_DESCRIPTION_TEXT ${MODULE_PYPARSING} $(DESC_MODULE_PYPARSING)
+  !insertmacro MUI_DESCRIPTION_TEXT ${MODULE_SIX} $(DESC_MODULE_SIX)
+  !insertmacro MUI_DESCRIPTION_TEXT ${MODULE_XLRD} $(DESC_MODULE_XLRD)
+  !insertmacro MUI_DESCRIPTION_TEXT ${MODULE_XLWT} $(DESC_MODULE_XLWT)
+  !insertmacro MUI_DESCRIPTION_TEXT ${MODULE_XLUTILS} $(DESC_MODULE_XLUTILS)
+  !insertmacro MUI_DESCRIPTION_TEXT ${MODULE_OPENPYXL} $(DESC_MODULE_OPENPYXL)
+>>>>>>> pporigin/master
 !insertmacro MUI_FUNCTION_DESCRIPTION_END

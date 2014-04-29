@@ -34,6 +34,7 @@ goto:EOF
 
 call :UnpackPython
 call :UnpackPyScripter 
+call :UnpackPyCharm
 call :UnpackNumPy
 call :UnpackSciPy
 call :UnpackPyWin32
@@ -43,6 +44,8 @@ call :UnpackPIL
 call :UnpackPy2Exe
 call :UnpackWxPython
 call :UnpackMatplotlib
+call :UnpackDateutil
+call :UnpackPyParsing
 call :UnpackLXML
 call :UnpackPySerial
 call :UnpackPyODBC
@@ -51,6 +54,11 @@ call :UnpackPyGTK
 call :UnpackPyQT
 call :UnpackIPython
 call :UnpackPandas
+call :UnpackSix
+call :UnpackXLrd
+call :UnpackXLwt
+call :UnpackXLUtils
+call :UnpackOpenPyXL
 
 goto:EOF
 
@@ -393,10 +401,61 @@ call COMMON :VerifyFile %MATPLOTLIB_FILE% MD5 %MATPLOTLIB_MD5%
 
 :: Unpack files
 call COMMON :LogMessage "Extracting matplotlib files"
-tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%MATPLOTLIB_FILE%" %UNPACK_FOLDER%\matplotlib\
+tools\uniextract16\bin\7z.exe x "%BIN_FOLDER%\%MATPLOTLIB_FILE%" -o%UNPACK_FOLDER%\matplotlib\ -y >NUL
 
 :: Fix
 call COMMON :FixMSCRT %UNPACK_FOLDER%\matplotlib\
+
+endlocal&goto :EOF
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:UnpackDateutil
+::
+:: By:   Perica Zivkovic
+:: Func: Downloads and extracts Dateutil   
+:: Args: none
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+setlocal ENABLEEXTENSIONS
+
+:: Download 
+call COMMON :DownloadFile %DATEUTIL_DOWNLOAD%
+
+:: Verify 
+call COMMON :VerifyFile %DATEUTIL_FILE% MD5 %DATEUTIL_MD5%
+
+:: Unpack files
+call COMMON :LogMessage "Extracting dateutil files"
+tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%DATEUTIL_FILE%" %UNPACK_FOLDER%\dateutil\
+tools\uniextract16\UniExtract.exe "%UNPACK_FOLDER%\dateutil\dist\%DATEUTIL_FILE_TAR%" %UNPACK_FOLDER%\dateutil\
+
+:: Fix
+call COMMON :FixMSCRT %UNPACK_FOLDER%\dateutil\
+
+endlocal&goto :EOF
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:UnpackPyParsing
+::
+:: By:   Perica Zivkovic
+:: Func: Downloads and extracts pyparsing   
+:: Args: none
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+setlocal ENABLEEXTENSIONS
+
+:: Download 
+call COMMON :DownloadFile %PYPARSING_DOWNLOAD%
+
+:: Verify 
+call COMMON :VerifyFile %PYPARSING_FILE% MD5 %PYPARSING_MD5%
+
+:: Unpack files
+call COMMON :LogMessage "Extracting pyparsing files"
+tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%PYPARSING_FILE%" %UNPACK_FOLDER%\pyparsing\
+
+:: Fix
+call COMMON :FixMSCRT %UNPACK_FOLDER%\pyparsing\
 
 endlocal&goto :EOF
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -412,6 +471,9 @@ setlocal ENABLEEXTENSIONS
 
 :: Download 
 call COMMON :DownloadFile %LXML_DOWNLOAD%
+
+:: Verify
+call COMMON :VerifyFile %LXML_FILE% MD5 %LXML_MD5%
 
 :: Unpack files
 call COMMON :LogMessage "Extracting LXML files"
@@ -553,7 +615,7 @@ call COMMON :VerifyFile %PYQT_FILE% MD5 %PYQT_MD5%
 
 :: Unpack files
 call COMMON :LogMessage "Extracting PyQT files"
-tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%PYQT_FILE%" %UNPACK_FOLDER%\pyqt\
+tools\uniextract16\bin\7z.exe x "%BIN_FOLDER%\%PYQT_FILE%" -o%UNPACK_FOLDER%\pyqt\ -y >NUL
 
 :: Patch uic
 call COMMON :LogMessage "Patching PyQt4 uic"
@@ -647,6 +709,189 @@ tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%PANDAS_FILE%" %UNPACK_FOLDER%\p
 
 :: Fix
 call COMMON :FixMSCRT %UNPACK_FOLDER%\pandas\
+
+endlocal&goto :EOF
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:UnpackSix
+::
+:: By:   Perica Zivkovic
+:: Func: Downloads and extracts six   
+:: Args: none
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+setlocal ENABLEEXTENSIONS
+
+:: Download 
+call COMMON :DownloadFile %SIX_DOWNLOAD%
+
+:: Verify 
+call COMMON :VerifyFile %SIX_FILE% MD5 %SIX_MD5%
+
+:: Unpack files
+call COMMON :LogMessage "Extracting SIX files"
+tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%SIX_FILE%" %UNPACK_FOLDER%\SIX\
+tools\uniextract16\UniExtract.exe "%UNPACK_FOLDER%\SIX\dist\%SIX_FILE_TAR%" %UNPACK_FOLDER%\SIX\
+
+:: Fix
+call COMMON :FixMSCRT %UNPACK_FOLDER%\SIX\
+
+endlocal&goto :EOF
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:UnpackXLrd
+::
+:: By:   Perica Zivkovic
+:: Func: Downloads and extracts xlrd   
+:: Args: none
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+setlocal ENABLEEXTENSIONS
+
+:: Download 
+call COMMON :DownloadFile %XLRD_DOWNLOAD%
+
+:: Verify 
+call COMMON :VerifyFile %XLRD_FILE% MD5 %XLRD_MD5%
+
+:: Unpack files
+call COMMON :LogMessage "Extracting XLRD files"
+tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%XLRD_FILE%" %UNPACK_FOLDER%\XLRD\
+tools\uniextract16\UniExtract.exe "%UNPACK_FOLDER%\XLRD\dist\%XLRD_FILE_TAR%" %UNPACK_FOLDER%\XLRD\
+
+:: Fix
+call COMMON :FixMSCRT %UNPACK_FOLDER%\XLRD\
+
+endlocal&goto :EOF
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:UnpackXLwt
+::
+:: By:   Perica Zivkovic
+:: Func: Downloads and extracts xlwt   
+:: Args: none
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+setlocal ENABLEEXTENSIONS
+
+:: Download 
+call COMMON :DownloadFile %XLWT_DOWNLOAD%
+
+:: Verify 
+call COMMON :VerifyFile %XLWT_FILE% MD5 %XLWT_MD5%
+
+:: Unpack files
+call COMMON :LogMessage "Extracting XLWT files"
+tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%XLWT_FILE%" %UNPACK_FOLDER%\XLWT\
+
+:: Fix
+call COMMON :FixMSCRT %UNPACK_FOLDER%\XLWT\
+
+endlocal&goto :EOF
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:UnpackXLUtils
+::
+:: By:   Perica Zivkovic
+:: Func: Downloads and extracts xlutils   
+:: Args: none
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+setlocal ENABLEEXTENSIONS
+
+:: Download 
+call COMMON :DownloadFile %XLUTILS_DOWNLOAD%
+
+:: Verify 
+call COMMON :VerifyFile %XLUTILS_FILE% MD5 %XLUTILS_MD5%
+
+:: Unpack files
+call COMMON :LogMessage "Extracting XLUTILS files"
+tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%XLUTILS_FILE%" %UNPACK_FOLDER%\XLUTILS\
+
+:: Fix
+call COMMON :FixMSCRT %UNPACK_FOLDER%\XLUTILS\
+
+endlocal&goto :EOF
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:UnpackOpenPyXL
+::
+:: By:   Perica Zivkovic
+:: Func: Downloads and extracts openpyxl   
+:: Args: none
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+setlocal ENABLEEXTENSIONS
+
+:: Download 
+call COMMON :DownloadFile %OPENPYXL_DOWNLOAD%
+
+:: Verify 
+call COMMON :VerifyFile %OPENPYXL_FILE% MD5 %OPENPYXL_MD5%
+
+:: Unpack files
+call COMMON :LogMessage "Extracting OPENPYXL files"
+tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%OPENPYXL_FILE%" %UNPACK_FOLDER%\OPENPYXL\
+tools\uniextract16\UniExtract.exe "%UNPACK_FOLDER%\OPENPYXL\dist\%OPENPYXL_FILE_TAR%" %UNPACK_FOLDER%\OPENPYXL\
+
+:: Fix
+call COMMON :FixMSCRT %UNPACK_FOLDER%\OPENPYXL\
+
+endlocal&goto :EOF
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:UnpackPyCharm
+::
+:: By:   Krzysztof Cebulski
+:: Func: Downloads and extracts PyCharm Community Edition
+:: Args: none
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+setlocal ENABLEEXTENSIONS
+:: Download PyCharm
+call COMMON :DownloadFile %PYCHARM_DOWNLOAD%
+
+:: Verify 
+call COMMON :VerifyFile %PYCHARM_FILE% MD5 %PYCHARM_MD5%
+
+:: Unpack files
+call COMMON :LogMessage "Extracting PyCharm files"
+tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%PYCHARM_FILE%" %UNPACK_FOLDER%\pycharm-temp >NUL
+
+:: Copy files to PyCharm folder
+call COMMON :LogMessage "Copy files to PyCharm folder"
+RD %UNPACK_FOLDER%\pycharm-temp\$PLUGINSDIR /S /Q
+RD %UNPACK_FOLDER%\pycharm-temp\bin\$PLUGINSDIR /S /Q
+mkdir %UNPACK_FOLDER%\PyCharm
+mkdir %UNPACK_FOLDER%\PyCharm\App
+move /Y "%UNPACK_FOLDER%\pycharm-temp" "%UNPACK_FOLDER%\PyCharm\App\PyCharm"
+
+:: Patch PyCharm
+call COMMON :LogMessage "Patch PyCharm"
+del %UNPACK_FOLDER%\PyCharm\App\PyCharm\bin\idea.properties /Q
+tools\uniextract16\UniExtract.exe "patches\PyCharm.3.1.x.PPpatch" "%UNPACK_FOLDER%\PyCharm\App\PyCharm" >NUL
+
+:: Replace @PY_VERSION@ in jdk.table.xml.tmp to %PY_VERSION% jdk.table.xml
+setlocal ENABLEDELAYEDEXPANSION
+set filein="%UNPACK_FOLDER%\PyCharm\App\PyCharm\.PyCharm30\config\options\jdk.table.xml.tmp"
+set fileout="%UNPACK_FOLDER%\PyCharm\App\PyCharm\.PyCharm30\config\options\jdk.table.xml"
+set old=@PY_VERSION@
+set new=%PY_VERSION%
+for /f "tokens=* delims=¶" %%i in ( '"type %filein%"') do (
+	set str=%%i
+	set str=!str:%old%=%new%!
+	echo !str! >> %fileout%	
+)
+del %filein%
+
+:: Build Shortcut
+call COMMON :LogMessage "Build PyCharm shortcut"
+tools\nsis\makensis.exe /V0 /DSHORTCUTNAME=PyCharm /DPY_VERSION=%PY_VERSION% /DPP_VERSION=%PP_VERSION% shortcuts\shortcut.nsi
+
+:: Copy shortcuts
+call COMMON :LogMessage "Copy PyCharm shortcut"
+copy shortcuts\PyCharm-Portable.exe "%UNPACK_FOLDER%" >NUL
 
 endlocal&goto :EOF
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
