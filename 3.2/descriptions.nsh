@@ -37,6 +37,7 @@ LangString DESC_MODULE_SCIPY ${LANG_ENGLISH} "SciPy is open-source software for 
 LangString DESC_MODULE_MATPLOTLIB ${LANG_ENGLISH} "2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms"
 LangString DESC_MODULE_LXML ${LANG_ENGLISH} "Powerful and Pythonic XML processing library combining libxml2/libxslt with the ElementTree API."
 LangString DESC_MODULE_PYODBC ${LANG_ENGLISH} "Module that allows you to use ODBC to connect to almost any database from Windows, Linux, OS/X, and more."
+LangString DESC_MODULE_PYGAME ${LANG_ENGLISH} "Pygame adds functionality on top of the excellent SDL library so that you can create fully featured games and multimedia programs."
 LangString DESC_MODULE_PYQT ${LANG_ENGLISH} "PYQT is a set of Python bindings for Nokia's Qt application framework implemented as a set of Python modules and contain over 300 classes and over 6,000 functions and methods."
 LangString DESC_MODULE_IPYTHON ${LANG_ENGLISH} "IPython provides a rich toolkit to help you make the most out of using Python interactively."
 LangString DESC_MODULE_PANDAS ${LANG_ENGLISH} "Pandas is a Python package providing fast, flexible, and expressive data structures designed to make working with structured (tabular, multidimensional, potentially heterogeneous) and time series data both easy and intuitive."

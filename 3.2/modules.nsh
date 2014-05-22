@@ -75,6 +75,11 @@ SectionGroup "Modules"
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\pyodbc\PLATLIB\*.*"
 	SectionEnd
+	Section "PyGame 1.9.2a0" MODULE_PYGAME
+		SectionIn 1
+		SetOutPath "$INSTDIR\App\"
+		File /r "${SOURCESFOLDER}\pygame\*.*"
+	SectionEnd
 	Section "PyQT 4.9.6-1" MODULE_PYQT
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\"

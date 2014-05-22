@@ -74,6 +74,9 @@ set PYODBC_DOWNLOAD="http://pyodbc.googlecode.com/files/pyodbc-3.0.2.win32-py3.2
 set PYODBC_FILE=pyodbc-3.0.2.win32-py3.2.exe
 set PYODBC_SHA1=9abe8b36be9f3a2dbb427a4a049e9b70cd909c6d
 
+set PYGAME_DOWNLOAD="http://pygame.org/ftp/pygame-1.9.2a0.win32-py3.2.msi"
+set PYGAME_FILE=pygame-1.9.2a0.win32-py3.2.msi
+
 set PYQT_DOWNLOAD="http://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.9.6/PyQt-Py3.2-x86-gpl-4.9.6-1.exe"
 set PYQT_FILE=PyQt-Py3.2-x86-gpl-4.9.6-1.exe
 set PYQT_MD5=9c4a1b3b1246e936c3439c0e8a1d5774
