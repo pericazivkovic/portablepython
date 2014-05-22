@@ -36,6 +36,7 @@ call :UnpackMatplotlib
 call :UnpackLXML
 call :UnpackPySerial
 call :UnpackPyODBC
+call :UnpackPyGame
 call :UnpackPyQT
 call :UnpackIPython
 call :UnpackPandas
@@ -355,6 +356,31 @@ tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%PYODBC_FILE%" %UNPACK_FOLDER%\p
 
 :: Fix
 call COMMON :FixMSCRT %UNPACK_FOLDER%\pyodbc\
+
+endlocal&goto :EOF
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:UnpackPyGame
+::
+:: By:   Perica Zivkovic
+:: Func: Downloads and extracts PyGame
+:: Args: none
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+setlocal ENABLEEXTENSIONS
+
+:: Download 
+call COMMON :DownloadFile %PYGAME_DOWNLOAD%
+
+:: Unpack files
+call COMMON :LogMessage "Extracting PyGame files"
+msiexec /quiet /a "%BIN_FOLDER%\%PYGAME_FILE%" TARGETDIR="%UNPACK_FOLDER%\pygame\"
+
+:: Cleanup
+del /F /Q "%UNPACK_FOLDER%\pygame\%PYGAME_FILE%"
+
+:: Fix
+call COMMON :FixMSCRT %UNPACK_FOLDER%\pygame\
 
 endlocal&goto :EOF
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
