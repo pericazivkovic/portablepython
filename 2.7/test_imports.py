@@ -8,7 +8,7 @@ class TestCoreSystem(unittest.TestCase):
 
 	def test_setuptools(self):
 		import setuptools
-		self.assertEqual(setuptools.__version__, "0.6c11")		
+		self.assertEqual(setuptools.__version__, "0.6c11")
 
 class TestModuleImports(unittest.TestCase):
 	"""Simple set of tests for package imports in case of full installation"""
