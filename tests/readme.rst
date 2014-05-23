@@ -20,7 +20,8 @@ or
 `pp_testpackagename_py3.py`.
 
 This is the **portable shebang** you should be using:
-* `#!/usr/bin/env python`
+
+* ``#!/usr/bin/env python``
 
 Sanity tests and to show things are actually working right for said item.
 
@@ -28,7 +29,8 @@ These are meant to be run with portable python. Yes, the portable one, not
 one you might happen to have installed locally.
 
 Example run: P as in portable thumbdrive letter...
-* P:\Portable_Python\Python-Portable.exe "pathto\tests\pp_wxPython.py"
+
+* ``P:\Portable_Python\Python-Portable.exe "path\to\tests\pp_wxPython.py"``
 
 Task List
 ---------
