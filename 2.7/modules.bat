@@ -1,22 +1,22 @@
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 :: The MIT License (MIT)
 :: Copyright (c) 2007 Perica Zivkovic
- 
-:: Permission is hereby granted, free of charge, to any person obtaining a 
-:: copy of this software and associated documentation files (the "Software"), 
-:: to deal in the Software without restriction, including without limitation 
-:: the rights to use, copy, modify, merge, publish, distribute, sublicense, 
-:: and/or sell copies of the Software, and to permit persons to whom the 
+
+:: Permission is hereby granted, free of charge, to any person obtaining a
+:: copy of this software and associated documentation files (the "Software"),
+:: to deal in the Software without restriction, including without limitation
+:: the rights to use, copy, modify, merge, publish, distribute, sublicense,
+:: and/or sell copies of the Software, and to permit persons to whom the
 :: Software is furnished to do so, subject to the following conditions:
- 
-:: The above copyright notice and this permission notice shall be included 
+
+:: The above copyright notice and this permission notice shall be included
 :: in all copies or substantial portions of the Software.
- 
-:: THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS 
-:: OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
-:: FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
-:: AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
-:: WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
+
+:: THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+:: OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+:: FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+:: AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+:: WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 :: CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 :: http://PortablePython.com
@@ -26,7 +26,7 @@
 set COMMON=.\..\common.bat
 
 call :UnpackPython
-call :UnpackPyScripter 
+call :UnpackPyScripter
 call :UnpackPyCharm
 call :UnpackNumPy
 call :UnpackSciPy
@@ -119,7 +119,7 @@ endlocal&goto :EOF
 :UnpackPyScripter
 ::
 :: By:   Perica Zivkovic
-:: Func: Downloads and extracts pyScripter 
+:: Func: Downloads and extracts pyScripter
 :: Args: none
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 setlocal ENABLEEXTENSIONS
@@ -127,7 +127,7 @@ setlocal ENABLEEXTENSIONS
 :: Download PyScripter
 call COMMON :DownloadFile %PY_SCRIPTER_DOWNLOAD%
 
-:: Verify 
+:: Verify
 call COMMON :VerifyFile %PY_SCRIPTER_FILE% SHA1 %PY_SCRIPTER_SHA1%
 
 :: Unpack files
@@ -168,15 +168,15 @@ endlocal&goto :EOF
 :UnpackNumPy
 ::
 :: By:   Perica Zivkovic
-:: Func: Downloads and extracts numpy 
+:: Func: Downloads and extracts numpy
 :: Args: none
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 setlocal ENABLEEXTENSIONS
 
-:: Download 
+:: Download
 call COMMON :DownloadFile %NUMPY_DOWNLOAD%
 
-:: Verify 
+:: Verify
 call COMMON :VerifyFile %NUMPY_FILE% MD5 %NUMPY_ZIP_MD5%
 
 :: Unpack files
@@ -194,15 +194,15 @@ endlocal&goto :EOF
 :UnpackSciPy
 ::
 :: By:   Perica Zivkovic
-:: Func: Downloads and extracts scipy 
+:: Func: Downloads and extracts scipy
 :: Args: none
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 setlocal ENABLEEXTENSIONS
 
-:: Download 
+:: Download
 call COMMON :DownloadFile %SCIPY_DOWNLOAD%
 
-:: Verify 
+:: Verify
 call COMMON :VerifyFile %SCIPY_FILE% MD5 %SCIPY_ZIP_MD5%
 
 :: Unpack files
@@ -220,15 +220,15 @@ endlocal&goto :EOF
 :UnpackPyWin32
 ::
 :: By:   Perica Zivkovic
-:: Func: Downloads and extracts pywin32 
+:: Func: Downloads and extracts pywin32
 :: Args: none
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 setlocal ENABLEEXTENSIONS
 
-:: Download 
+:: Download
 call COMMON :DownloadFile %PYWIN32_DOWNLOAD%
 
-:: Verify 
+:: Verify
 call COMMON :VerifyFile %PYWIN32_FILE% MD5 %PYWIN32_MD5%
 
 :: Unpack files
@@ -253,17 +253,17 @@ endlocal&goto :EOF
 :UnpackNetworkX
 ::
 :: By:   Perica Zivkovic
-:: Func: Downloads and extracts networkx 
+:: Func: Downloads and extracts networkx
 :: Args: none
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 setlocal ENABLEEXTENSIONS
 
-:: Download 
+:: Download
 call COMMON :DownloadFile %NETWORKX_DOWNLOAD%
 
-:: Verify 
+:: Verify
 call COMMON :VerifyFile %NETWORKX_FILE% MD5 %NETWORKX_MD5%
-	
+
 :: Unpack files
 call COMMON :LogMessage "Extracting networkx files"
 tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%NETWORKX_FILE%" %UNPACK_FOLDER%\networkx\
@@ -278,15 +278,15 @@ endlocal&goto :EOF
 :UnpackDjango
 ::
 :: By:   Perica Zivkovic
-:: Func: Downloads and extracts django  
+:: Func: Downloads and extracts django
 :: Args: none
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 setlocal ENABLEEXTENSIONS
 
-:: Download 
+:: Download
 call COMMON :DownloadFile %DJANGO_DOWNLOAD%
 
-:: Verify 
+:: Verify
 call COMMON :VerifyFile %DJANGO_FILE% MD5 %DJANGO_MD5%
 
 :: Unpack files
@@ -304,12 +304,12 @@ endlocal&goto :EOF
 :UnpackPIL
 ::
 :: By:   Perica Zivkovic
-:: Func: Downloads and extracts PIL  
+:: Func: Downloads and extracts PIL
 :: Args: none
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 setlocal ENABLEEXTENSIONS
 
-:: Download 
+:: Download
 call COMMON :DownloadFile %PIL_DOWNLOAD%
 
 :: Unpack files
@@ -326,15 +326,15 @@ endlocal&goto :EOF
 :UnpackPy2Exe
 ::
 :: By:   Perica Zivkovic
-:: Func: Downloads and extracts Py2Exe  
+:: Func: Downloads and extracts Py2Exe
 :: Args: none
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 setlocal ENABLEEXTENSIONS
 
-:: Download 
+:: Download
 call COMMON :DownloadFile %PY2EXE_DOWNLOAD%
 
-:: Verify 
+:: Verify
 call COMMON :VerifyFile %PY2EXE_FILE% MD5 %PY2EXE_MD5%
 
 :: Unpack files
@@ -351,15 +351,15 @@ endlocal&goto :EOF
 :UnpackWxPython
 ::
 :: By:   Perica Zivkovic
-:: Func: Downloads and extracts WxPython  
+:: Func: Downloads and extracts WxPython
 :: Args: none
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 setlocal ENABLEEXTENSIONS
 
-:: Download 
+:: Download
 call COMMON :DownloadFile %WXPYTHON_DOWNLOAD%
 
-:: Verify 
+:: Verify
 call COMMON :VerifyFile %WXPYTHON_FILE% MD5 %WXPYTHON_MD5%
 
 :: Unpack files
@@ -381,15 +381,15 @@ endlocal&goto :EOF
 :UnpackMatplotlib
 ::
 :: By:   Perica Zivkovic
-:: Func: Downloads and extracts Matplotlib  
+:: Func: Downloads and extracts Matplotlib
 :: Args: none
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 setlocal ENABLEEXTENSIONS
 
-:: Download 
+:: Download
 call COMMON :DownloadFile %MATPLOTLIB_DOWNLOAD%
 
-:: Verify 
+:: Verify
 call COMMON :VerifyFile %MATPLOTLIB_FILE% MD5 %MATPLOTLIB_MD5%
 
 :: Unpack files
@@ -406,15 +406,15 @@ endlocal&goto :EOF
 :UnpackDateutil
 ::
 :: By:   Perica Zivkovic
-:: Func: Downloads and extracts Dateutil   
+:: Func: Downloads and extracts Dateutil
 :: Args: none
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 setlocal ENABLEEXTENSIONS
 
-:: Download 
+:: Download
 call COMMON :DownloadFile %DATEUTIL_DOWNLOAD%
 
-:: Verify 
+:: Verify
 call COMMON :VerifyFile %DATEUTIL_FILE% MD5 %DATEUTIL_MD5%
 
 :: Unpack files
@@ -432,15 +432,15 @@ endlocal&goto :EOF
 :UnpackPyParsing
 ::
 :: By:   Perica Zivkovic
-:: Func: Downloads and extracts pyparsing   
+:: Func: Downloads and extracts pyparsing
 :: Args: none
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 setlocal ENABLEEXTENSIONS
 
-:: Download 
+:: Download
 call COMMON :DownloadFile %PYPARSING_DOWNLOAD%
 
-:: Verify 
+:: Verify
 call COMMON :VerifyFile %PYPARSING_FILE% MD5 %PYPARSING_MD5%
 
 :: Unpack files
@@ -457,12 +457,12 @@ endlocal&goto :EOF
 :UnpackLXML
 ::
 :: By:   Perica Zivkovic
-:: Func: Downloads and extracts LXML  
+:: Func: Downloads and extracts LXML
 :: Args: none
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 setlocal ENABLEEXTENSIONS
 
-:: Download 
+:: Download
 call COMMON :DownloadFile %LXML_DOWNLOAD%
 
 :: Verify
@@ -482,17 +482,17 @@ endlocal&goto :EOF
 :UnpackPySerial
 ::
 :: By:   Perica Zivkovic
-:: Func: Downloads and extracts PySerial 
+:: Func: Downloads and extracts PySerial
 :: Args: none
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 setlocal ENABLEEXTENSIONS
 
-:: Download 
+:: Download
 call COMMON :DownloadFile %PY_SERIAL_DOWNLOAD%
 
-:: Verify 
+:: Verify
 call COMMON :VerifyFile %PY_SERIAL_FILE% MD5 %PY_SERIAL_MD5%
-	
+
 :: Unpack files
 call COMMON :LogMessage "Extracting PySerial files"
 tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%PY_SERIAL_FILE%" %UNPACK_FOLDER%\pyserial\
@@ -515,9 +515,9 @@ setlocal ENABLEEXTENSIONS
 :: Download
 call COMMON :DownloadFile %PYODBC_DOWNLOAD%
 
-:: Verify 
+:: Verify
 call COMMON :VerifyFile %PYODBC_FILE% SHA1 %PYODBC_SHA1%
-	
+
 :: Unpack files
 call COMMON :LogMessage "Extracting PyODBC files"
 tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%PYODBC_FILE%" %UNPACK_FOLDER%\pyodbc\
@@ -537,7 +537,7 @@ endlocal&goto :EOF
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 setlocal ENABLEEXTENSIONS
 
-:: Download 
+:: Download
 call COMMON :DownloadFile %PYGAME_DOWNLOAD%
 
 :: Unpack files
@@ -562,7 +562,7 @@ endlocal&goto :EOF
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 setlocal ENABLEEXTENSIONS
 
-:: Download 
+:: Download
 call COMMON :DownloadFile %PYGTK_DOWNLOAD%
 
 :: Unpack files
@@ -600,10 +600,10 @@ endlocal&goto :EOF
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 setlocal ENABLEEXTENSIONS
 
-:: Download 
+:: Download
 call COMMON :DownloadFile %PYQT_DOWNLOAD%
 
-:: Verify 
+:: Verify
 call COMMON :VerifyFile %PYQT_FILE% MD5 %PYQT_MD5%
 
 :: Unpack files
@@ -648,15 +648,15 @@ endlocal&goto :EOF
 :UnpackIPython
 ::
 :: By:   Perica Zivkovic
-:: Func: Downloads and extracts IPython  
+:: Func: Downloads and extracts IPython
 :: Args: none
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 setlocal ENABLEEXTENSIONS
 
-:: Download 
+:: Download
 call COMMON :DownloadFile %IPYTHON_DOWNLOAD%
 
-:: Verify 
+:: Verify
 call COMMON :VerifyFile %IPYTHON_FILE% MD5 %IPYTHON_MD5%
 
 :: Unpack files
@@ -693,7 +693,7 @@ endlocal&goto :EOF
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 setlocal ENABLEEXTENSIONS
 
-:: Download 
+:: Download
 call COMMON :DownloadFile %PANDAS_DOWNLOAD%
 
 :: Unpack files
@@ -710,15 +710,15 @@ endlocal&goto :EOF
 :UnpackSix
 ::
 :: By:   Perica Zivkovic
-:: Func: Downloads and extracts six   
+:: Func: Downloads and extracts six
 :: Args: none
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 setlocal ENABLEEXTENSIONS
 
-:: Download 
+:: Download
 call COMMON :DownloadFile %SIX_DOWNLOAD%
 
-:: Verify 
+:: Verify
 call COMMON :VerifyFile %SIX_FILE% MD5 %SIX_MD5%
 
 :: Unpack files
@@ -736,15 +736,15 @@ endlocal&goto :EOF
 :UnpackXLrd
 ::
 :: By:   Perica Zivkovic
-:: Func: Downloads and extracts xlrd   
+:: Func: Downloads and extracts xlrd
 :: Args: none
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 setlocal ENABLEEXTENSIONS
 
-:: Download 
+:: Download
 call COMMON :DownloadFile %XLRD_DOWNLOAD%
 
-:: Verify 
+:: Verify
 call COMMON :VerifyFile %XLRD_FILE% MD5 %XLRD_MD5%
 
 :: Unpack files
@@ -762,15 +762,15 @@ endlocal&goto :EOF
 :UnpackXLwt
 ::
 :: By:   Perica Zivkovic
-:: Func: Downloads and extracts xlwt   
+:: Func: Downloads and extracts xlwt
 :: Args: none
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 setlocal ENABLEEXTENSIONS
 
-:: Download 
+:: Download
 call COMMON :DownloadFile %XLWT_DOWNLOAD%
 
-:: Verify 
+:: Verify
 call COMMON :VerifyFile %XLWT_FILE% MD5 %XLWT_MD5%
 
 :: Unpack files
@@ -787,15 +787,15 @@ endlocal&goto :EOF
 :UnpackXLUtils
 ::
 :: By:   Perica Zivkovic
-:: Func: Downloads and extracts xlutils   
+:: Func: Downloads and extracts xlutils
 :: Args: none
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 setlocal ENABLEEXTENSIONS
 
-:: Download 
+:: Download
 call COMMON :DownloadFile %XLUTILS_DOWNLOAD%
 
-:: Verify 
+:: Verify
 call COMMON :VerifyFile %XLUTILS_FILE% MD5 %XLUTILS_MD5%
 
 :: Unpack files
@@ -812,15 +812,15 @@ endlocal&goto :EOF
 :UnpackOpenPyXL
 ::
 :: By:   Perica Zivkovic
-:: Func: Downloads and extracts openpyxl   
+:: Func: Downloads and extracts openpyxl
 :: Args: none
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 setlocal ENABLEEXTENSIONS
 
-:: Download 
+:: Download
 call COMMON :DownloadFile %OPENPYXL_DOWNLOAD%
 
-:: Verify 
+:: Verify
 call COMMON :VerifyFile %OPENPYXL_FILE% MD5 %OPENPYXL_MD5%
 
 :: Unpack files
@@ -845,7 +845,7 @@ setlocal ENABLEEXTENSIONS
 :: Download PyCharm
 call COMMON :DownloadFile %PYCHARM_DOWNLOAD%
 
-:: Verify 
+:: Verify
 call COMMON :VerifyFile %PYCHARM_FILE% MD5 %PYCHARM_MD5%
 
 :: Unpack files
@@ -874,7 +874,7 @@ set new=%PY_VERSION%
 for /f "tokens=* delims=¶" %%i in ( '"type %filein%"') do (
 	set str=%%i
 	set str=!str:%old%=%new%!
-	echo !str! >> %fileout%	
+	echo !str! >> %fileout%
 )
 del %filein%
 

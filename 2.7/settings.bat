@@ -1,22 +1,22 @@
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 :: The MIT License (MIT)
 :: Copyright (c) 2007 Perica Zivkovic
- 
-:: Permission is hereby granted, free of charge, to any person obtaining a 
-:: copy of this software and associated documentation files (the "Software"), 
-:: to deal in the Software without restriction, including without limitation 
-:: the rights to use, copy, modify, merge, publish, distribute, sublicense, 
-:: and/or sell copies of the Software, and to permit persons to whom the 
+
+:: Permission is hereby granted, free of charge, to any person obtaining a
+:: copy of this software and associated documentation files (the "Software"),
+:: to deal in the Software without restriction, including without limitation
+:: the rights to use, copy, modify, merge, publish, distribute, sublicense,
+:: and/or sell copies of the Software, and to permit persons to whom the
 :: Software is furnished to do so, subject to the following conditions:
- 
-:: The above copyright notice and this permission notice shall be included 
+
+:: The above copyright notice and this permission notice shall be included
 :: in all copies or substantial portions of the Software.
- 
-:: THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS 
-:: OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
-:: FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
-:: AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
-:: WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
+
+:: THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+:: OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+:: FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+:: AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+:: WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 :: CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 :: http://PortablePython.com
@@ -48,7 +48,7 @@ set NUMPY_ZIP_MD5=47dcbfaba32a64f1e30927c219853fc1
 set SCIPY_DOWNLOAD="http://sourceforge.net/projects/scipy/files/scipy/0.13.3/scipy-0.13.3-win32-superpack-python2.7.exe"
 set SCIPY_FILE=scipy-0.13.3-win32-superpack-python2.7.exe
 set SCIPY_FILE_NOSSE=scipy-0.13.3-nosse.exe
-set SCIPY_ZIP_MD5=ab43e3022aa642bef49a1f92516a6fdf  
+set SCIPY_ZIP_MD5=ab43e3022aa642bef49a1f92516a6fdf
 
 set PYWIN32_DOWNLOAD="http://sourceforge.net/projects/pywin32/files/pywin32/Build 218/pywin32-218.win32-py2.7.exe"
 set PYWIN32_FILE=pywin32-218.win32-py2.7.exe
@@ -90,14 +90,14 @@ set PYPARSING_MD5=e312e220208383c0b87f3c36996cf47a
 set LXML_DOWNLOAD="https://pypi.python.org/packages/2.7/l/lxml/lxml-3.3.4.win32-py2.7.exe"
 set LXML_FILE=lxml-3.3.4.win32-py2.7.exe
 set LXML_MD5=55384beefb503549675f752697c2095f
-	
+
 set PY_SERIAL_DOWNLOAD="http://sourceforge.net/projects/pyserial/files/pyserial/2.7/pyserial-2.7.win32.exe"
 set PY_SERIAL_FILE=pyserial-2.7.win32.exe
 set PY_SERIAL_MD5=21555387937eeb79126cde25abee4b35
 
 set PYODBC_DOWNLOAD="http://pyodbc.googlecode.com/files/pyodbc-3.0.7.win32-py2.7.exe"
 set PYODBC_FILE=pyodbc-3.0.7.win32-py2.7.exe
-set PYODBC_SHA1=e1992fe4d4983f16e33913e8162f89f50fcde2b0 
+set PYODBC_SHA1=e1992fe4d4983f16e33913e8162f89f50fcde2b0
 
 set PYGAME_DOWNLOAD="http://pygame.org/ftp/pygame-1.9.1.win32-py2.7.msi"
 set PYGAME_FILE=pygame-1.9.1.win32-py2.7.msi
