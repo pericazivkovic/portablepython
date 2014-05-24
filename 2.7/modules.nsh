@@ -72,7 +72,7 @@ SectionGroup "Modules"
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\py2exe\PLATLIB\*.*"
 	SectionEnd
-	Section "wxPython 3.0.0.0" MODULE_WXPYTHON
+	Section "wxPython 3.0.1.0.b20140104" MODULE_WXPYTHON
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\"
 		File /r "${SOURCESFOLDER}\wxpython\package\*.*"

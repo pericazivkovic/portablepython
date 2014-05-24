@@ -70,9 +70,9 @@ set PY2EXE_DOWNLOAD="http://sourceforge.net/projects/py2exe/files/py2exe/0.6.9/p
 set PY2EXE_FILE=py2exe-0.6.9.win32-py2.7.exe
 set PY2EXE_MD5=b7899302e70596defe3b7e8c95cd15c1
 
-set WXPYTHON_DOWNLOAD="http://sourceforge.net/projects/wxpython/files/wxPython/3.0.0.0/wxPython3.0-win32-3.0.0.0-py27.exe"
-set WXPYTHON_FILE=wxPython3.0-win32-3.0.0.0-py27.exe
-set WXPYTHON_MD5=37b0b48483cf8f26d05fe152d60c214a
+set WXPYTHON_DOWNLOAD="http://wxpython.kosoftworks.com/preview/20140104/wxPython3.0-win32-3.0.1.0.b20140104-py27.exe"
+set WXPYTHON_FILE=wxPython3.0-win32-3.0.1.0.b20140104-py27.exe
+set WXPYTHON_MD5=33715315d4a3596ed0b374fe4b3ba015
 
 set MATPLOTLIB_DOWNLOAD="http://sourceforge.net/projects/matplotlib/files/matplotlib/matplotlib-1.3.1/matplotlib-1.3.1.win32-py2.7.exe"
 set MATPLOTLIB_FILE=matplotlib-1.3.1.win32-py2.7.exe
