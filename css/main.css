@@ -124,6 +124,7 @@ a:link, a:hover, a:visited, a:active {
     text-align: center;
     font-size: 12px;
     border: 1px solid #ACACAC;
+    width: 163px;
 }
 
 .frame-header {
