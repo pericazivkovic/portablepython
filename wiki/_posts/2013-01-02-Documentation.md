@@ -5,6 +5,7 @@ title: "Documentation page"
 ## Documentation
 
 Table of content:
+
 * [FAQ]({{site.url}}/wiki/FAQ)
 * [Installation]({{site.url}}/wiki/Installation)
 * [Portable Python 2.7 documentation]({{site.url}}/doc/2.7)
