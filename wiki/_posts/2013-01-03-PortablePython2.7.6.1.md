@@ -45,7 +45,7 @@ Package file hash:
 * MD5 - 5b480c1bbbc06b779a7d150c26f2147d
 * SHA1 - 10bfb41048cb2017af507be059c842403e00fd8d 
 
-Download this package by using [torrent network](http://www.legittorrents.info/download.php?id=948aba8f66ed5466cfa6ad291476fecf2290cf19&f=Portable%20Python%202.7.6.1.torrent) or one of the mirrors:
+Download this package by using one of the mirrors:
 
 | Country | Mirror | Type |
 |-------------|------------|----------|
