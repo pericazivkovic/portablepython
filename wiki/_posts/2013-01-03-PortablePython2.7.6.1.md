@@ -41,6 +41,7 @@ Installed size: based on selected packages, between 50MB and 850MB
 Warning: default installation installs all packages and this can be a long process especially if the target location is USB drive. Packages can be selected/deselected during the installation process. 
 
 Package file hash:
+
 * MD5 - 5b480c1bbbc06b779a7d150c26f2147d
 * SHA1 - 10bfb41048cb2017af507be059c842403e00fd8d 
 
