@@ -182,7 +182,7 @@ call COMMON :VerifyFile %NUMPY_FILE% MD5 %NUMPY_ZIP_MD5%
 :: Unpack files
 call COMMON :LogMessage "Extracting NumPy files"
 tools\uniextract16\bin\7z.exe x "%BIN_FOLDER%\%NUMPY_FILE%" -o%UNPACK_FOLDER%\numpy\ -y
-tools\uniextract16\UniExtract.exe "%UNPACK_FOLDER%\numpy\%NUMPY_FILE_NOSSE%" %UNPACK_FOLDER%\numpy\
+tools\uniextract16\bin\7z.exe x "%UNPACK_FOLDER%\numpy\%NUMPY_FILE_NOSSE%" -o%UNPACK_FOLDER%\numpy\ -y
 
 :: Fix
 call COMMON :FixMSCRT %UNPACK_FOLDER%\numpy\
@@ -856,6 +856,7 @@ tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%PYCHARM_FILE%" %UNPACK_FOLDER%\
 call COMMON :LogMessage "Copy files to PyCharm folder"
 RD %UNPACK_FOLDER%\pycharm-temp\$PLUGINSDIR /S /Q
 RD %UNPACK_FOLDER%\pycharm-temp\bin\$PLUGINSDIR /S /Q
+RD "%UNPACK_FOLDER%\PyCharm" /S /Q
 mkdir %UNPACK_FOLDER%\PyCharm
 mkdir %UNPACK_FOLDER%\PyCharm\App
 move /Y "%UNPACK_FOLDER%\pycharm-temp" "%UNPACK_FOLDER%\PyCharm\App\PyCharm"
@@ -863,19 +864,21 @@ move /Y "%UNPACK_FOLDER%\pycharm-temp" "%UNPACK_FOLDER%\PyCharm\App\PyCharm"
 :: Patch PyCharm
 call COMMON :LogMessage "Patch PyCharm"
 del %UNPACK_FOLDER%\PyCharm\App\PyCharm\bin\idea.properties /Q
-tools\uniextract16\UniExtract.exe "patches\PyCharm.3.1.x.PPpatch" "%UNPACK_FOLDER%\PyCharm\App\PyCharm" >NUL
+tools\uniextract16\UniExtract.exe "patches\PyCharm.4.0.x.PPpatch" "%UNPACK_FOLDER%\PyCharm\App\PyCharm" >NUL
 
+del "%UNPACK_FOLDER%\PyCharm\App\PyCharm\.PyCharm\config\options\other.xml" /Q
 :: Replace @PY_VERSION@ in jdk.table.xml.tmp to %PY_VERSION% jdk.table.xml
 setlocal ENABLEDELAYEDEXPANSION
-set filein="%UNPACK_FOLDER%\PyCharm\App\PyCharm\.PyCharm30\config\options\jdk.table.xml.tmp"
-set fileout="%UNPACK_FOLDER%\PyCharm\App\PyCharm\.PyCharm30\config\options\jdk.table.xml"
+set filein="%UNPACK_FOLDER%\PyCharm\App\PyCharm\.PyCharm\config\options\jdk.table.xml.tmp"
+set fileout="%UNPACK_FOLDER%\PyCharm\App\PyCharm\.PyCharm\config\options\jdk.table.xml"
+echo write to "%fileout%"...
 set old=@PY_VERSION@
 set new=%PY_VERSION%
-for /f "tokens=* delims=¶" %%i in ( '"type %filein%"') do (
+(for /f "usebackq tokens=* delims=? " %%i in (`type %filein%`) do (
 	set str=%%i
 	set str=!str:%old%=%new%!
-	echo !str! >> %fileout%	
-)
+	echo !str! 
+)) > %fileout%
 del %filein%
 
 :: Build Shortcut
