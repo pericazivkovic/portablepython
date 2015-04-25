@@ -32,6 +32,7 @@ Section "!Python 3.4.3 core (x64)" PYTHON_CORE
 	File /r "${SOURCESFOLDER}\python-core\*.*"
 	File "${SOURCESFOLDER}\Python-Portable.exe"
 	File "${SOURCESFOLDER}\IDLE-Portable.exe"
+	File "${SOURCESFOLDER}\PortablePythonPrompt.cmd"
 SectionEnd
 
 ;SectionGroup "Modules"
@@ -105,12 +106,12 @@ SectionGroup "Code editors"
 		File /r "${SOURCESFOLDER}\PyScripter\*.*"
 		File "${SOURCESFOLDER}\PyScripter-Portable.exe"
 	SectionEnd
-	; Section "PyCharm Community 3.1.2" IDE_PYCHARM
-	; 	SectionIn 1
-	; 	SetOutPath "$INSTDIR"
-	; 	File /r "${SOURCESFOLDER}\PyCharm\*.*"
-	; 	File "${SOURCESFOLDER}\PyCharm-Portable.exe"
-	; SectionEnd	
+	Section "PyCharm Community 4.0.6" IDE_PYCHARM
+		SectionIn 1
+		SetOutPath "$INSTDIR"
+		File /r "${SOURCESFOLDER}\PyCharm\*.*"
+		File "${SOURCESFOLDER}\PyCharm-Portable.exe"
+	SectionEnd	
 SectionGroupEnd
 
 

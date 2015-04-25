@@ -72,14 +72,13 @@ set PYQT_DOWNLOAD="http://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.9.6/P
 set PYQT_FILE=PyQt-Py3.2-x86-gpl-4.9.6-1.exe
 set PYQT_MD5=9c4a1b3b1246e936c3439c0e8a1d5774
 
-set IPYTHON_DOWNLOAD="http://pypi.python.org/packages/any/i/ipython/ipython-0.13.1.py3-win32.exe"
-set IPYTHON_FILE=ipython-0.13.1.py3-win32.exe
-set IPYTHON_MD5=43c1c567b920b718a38fffd1866a4392
+set IPYTHON_DOWNLOAD="https://pypi.python.org/packages/3.4/i/ipython/ipython-3.1.0-py3-none-any.whl"
+set IPYTHON_FILE=ipython-3.1.0-py3-none-any.whl
+set IPYTHON_MD5=e149386e11472f9cf730773b2d824253
 
 set PANDAS_DOWNLOAD="https://pypi.python.org/packages/3.2/p/pandas/pandas-0.11.0.win32-py3.2.exe"
 set PANDAS_FILE=pandas-0.11.0.win32-py3.2.exe
 set PANDAS_MD5=7f11d2f59284c5ba64e7d781e1023f95
 
-set PYCHARM_DOWNLOAD="http://download-cf.jetbrains.com/python/pycharm-community-3.1.2.exe"
-set PYCHARM_FILE=pycharm-community-3.1.2.exe
-set PYCHARM_MD5=4707668758b044bf5a4214557e7a15fa
+set PYCHARM_DOWNLOAD="http://download-cf.jetbrains.com/python/pycharm-community-4.0.6.exe"
+set PYCHARM_FILE=pycharm-community-4.0.6.exe
