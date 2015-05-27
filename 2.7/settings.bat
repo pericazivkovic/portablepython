@@ -23,13 +23,13 @@
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 set PY_VERSION=2.7
-set PP_VERSION=9.1
+set PP_VERSION=10.1
 set PY_SHORT_VERSION=27
 
 :: Core
-set PY_MSI_DOWNLOAD="https://www.python.org/ftp/python/2.7.9/python-2.7.9.msi"
-set PY_MSI_FILE=python-2.7.9.msi
-set PY_MSI_MD5=3ed20d8b06dcd339f814b38861f88fc9
+set PY_MSI_DOWNLOAD="https://www.python.org/ftp/python/2.7.10/python-2.7.10.msi"
+set PY_MSI_FILE=python-2.7.10.msi
+set PY_MSI_MD5=4ba2c79b103f6003bc4611c837a08208
 
 :: Modules
 set PY_SETUPTOOLS_DOWNLOAD="http://pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11.win32-py2.7.exe"
@@ -143,6 +143,6 @@ set OPENPYXL_FILE=openpyxl-1.8.5.tar.gz
 set OPENPYXL_FILE_TAR=openpyxl-1.8.5.tar
 set OPENPYXL_MD5=6f2eca608c3129dbfd77982713565709
 
-set PYCHARM_DOWNLOAD="http://download-cf.jetbrains.com/python/pycharm-community-4.0.6.exe"
-set PYCHARM_FILE=pycharm-community-4.0.6.exe
+set PYCHARM_DOWNLOAD="http://download-cf.jetbrains.com/python/pycharm-community-4.5.1.exe"
+set PYCHARM_FILE=pycharm-community-4.5.1.exe
 

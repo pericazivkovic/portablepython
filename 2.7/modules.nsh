@@ -26,13 +26,14 @@
 InstType "Full"
 InstType "Minimal"
 
-Section "!Python 2.7.9 core" PYTHON_CORE
+Section "!Python 2.7.10 core" PYTHON_CORE
 	SectionIn 1 2 RO
 	SetOutPath "$INSTDIR"
 	File /r "${SOURCESFOLDER}\python-core\*.*"
 	File "${SOURCESFOLDER}\Python-Portable.exe"
 	File "${SOURCESFOLDER}\PythonW-Portable.exe"
 	File "${SOURCESFOLDER}\IDLE-Portable.exe"
+	File "${SOURCESFOLDER}\PortablePythonPrompt.cmd"
 SectionEnd
 SectionGroup "Modules"
 	Section "NumPy 1.9.2" MODULE_NUMPY
@@ -179,7 +180,7 @@ SectionGroup "Code editors"
 		File /r "${SOURCESFOLDER}\PyScripter\*.*"
 		File "${SOURCESFOLDER}\PyScripter-Portable.exe"
 	SectionEnd
-	Section "PyCharm Community 4.0.6" IDE_PYCHARM
+	Section "PyCharm Community 4.5.1" IDE_PYCHARM
 		SectionIn 1
 		SetOutPath "$INSTDIR"
 		File /r "${SOURCESFOLDER}\PyCharm\*.*"

@@ -4,7 +4,7 @@ class TestCoreSystem(unittest.TestCase):
 	"""Test Python core and associated tools"""
 	def test_python(self):
 		import platform
-		self.assertEqual(platform.python_version(), "2.7.6")
+		self.assertEqual(platform.python_version(), "2.7.10")
 
 	def test_setuptools(self):
 		import setuptools

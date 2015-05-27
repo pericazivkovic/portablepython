@@ -108,6 +108,7 @@ call COMMON :LogMessage "Copy Python Portable shortcut"
 copy shortcuts\Python-Portable.exe "%UNPACK_FOLDER%" 1>NUL
 copy shortcuts\PythonW-Portable.exe "%UNPACK_FOLDER%" 1>NUL
 copy shortcuts\IDLE-Portable.exe "%UNPACK_FOLDER%" 1>NUL
+copy shortcuts\PortablePythonPrompt.cmd "%UNPACK_FOLDER%" 1>NUL
 
 :: Fix
 call COMMON :FixMSCRT %UNPACK_FOLDER%\python-core\
