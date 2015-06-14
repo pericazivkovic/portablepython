@@ -8,7 +8,7 @@ This package contains following applications/libraries:
 
 * PyScripter v2.5.3
 * PyCharm Community Edition 3.1.2 (Thanks to [cebik](https://github.com/cebik))
-* NymPy 1.8.1
+* NumPy 1.8.1
 * SciPy 0.13.3
 * Matplotlib 1.3.1
 * PyWin32 218
