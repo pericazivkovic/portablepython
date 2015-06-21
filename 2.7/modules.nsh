@@ -174,7 +174,7 @@ SectionGroupEnd
 
 
 SectionGroup "Code editors"
-	Section "PyScripter 2.5.3" IDE_PYSCRIPTER
+	Section "PyScripter 2.6.0" IDE_PYSCRIPTER
 		SectionIn 1
 		SetOutPath "$INSTDIR"
 		File /r "${SOURCESFOLDER}\PyScripter\*.*"

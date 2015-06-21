@@ -36,9 +36,9 @@ set PY_SETUPTOOLS_DOWNLOAD="http://pypi.python.org/packages/2.7/s/setuptools/set
 set PY_SETUPTOOLS_FILE=setuptools-0.6c11.win32-py2.7.exe
 set PY_SETUPTOOLS_MD5=57e1e64f6b7c7f1d2eddfc9746bbaf20
 
-set PY_SCRIPTER_DOWNLOAD="http://pyscripter.googlecode.com/files/PyScripter-v2.5.3.zip"
-set PY_SCRIPTER_FILE=PyScripter-v2.5.3.zip
-set PY_SCRIPTER_SHA1=363226a2dc708bc5dd83eda9ccc36339b79a7345
+set PY_SCRIPTER_DOWNLOAD="http://sourceforge.net/projects/pyscripter/files/PyScripter-v2.6.0.zip"
+set PY_SCRIPTER_FILE=PyScripter-v2.6.0.zip
+set PY_SCRIPTER_SHA1=03ffbb5eb33ffc1da9a54dae3c9a67243b897fd5
 
 set NUMPY_DOWNLOAD="http://sourceforge.net/projects/numpy/files/NumPy/1.9.2/numpy-1.9.2-win32-superpack-python2.7.exe"
 set NUMPY_FILE=numpy-1.9.2-win32-superpack-python2.7.exe

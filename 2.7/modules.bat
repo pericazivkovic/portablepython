@@ -138,21 +138,12 @@ tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%PY_SCRIPTER_FILE%" %UNPACK_FOLD
 :: Copy files to PyScripter folder
 call COMMON :LogMessage "Copy files to PyScripter folder"
 mkdir %UNPACK_FOLDER%\PyScripter
-mkdir %UNPACK_FOLDER%\PyScripter\App
-mkdir %UNPACK_FOLDER%\PyScripter\App\locale
-mkdir %UNPACK_FOLDER%\PyScripter\App\Skins
-copy %UNPACK_FOLDER%\pyscripter-temp\PyScripter\PyScripter.exe "%UNPACK_FOLDER%\PyScripter\App\" >NUL
-copy %UNPACK_FOLDER%\pyscripter-temp\PyScripter\PyScripter.chm "%UNPACK_FOLDER%\PyScripter\App\" >NUL
-copy %UNPACK_FOLDER%\pyscripter-temp\PyScripter\PyProject.ico "%UNPACK_FOLDER%\PyScripter\App\" >NUL
-xcopy /EY %UNPACK_FOLDER%\pyscripter-temp\PyScripter\locale "%UNPACK_FOLDER%\PyScripter\App\locale" >NUL
+move "%UNPACK_FOLDER%\pyscripter-temp\PyScripter" "%UNPACK_FOLDER%\PyScripter\App"
 
-:: Unpack rpyc
-call COMMON :LogMessage "Unpack rypc"
-tools\uniextract16\UniExtract.exe "%UNPACK_FOLDER%\pyscripter-temp\PyScripter\Lib\rpyc.zip" %UNPACK_FOLDER%\PyScripter\App\Lib\site-packages\ >NUL
 
 :: Patch PyScripter
 call COMMON :LogMessage "Patch PyScripter"
-tools\uniextract16\UniExtract.exe patches\PyScripter.2.5.3.PPpatch %UNPACK_FOLDER%\PyScripter\App >NUL
+copy /Y patches\PyScripter26.ini %UNPACK_FOLDER%\PyScripter\App\PyScripter.ini 1>NUL 2>NUL
 
 :: Build Shortcut
 call COMMON :LogMessage "Build PyScripter shortcut"
