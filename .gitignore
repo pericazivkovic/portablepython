@@ -4,3 +4,10 @@
 
 shortcuts/*.exe
 build
+
+#################
+## chm doc index 
+#################
+
+tools/nsis/*.chw
+

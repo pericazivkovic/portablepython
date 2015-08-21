@@ -26,26 +26,27 @@
 InstType "Full"
 InstType "Minimal"
 
-Section "!Python 2.7.6 core" PYTHON_CORE
+Section "!Python 2.7.10 core" PYTHON_CORE
 	SectionIn 1 2 RO
 	SetOutPath "$INSTDIR"
 	File /r "${SOURCESFOLDER}\python-core\*.*"
 	File "${SOURCESFOLDER}\Python-Portable.exe"
 	File "${SOURCESFOLDER}\PythonW-Portable.exe"
 	File "${SOURCESFOLDER}\IDLE-Portable.exe"
+	File "${SOURCESFOLDER}\PortablePythonPrompt.cmd"
 SectionEnd
 SectionGroup "Modules"
-	Section "NumPy 1.8.1" MODULE_NUMPY
+	Section "NumPy 1.9.2" MODULE_NUMPY
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\numpy\PLATLIB\*.*"
 	SectionEnd
-	Section "SciPy 0.13.3" MODULE_SCIPY
+	Section "SciPy 0.15.1" MODULE_SCIPY
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\scipy\PLATLIB\*.*"
 	SectionEnd
-	Section "PyWin32 218" MODULE_PYWIN32
+	Section "PyWin32 219" MODULE_PYWIN32
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\"
 		File /r "${SOURCESFOLDER}\pywin32\*.*"
@@ -77,12 +78,12 @@ SectionGroup "Modules"
 		SetOutPath "$INSTDIR\App\"
 		File /r "${SOURCESFOLDER}\wxpython\package\*.*"
 	SectionEnd
-	Section "matplotlib 1.3.1" MODULE_MATPLOTLIB
+	Section "matplotlib 1.4.3" MODULE_MATPLOTLIB
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\matplotlib\PLATLIB\*.*"
 	SectionEnd
-	Section "lxml 3.3.4" MODULE_LXML
+	Section "lxml 3.4.3" MODULE_LXML
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\lxml\PLATLIB\*.*"
@@ -109,7 +110,7 @@ SectionGroup "Modules"
 		SetOutPath "$INSTDIR"
 		File "${SOURCESFOLDER}\Glade3-Portable.exe"
 	SectionEnd
-	Section "PyQT 4.10.4" MODULE_PYQT
+	Section "PyQT 4.11.3" MODULE_PYQT
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\"
 		File /r "${SOURCESFOLDER}\pyqt\Lib\*.*"
@@ -129,10 +130,10 @@ SectionGroup "Modules"
 		SetOutPath "$INSTDIR"
 		File "${SOURCESFOLDER}\IPython-Portable.exe"
 	SectionEnd
-	Section "Pandas 0.13.1" MODULE_PANDAS
+	Section "Pandas 0.16.0" MODULE_PANDAS
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
-		File /r "${SOURCESFOLDER}\pandas\PLATLIB\*.*"
+		File /r "${SOURCESFOLDER}\pandas\*.*"
 	SectionEnd 
 	Section "Dateutil 2.2" MODULE_DATEUTIL
 		SectionIn 1
@@ -173,13 +174,13 @@ SectionGroupEnd
 
 
 SectionGroup "Code editors"
-	Section "PyScripter 2.5.3" IDE_PYSCRIPTER
+	Section "PyScripter 2.6.0" IDE_PYSCRIPTER
 		SectionIn 1
 		SetOutPath "$INSTDIR"
 		File /r "${SOURCESFOLDER}\PyScripter\*.*"
 		File "${SOURCESFOLDER}\PyScripter-Portable.exe"
 	SectionEnd
-	Section "PyCharm Community 3.1.2" IDE_PYCHARM
+	Section "PyCharm Community 4.5.1" IDE_PYCHARM
 		SectionIn 1
 		SetOutPath "$INSTDIR"
 		File /r "${SOURCESFOLDER}\PyCharm\*.*"

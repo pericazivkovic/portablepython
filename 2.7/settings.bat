@@ -23,36 +23,36 @@
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 set PY_VERSION=2.7
-set PP_VERSION=6.2
+set PP_VERSION=10.2
 set PY_SHORT_VERSION=27
 
 :: Core
-set PY_MSI_DOWNLOAD="http://python.org/ftp/python/2.7.6/python-2.7.6.msi"
-set PY_MSI_FILE=python-2.7.6.msi
-set PY_MSI_MD5=ac54e14f7ba180253b9bae6635d822ea
+set PY_MSI_DOWNLOAD="https://www.python.org/ftp/python/2.7.10/python-2.7.10.msi"
+set PY_MSI_FILE=python-2.7.10.msi
+set PY_MSI_MD5=4ba2c79b103f6003bc4611c837a08208
 
 :: Modules
 set PY_SETUPTOOLS_DOWNLOAD="http://pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11.win32-py2.7.exe"
 set PY_SETUPTOOLS_FILE=setuptools-0.6c11.win32-py2.7.exe
 set PY_SETUPTOOLS_MD5=57e1e64f6b7c7f1d2eddfc9746bbaf20
 
-set PY_SCRIPTER_DOWNLOAD="http://pyscripter.googlecode.com/files/PyScripter-v2.5.3.zip"
-set PY_SCRIPTER_FILE=PyScripter-v2.5.3.zip
-set PY_SCRIPTER_SHA1=363226a2dc708bc5dd83eda9ccc36339b79a7345
+set PY_SCRIPTER_DOWNLOAD="http://sourceforge.net/projects/pyscripter/files/PyScripter-v2.6.0.zip"
+set PY_SCRIPTER_FILE=PyScripter-v2.6.0.zip
+set PY_SCRIPTER_SHA1=03ffbb5eb33ffc1da9a54dae3c9a67243b897fd5
 
-set NUMPY_DOWNLOAD="http://sourceforge.net/projects/numpy/files/NumPy/1.8.1/numpy-1.8.1-win32-superpack-python2.7.exe"
-set NUMPY_FILE=numpy-1.8.1-win32-superpack-python2.7.exe
-set NUMPY_FILE_NOSSE=numpy-1.8.1-nosse.exe
-set NUMPY_ZIP_MD5=47dcbfaba32a64f1e30927c219853fc1
+set NUMPY_DOWNLOAD="http://sourceforge.net/projects/numpy/files/NumPy/1.9.2/numpy-1.9.2-win32-superpack-python2.7.exe"
+set NUMPY_FILE=numpy-1.9.2-win32-superpack-python2.7.exe
+set NUMPY_FILE_NOSSE=numpy-1.9.2-sse2.exe
+set NUMPY_ZIP_MD5=694e11489cd5340e06d01f19866ecf3b
 
-set SCIPY_DOWNLOAD="http://sourceforge.net/projects/scipy/files/scipy/0.13.3/scipy-0.13.3-win32-superpack-python2.7.exe"
-set SCIPY_FILE=scipy-0.13.3-win32-superpack-python2.7.exe
-set SCIPY_FILE_NOSSE=scipy-0.13.3-nosse.exe
-set SCIPY_ZIP_MD5=ab43e3022aa642bef49a1f92516a6fdf  
+set SCIPY_DOWNLOAD="http://sourceforge.net/projects/scipy/files/scipy/0.15.1/scipy-0.15.1-win32-superpack-python2.7.exe"
+set SCIPY_FILE=scipy-0.15.1-win32-superpack-python2.7.exe
+set SCIPY_FILE_NOSSE=scipy-0.15.1-sse2.exe
+set SCIPY_ZIP_MD5=8d8ab3c298bf0693e827dc419fa7d6f7  
 
-set PYWIN32_DOWNLOAD="http://sourceforge.net/projects/pywin32/files/pywin32/Build 218/pywin32-218.win32-py2.7.exe"
-set PYWIN32_FILE=pywin32-218.win32-py2.7.exe
-set PYWIN32_MD5=16e178ac18b49fa0d27ba0be90f460af
+set PYWIN32_DOWNLOAD="http://sourceforge.net/projects/pywin32/files/pywin32/Build 219/pywin32-219.win32-py2.7.exe"
+set PYWIN32_FILE=pywin32-219.win32-py2.7.exe
+set PYWIN32_MD5=f270e9f88155f649fc1a6c2f85aa128d
 
 set NETWORKX_DOWNLOAD="http://networkx.lanl.gov/download/networkx/networkx-1.7-py2.7.egg"
 set NETWORKX_FILE=networkx-1.7-py2.7.egg
@@ -74,9 +74,9 @@ set WXPYTHON_DOWNLOAD="http://sourceforge.net/projects/wxpython/files/wxPython/3
 set WXPYTHON_FILE=wxPython3.0-win32-3.0.0.0-py27.exe
 set WXPYTHON_MD5=37b0b48483cf8f26d05fe152d60c214a
 
-set MATPLOTLIB_DOWNLOAD="http://sourceforge.net/projects/matplotlib/files/matplotlib/matplotlib-1.3.1/matplotlib-1.3.1.win32-py2.7.exe"
-set MATPLOTLIB_FILE=matplotlib-1.3.1.win32-py2.7.exe
-set MATPLOTLIB_MD5=08953f7c4b2ddd7c233b0e42db51f13a
+set MATPLOTLIB_DOWNLOAD="http://sourceforge.net/projects/matplotlib/files/matplotlib/matplotlib-1.4.3/windows/matplotlib-1.4.3.win32-py2.7.exe"
+set MATPLOTLIB_FILE=matplotlib-1.4.3.win32-py2.7.exe
+set MATPLOTLIB_MD5=f43c20480a1673185afefc7d4848a1d2
 
 set DATEUTIL_DOWNLOAD="https://pypi.python.org/packages/source/p/python-dateutil/python-dateutil-2.2.tar.gz"
 set DATEUTIL_FILE=python-dateutil-2.2.tar.gz
@@ -87,9 +87,9 @@ set PYPARSING_DOWNLOAD="https://pypi.python.org/packages/any/p/pyparsing/pyparsi
 set PYPARSING_FILE=pyparsing-2.0.1.win32-py2.7.exe
 set PYPARSING_MD5=e312e220208383c0b87f3c36996cf47a
 
-set LXML_DOWNLOAD="https://pypi.python.org/packages/2.7/l/lxml/lxml-3.3.4.win32-py2.7.exe"
-set LXML_FILE=lxml-3.3.4.win32-py2.7.exe
-set LXML_MD5=55384beefb503549675f752697c2095f
+set LXML_DOWNLOAD="https://pypi.python.org/packages/2.7/l/lxml/lxml-3.4.3.win32-py2.7.exe"
+set LXML_FILE=lxml-3.4.3.win32-py2.7.exe
+set LXML_MD5=a22fd83608bf1a3127b1c2f233ac1e10
 	
 set PY_SERIAL_DOWNLOAD="http://sourceforge.net/projects/pyserial/files/pyserial/2.7/pyserial-2.7.win32.exe"
 set PY_SERIAL_FILE=pyserial-2.7.win32.exe
@@ -106,17 +106,17 @@ set PYGTK_DOWNLOAD="http://ftp.gnome.org/pub/GNOME/binaries/win32/pygtk/2.24/pyg
 set PYGTK_FILE=pygtk-all-in-one-2.24.2.win32-py2.7.msi
 set PYGTK_MD5=4bddf847f81d8de2d73048b113da3dd5
 
-set PYQT_DOWNLOAD="http://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.10.4/PyQt4-4.10.4-gpl-Py2.7-Qt4.8.5-x32.exe"
-set PYQT_FILE=PyQt4-4.10.4-gpl-Py2.7-Qt4.8.5-x32.exe
-set PYQT_MD5=4dbba5c9920a5fa5311c294d5975b65f
+set PYQT_DOWNLOAD="http://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.11.3/PyQt4-4.11.3-gpl-Py2.7-Qt4.8.6-x32.exe"
+set PYQT_FILE=PyQt4-4.11.3-gpl-Py2.7-Qt4.8.6-x32.exe
+set PYQT_MD5=bf9e4d934a998ba081f29b065b88e213
 
 set IPYTHON_DOWNLOAD="https://pypi.python.org/packages/source/i/ipython/ipython-1.2.1.zip"
 set IPYTHON_FILE=ipython-1.2.1.zip
 set IPYTHON_MD5=a4b36d55e2671c6e821018a63d50b8b1
 
-set PANDAS_DOWNLOAD="https://pypi.python.org/packages/2.7/p/pandas/pandas-0.11.0.win32-py2.7.exe"
-set PANDAS_FILE=pandas-0.11.0.win32-py2.7.exe
-set PANDAS_MD5=aaefa25cc5042f0408834f4d1f74ed10
+set PANDAS_DOWNLOAD="https://pypi.python.org/packages/2.7/p/pandas/pandas-0.16.0-cp27-none-win32.whl"
+set PANDAS_FILE=pandas-0.16.0-cp27-none-win32.whl
+set PANDAS_MD5=81cba8feac97e202dcabb9683d34204d
 
 set SIX_DOWNLOAD="https://pypi.python.org/packages/source/s/six/six-1.6.1.tar.gz"
 set SIX_FILE=six-1.6.1.tar.gz
@@ -143,6 +143,6 @@ set OPENPYXL_FILE=openpyxl-1.8.5.tar.gz
 set OPENPYXL_FILE_TAR=openpyxl-1.8.5.tar
 set OPENPYXL_MD5=6f2eca608c3129dbfd77982713565709
 
-set PYCHARM_DOWNLOAD="http://download-cf.jetbrains.com/python/pycharm-community-3.1.2.exe"
-set PYCHARM_FILE=pycharm-community-3.1.2.exe
-set PYCHARM_MD5=4707668758b044bf5a4214557e7a15fa
+set PYCHARM_DOWNLOAD="http://download-cf.jetbrains.com/python/pycharm-community-4.5.1.exe"
+set PYCHARM_FILE=pycharm-community-4.5.1.exe
+
