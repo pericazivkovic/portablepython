@@ -865,7 +865,6 @@ call COMMON :LogMessage "Patch PyCharm"
 del %UNPACK_FOLDER%\PyCharm\App\PyCharm\bin\idea.properties /Q
 tools\uniextract16\UniExtract.exe "patches\PyCharm.4.0.x.PPpatch" "%UNPACK_FOLDER%\PyCharm\App\PyCharm" >NUL
 
-del "%UNPACK_FOLDER%\PyCharm\App\PyCharm\.PyCharm\config\options\other.xml" /Q
 :: Replace @PY_VERSION@ in jdk.table.xml.tmp to %PY_VERSION% jdk.table.xml
 setlocal ENABLEDELAYEDEXPANSION
 set filein="%UNPACK_FOLDER%\PyCharm\App\PyCharm\.PyCharm\config\options\jdk.table.xml.tmp"
