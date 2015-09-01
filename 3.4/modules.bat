@@ -108,7 +108,7 @@ tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%PY_SCRIPTER_FILE%" %UNPACK_FOLD
 :: Copy files to PyScripter folder
 call COMMON :LogMessage "Copy files to PyScripter folder"
 mkdir %UNPACK_FOLDER%\PyScripter
-move "%UNPACK_FOLDER%\pyscripter-temp\PyScripter" "%UNPACK_FOLDER%\PyScripter\App"
+ROBOCOPY /NP /E /MOVE "%UNPACK_FOLDER%\pyscripter-temp\PyScripter" "%UNPACK_FOLDER%\PyScripter\App"
 :: mkdir %UNPACK_FOLDER%\PyScripter\App
 :: mkdir %UNPACK_FOLDER%\PyScripter\App\locale
 :: mkdir %UNPACK_FOLDER%\PyScripter\App\Skins
