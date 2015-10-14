@@ -80,5 +80,6 @@ set PANDAS_DOWNLOAD="https://pypi.python.org/packages/3.2/p/pandas/pandas-0.11.0
 set PANDAS_FILE=pandas-0.11.0.win32-py3.2.exe
 set PANDAS_MD5=7f11d2f59284c5ba64e7d781e1023f95
 
-set PYCHARM_DOWNLOAD="http://download-cf.jetbrains.com/python/pycharm-community-4.0.6.exe"
-set PYCHARM_FILE=pycharm-community-4.0.6.exe
+set PYCHARM_DOWNLOAD="http://download-cf.jetbrains.com/python/pycharm-community-4.5.4.exe"
+set PYCHARM_FILE=pycharm-community-4.5.4.exe
+set PYCHARM_MD5=fc9842b3dd3073a25fedeaf3c52372f6
