@@ -27,9 +27,9 @@ set PP_VERSION=6.1
 set PY_SHORT_VERSION=27
 
 :: Core
-set PY_MSI_DOWNLOAD="http://python.org/ftp/python/2.7.6/python-2.7.6.msi"
-set PY_MSI_FILE=python-2.7.6.msi
-set PY_MSI_MD5=ac54e14f7ba180253b9bae6635d822ea
+set PY_MSI_DOWNLOAD="http://python.org/ftp/python/2.7.11/python-2.7.11.msi"
+set PY_MSI_FILE=python-2.7.11.msi
+set PY_MSI_MD5=241bf8e097ab4e1047d9bb4f59602095
 
 :: Modules
 set PY_SETUPTOOLS_DOWNLOAD="http://pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11.win32-py2.7.exe"
