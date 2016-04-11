@@ -50,7 +50,7 @@ SectionGroup "Modules"
 		SetOutPath "$INSTDIR\App\"
 		File /r "${SOURCESFOLDER}\pywin32\*.*"
 	SectionEnd
-	Section "NetworkX 1.7" MODULE_NETWORKX
+	Section "NetworkX 1.11" MODULE_NETWORKX
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\networkx\"
 		File /r "${SOURCESFOLDER}\networkx\networkx\*.*"

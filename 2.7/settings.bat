@@ -54,9 +54,9 @@ set PYWIN32_DOWNLOAD="http://sourceforge.net/projects/pywin32/files/pywin32/Buil
 set PYWIN32_FILE=pywin32-218.win32-py2.7.exe
 set PYWIN32_MD5=16e178ac18b49fa0d27ba0be90f460af
 
-set NETWORKX_DOWNLOAD="http://networkx.lanl.gov/download/networkx/networkx-1.7-py2.7.egg"
-set NETWORKX_FILE=networkx-1.7-py2.7.egg
-set NETWORKX_MD5=1d4c59f1e894f39f8928be8718905969
+set NETWORKX_DOWNLOAD="https://pypi.python.org/packages/2.7/n/networkx/networkx-1.11-py2.7.egg"
+set NETWORKX_FILE=networkx-1.11-py2.7.egg
+set NETWORKX_MD5=314fde21a33ad8f6753d7a06315722cc
 
 set DJANGO_DOWNLOAD="https://pypi.python.org/packages/source/D/Django/Django-1.6.2.tar.gz"
 set DJANGO_FILE=Django-1.6.2.tar.gz
