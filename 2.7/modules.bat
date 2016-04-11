@@ -846,7 +846,7 @@ setlocal ENABLEEXTENSIONS
 call COMMON :DownloadFile %PYCHARM_DOWNLOAD%
 
 :: Verify 
-call COMMON :VerifyFile %PYCHARM_FILE% MD5 %PYCHARM_MD5%
+call COMMON :VerifyFile %PYCHARM_FILE% SHA256 %PYCHARM_SHA256%
 
 :: Unpack files
 call COMMON :LogMessage "Extracting PyCharm files"

@@ -105,7 +105,7 @@ SectionGroup "Code editors"
 		File /r "${SOURCESFOLDER}\PyScripter\*.*"
 		File "${SOURCESFOLDER}\PyScripter-Portable.exe"
 	SectionEnd
-	Section "PyCharm Community 3.1.2" IDE_PYCHARM
+	Section "PyCharm Community 2016.1.2" IDE_PYCHARM
 		SectionIn 1
 		SetOutPath "$INSTDIR"
 		File /r "${SOURCESFOLDER}\PyCharm\*.*"
