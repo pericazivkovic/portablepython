@@ -96,7 +96,7 @@ call .\config\%1\modules.bat
 :: Build installer
 call COMMON :LogMessage 
 call COMMON :LogMessage "Building Portable Python %PY_VERSION%.%PP_VERSION% installer ..."
-tools\nsis\makensis /V0 /DPY_VERSION=%1 /DPP_VERSION=%PP_VERSION% /DOUTPUT_FOLDER="%OUTPUT_FOLDER%" /DSOURCES_FOLDER="%UNPACK_FOLDER%" main.nsi
+tools\nsis\makensis /V1 /DPY_VERSION=%1 /DPP_VERSION=%PP_VERSION% /DOUTPUT_FOLDER="%OUTPUT_FOLDER%" /DSOURCES_FOLDER="%UNPACK_FOLDER%" main.nsi
 call COMMON :LogMessage 
 call COMMON :LogMessage "Portable Python build script completed at :: %date% %time%"
 call COMMON :LogMessage "Installer ready at: %OUTPUT_FOLDER%"
