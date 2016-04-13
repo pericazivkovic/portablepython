@@ -28,7 +28,7 @@
 !verbose 2
 
 ; Include correct folder
-!AddIncludeDir ${PY_VERSION}
+!AddIncludeDir config\${PY_VERSION}
 
 !define WEBSITE "PortablePython.com"
 !define VERSION "${PY_VERSION}.${PP_VERSION}"

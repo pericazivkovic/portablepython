@@ -43,13 +43,13 @@ call COMMON :LogMessage
 call COMMON :LogMessage "Building distribution based on Python %1"
 	
 :: Check can we find config dir
-if not exist %1 (
+if not exist config\%1 (
 		call COMMON :LogMessage "ERROR: Config folder not found for this version !! Aborting..."
 		goto:eof
 	)
 
 :: Load variables for specified version
-call .\%1\settings.bat 
+call .\config\%1\settings.bat
 
 set TEMP_FOLDER=%CD%\build\PortablePython.v%PY_VERSION%.%PP_VERSION%
 set BIN_FOLDER=%TEMP_FOLDER%\binaries
@@ -91,7 +91,7 @@ if not exist %TEMP_FOLDER% (
 	)
 	
 :: Extract modules
-call .\%1\modules.bat 
+call .\config\%1\modules.bat
 
 :: Build installer
 call COMMON :LogMessage 
