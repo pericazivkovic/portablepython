@@ -45,7 +45,7 @@ SectionGroup "Modules"
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\scipy\PLATLIB\*.*"
 	SectionEnd
-	Section "PyWin32 218" MODULE_PYWIN32
+	Section "PyWin32 220" MODULE_PYWIN32
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\"
 		File /r "${SOURCESFOLDER}\pywin32\*.*"

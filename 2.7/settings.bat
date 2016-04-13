@@ -50,9 +50,9 @@ set SCIPY_FILE=scipy-0.13.3-win32-superpack-python2.7.exe
 set SCIPY_FILE_NOSSE=scipy-0.13.3-nosse.exe
 set SCIPY_ZIP_MD5=ab43e3022aa642bef49a1f92516a6fdf  
 
-set PYWIN32_DOWNLOAD="http://sourceforge.net/projects/pywin32/files/pywin32/Build 218/pywin32-218.win32-py2.7.exe"
-set PYWIN32_FILE=pywin32-218.win32-py2.7.exe
-set PYWIN32_MD5=16e178ac18b49fa0d27ba0be90f460af
+set PYWIN32_DOWNLOAD="http://sourceforge.net/projects/pywin32/files/pywin32/Build 220/pywin32-220.win32-py2.7.exe"
+set PYWIN32_FILE=pywin32-220.win32-py2.7.exe
+set PYWIN32_MD5=59be43a3f010602ce623612ecdf34908
 
 set NETWORKX_DOWNLOAD="https://pypi.python.org/packages/2.7/n/networkx/networkx-1.11-py2.7.egg"
 set NETWORKX_FILE=networkx-1.11-py2.7.egg
