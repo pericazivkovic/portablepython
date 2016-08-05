@@ -5,7 +5,7 @@ title: "Portable Python"
 Portable Python is not being developed anymore. At the moment there are several better and more up-to-date alternatives:
 
 
-> [PythonXY](https://code.google.com/p/pythonxy/ "PythonXY") 
+> [PythonXY](http://python-xy.github.io/ "PythonXY") 
 
 Python(x,y) is a free scientific and engineering development software for numerical computations, data analysis and data visualization based on Python programming language, Qt graphical user interfaces and Spyder interactive scientific development environment. 	
 
