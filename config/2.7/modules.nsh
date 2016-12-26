@@ -26,7 +26,7 @@
 InstType "Full"
 InstType "Minimal"
 
-Section "!Python 2.7.10 core" PYTHON_CORE
+Section "!Python 2.7.11 core" PYTHON_CORE
 	SectionIn 1 2 RO
 	SetOutPath "$INSTDIR"
 	File /r "${SOURCESFOLDER}\python-core\*.*"
@@ -46,12 +46,12 @@ SectionGroup "Modules"
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\scipy\PLATLIB\*.*"
 	SectionEnd
-	Section "PyWin32 219" MODULE_PYWIN32
+	Section "PyWin32 220" MODULE_PYWIN32
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\"
 		File /r "${SOURCESFOLDER}\pywin32\*.*"
 	SectionEnd
-	Section "NetworkX 1.7" MODULE_NETWORKX
+	Section "NetworkX 1.11" MODULE_NETWORKX
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\networkx\"
 		File /r "${SOURCESFOLDER}\networkx\networkx\*.*"
@@ -180,7 +180,7 @@ SectionGroup "Code editors"
 		File /r "${SOURCESFOLDER}\PyScripter\*.*"
 		File "${SOURCESFOLDER}\PyScripter-Portable.exe"
 	SectionEnd
-	Section "PyCharm Community 4.5.1" IDE_PYCHARM
+	Section "PyCharm Community 2016.1.2" IDE_PYCHARM
 		SectionIn 1
 		SetOutPath "$INSTDIR"
 		File /r "${SOURCESFOLDER}\PyCharm\*.*"
@@ -242,4 +242,3 @@ Function .onSelChange
         !insertmacro UnselectSection ${MODULE_XLUTILS}
 	${EndIf}		
 FunctionEnd
-

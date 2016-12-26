@@ -3,6 +3,8 @@
 #################
 
 shortcuts/*.exe
+
+# Temp dir
 build
 
 #################

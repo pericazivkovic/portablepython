@@ -41,19 +41,19 @@ call COMMON :LogMessage
 call COMMON :LogMessage "Portable Python build script started :: %date% %time%"
 
 :: Check can we find config dir
-if not exist %1 (
-		call COMMON :LogMessage "ERROR: Config folder %1 not found for this version !! Aborting..."
+if not exist config\%1 (
+		call COMMON :LogMessage "ERROR: Config folder not found for this version !! Aborting..."
 		goto:eof
 	)
 
 :: Load variables for specified version
 set PP_TYPE=%1
-call .\%PP_TYPE%\settings.bat 
+call .\config\%PP_TYPE%\settings.bat 
 
 call COMMON :LogMessage
 call COMMON :LogMessage "Building distribution %PP_TYPE% based on Python %PY_VERSION%"
 	
-set TEMP_FOLDER=%TEMP%\PortablePython%PP_TYPE%.v.%PY_VERSION%.%PP_VERSION%.Build
+set TEMP_FOLDER=%CD%\build\PortablePython%PP_TYPE%.v.%PY_VERSION%.%PP_VERSION%.Build
 set BIN_FOLDER=%TEMP_FOLDER%\binaries
 set UNPACK_FOLDER=%TEMP_FOLDER%\unpacked
 set OUTPUT_FOLDER=%TEMP_FOLDER%\output
@@ -93,12 +93,12 @@ if not exist %TEMP_FOLDER% (
 	)
 	
 :: Extract modules
-call .\%PP_TYPE%\modules.bat 
+call .\config\%PP_TYPE%\modules.bat 
 
 :: Build installer
 call COMMON :LogMessage 
 call COMMON :LogMessage "Building Portable Python %PP_TYPE% %PY_VERSION%.%PP_VERSION% installer ..."
-tools\nsis\makensis /V0 /DPP_TYPE=%1 /DPY_VERSION=%PY_VERSION% /DPP_VERSION=%PP_VERSION% /DOUTPUT_FOLDER="%OUTPUT_FOLDER%" /DSOURCES_FOLDER="%UNPACK_FOLDER%" main.nsi
+tools\nsis\makensis /V1 /DPP_TYPE=%1 /DPY_VERSION=%PY_VERSION% /DPP_VERSION=%PP_VERSION% /DOUTPUT_FOLDER="%OUTPUT_FOLDER%" /DSOURCES_FOLDER="%UNPACK_FOLDER%" main.nsi
 call COMMON :LogMessage 
 call COMMON :LogMessage "Portable Python build script completed at :: %date% %time%"
 call COMMON :LogMessage "Installer ready at: %OUTPUT_FOLDER%"

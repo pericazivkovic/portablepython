@@ -23,13 +23,13 @@
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 set PY_VERSION=2.7
-set PP_VERSION=10.2
+set PP_VERSION=11.0
 set PY_SHORT_VERSION=27
 
 :: Core
-set PY_MSI_DOWNLOAD="https://www.python.org/ftp/python/2.7.10/python-2.7.10.msi"
-set PY_MSI_FILE=python-2.7.10.msi
-set PY_MSI_MD5=4ba2c79b103f6003bc4611c837a08208
+set PY_MSI_DOWNLOAD="http://python.org/ftp/python/2.7.11/python-2.7.11.msi"
+set PY_MSI_FILE=python-2.7.11.msi
+set PY_MSI_MD5=241bf8e097ab4e1047d9bb4f59602095
 
 :: Modules
 set PY_SETUPTOOLS_DOWNLOAD="http://pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11.win32-py2.7.exe"
@@ -50,13 +50,13 @@ set SCIPY_FILE=scipy-0.15.1-win32-superpack-python2.7.exe
 set SCIPY_FILE_NOSSE=scipy-0.15.1-sse2.exe
 set SCIPY_ZIP_MD5=8d8ab3c298bf0693e827dc419fa7d6f7  
 
-set PYWIN32_DOWNLOAD="http://sourceforge.net/projects/pywin32/files/pywin32/Build 219/pywin32-219.win32-py2.7.exe"
-set PYWIN32_FILE=pywin32-219.win32-py2.7.exe
-set PYWIN32_MD5=f270e9f88155f649fc1a6c2f85aa128d
+set PYWIN32_DOWNLOAD="http://sourceforge.net/projects/pywin32/files/pywin32/Build 220/pywin32-220.win32-py2.7.exe"
+set PYWIN32_FILE=pywin32-220.win32-py2.7.exe
+set PYWIN32_MD5=59be43a3f010602ce623612ecdf34908
 
-set NETWORKX_DOWNLOAD="http://networkx.lanl.gov/download/networkx/networkx-1.7-py2.7.egg"
-set NETWORKX_FILE=networkx-1.7-py2.7.egg
-set NETWORKX_MD5=1d4c59f1e894f39f8928be8718905969
+set NETWORKX_DOWNLOAD="https://pypi.python.org/packages/2.7/n/networkx/networkx-1.11-py2.7.egg"
+set NETWORKX_FILE=networkx-1.11-py2.7.egg
+set NETWORKX_MD5=314fde21a33ad8f6753d7a06315722cc
 
 set DJANGO_DOWNLOAD="https://pypi.python.org/packages/source/D/Django/Django-1.6.2.tar.gz"
 set DJANGO_FILE=Django-1.6.2.tar.gz
@@ -143,7 +143,6 @@ set OPENPYXL_FILE=openpyxl-1.8.5.tar.gz
 set OPENPYXL_FILE_TAR=openpyxl-1.8.5.tar
 set OPENPYXL_MD5=6f2eca608c3129dbfd77982713565709
 
-set PYCHARM_DOWNLOAD="http://download-cf.jetbrains.com/python/pycharm-community-4.5.4.exe"
-set PYCHARM_FILE=pycharm-community-4.5.4.exe
-set PYCHARM_MD5=fc9842b3dd3073a25fedeaf3c52372f6
-
+set PYCHARM_DOWNLOAD="https://download.jetbrains.com/python/pycharm-community-2016.1.2.exe"
+set PYCHARM_FILE=pycharm-community-2016.1.2.exe
+set PYCHARM_SHA256=4d9f3d6b213a5e4224d1ba0949e03801e41de5c7d1f70169b41fecda5cfe232f
