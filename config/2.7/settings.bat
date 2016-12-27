@@ -143,6 +143,6 @@ set OPENPYXL_FILE=openpyxl-1.8.5.tar.gz
 set OPENPYXL_FILE_TAR=openpyxl-1.8.5.tar
 set OPENPYXL_MD5=6f2eca608c3129dbfd77982713565709
 
-set PYCHARM_DOWNLOAD="https://download.jetbrains.com/python/pycharm-community-2016.1.2.exe"
-set PYCHARM_FILE=pycharm-community-2016.1.2.exe
-set PYCHARM_SHA256=4d9f3d6b213a5e4224d1ba0949e03801e41de5c7d1f70169b41fecda5cfe232f
+set PYCHARM_DOWNLOAD="http://download.jetbrains.com/python/pycharm-community-2016.3.1.exe"
+set PYCHARM_FILE=pycharm-community-2016.3.1.exe
+set PYCHARM_SHA256=3546c3f68d142d85f6a5283f3a4ee4d1161238b82bc9c8296ad8010c4d8f11c1
