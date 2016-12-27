@@ -70,12 +70,13 @@ SectionGroup "Modules"
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\pyserial\PURELIB\*.*"
 	SectionEnd
+/* 	since pyodbc moved from google to github - installation via pip is required
 	Section "PyODBC 3.0.2" MODULE_PYODBC
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\pyodbc\PLATLIB\*.*"
 	SectionEnd
-	Section "PyQT 4.9.6-1" MODULE_PYQT
+*/	Section "PyQT 4.9.6-1" MODULE_PYQT
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\"
 		File /r "${SOURCESFOLDER}\pyqt\Lib\*.*"
@@ -105,7 +106,7 @@ SectionGroup "Code editors"
 		File /r "${SOURCESFOLDER}\PyScripter\*.*"
 		File "${SOURCESFOLDER}\PyScripter-Portable.exe"
 	SectionEnd
-	Section "PyCharm Community 3.1.2" IDE_PYCHARM
+	Section "PyCharm Community 2016.3.1" IDE_PYCHARM
 		SectionIn 1
 		SetOutPath "$INSTDIR"
 		File /r "${SOURCESFOLDER}\PyCharm\*.*"

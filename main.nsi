@@ -28,12 +28,12 @@
 !verbose 2
 
 ; Include correct folder
-!AddIncludeDir ${PY_VERSION}
+!AddIncludeDir config\${PP_TYPE}
 
 !define WEBSITE "PortablePython.com"
 !define VERSION "${PY_VERSION}.${PP_VERSION}"
-!define APPNAME "Portable Python ${VERSION}"
-!define OUTFILENAME "PortablePython_${VERSION}.exe"
+!define APPNAME "Portable Python ${PP_TYPE} ${VERSION}"
+!define OUTFILENAME "PortablePython${PP_TYPE}_${VERSION}.exe"
 !define OUTFOLDER "${OUTPUT_FOLDER}"
 !define SOURCESFOLDER "${SOURCES_FOLDER}"
 

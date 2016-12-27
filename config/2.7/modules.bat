@@ -25,6 +25,13 @@
 :: Include common functions
 set COMMON=.\..\common.bat
 
+:: CHECK Parameter, maybe only a subset of packages should be build 
+if [%1]==[] (SET _packagelist=All) ELSE (SET _packagelist=%*)
+for %%G in (%_packagelist%) do (call :Unpack%%G)
+goto:EOF
+
+:UnpackAll
+
 call :UnpackPython
 call :UnpackPyScripter 
 call :UnpackPyCharm
@@ -41,7 +48,8 @@ call :UnpackDateutil
 call :UnpackPyParsing
 call :UnpackLXML
 call :UnpackPySerial
-call :UnpackPyODBC
+:: since pyodbc moved from google to github - installation via pip is required
+:: call :UnpackPyODBC
 call :UnpackPyGame
 call :UnpackPyGTK
 call :UnpackPyQT
@@ -108,6 +116,7 @@ call COMMON :LogMessage "Copy Python Portable shortcut"
 copy shortcuts\Python-Portable.exe "%UNPACK_FOLDER%" 1>NUL
 copy shortcuts\PythonW-Portable.exe "%UNPACK_FOLDER%" 1>NUL
 copy shortcuts\IDLE-Portable.exe "%UNPACK_FOLDER%" 1>NUL
+copy shortcuts\PortablePythonPrompt.cmd "%UNPACK_FOLDER%" 1>NUL
 
 :: Fix
 call COMMON :FixMSCRT %UNPACK_FOLDER%\python-core\
@@ -137,21 +146,12 @@ tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%PY_SCRIPTER_FILE%" %UNPACK_FOLD
 :: Copy files to PyScripter folder
 call COMMON :LogMessage "Copy files to PyScripter folder"
 mkdir %UNPACK_FOLDER%\PyScripter
-mkdir %UNPACK_FOLDER%\PyScripter\App
-mkdir %UNPACK_FOLDER%\PyScripter\App\locale
-mkdir %UNPACK_FOLDER%\PyScripter\App\Skins
-copy %UNPACK_FOLDER%\pyscripter-temp\PyScripter\PyScripter.exe "%UNPACK_FOLDER%\PyScripter\App\" >NUL
-copy %UNPACK_FOLDER%\pyscripter-temp\PyScripter\PyScripter.chm "%UNPACK_FOLDER%\PyScripter\App\" >NUL
-copy %UNPACK_FOLDER%\pyscripter-temp\PyScripter\PyProject.ico "%UNPACK_FOLDER%\PyScripter\App\" >NUL
-xcopy /EY %UNPACK_FOLDER%\pyscripter-temp\PyScripter\locale "%UNPACK_FOLDER%\PyScripter\App\locale" >NUL
+ROBOCOPY /NP /E /MOVE "%UNPACK_FOLDER%\pyscripter-temp\PyScripter" "%UNPACK_FOLDER%\PyScripter\App"
 
-:: Unpack rpyc
-call COMMON :LogMessage "Unpack rypc"
-tools\uniextract16\UniExtract.exe "%UNPACK_FOLDER%\pyscripter-temp\PyScripter\Lib\rpyc.zip" %UNPACK_FOLDER%\PyScripter\App\Lib\site-packages\ >NUL
 
 :: Patch PyScripter
 call COMMON :LogMessage "Patch PyScripter"
-tools\uniextract16\UniExtract.exe patches\PyScripter.2.5.3.PPpatch %UNPACK_FOLDER%\PyScripter\App >NUL
+copy /Y patches\PyScripter26.ini %UNPACK_FOLDER%\PyScripter\App\PyScripter.ini 1>NUL 2>NUL
 
 :: Build Shortcut
 call COMMON :LogMessage "Build PyScripter shortcut"
@@ -182,7 +182,7 @@ call COMMON :VerifyFile %NUMPY_FILE% MD5 %NUMPY_ZIP_MD5%
 :: Unpack files
 call COMMON :LogMessage "Extracting NumPy files"
 tools\uniextract16\bin\7z.exe x "%BIN_FOLDER%\%NUMPY_FILE%" -o%UNPACK_FOLDER%\numpy\ -y
-tools\uniextract16\UniExtract.exe "%UNPACK_FOLDER%\numpy\%NUMPY_FILE_NOSSE%" %UNPACK_FOLDER%\numpy\
+tools\uniextract16\bin\7z.exe x "%UNPACK_FOLDER%\numpy\%NUMPY_FILE_NOSSE%" -o%UNPACK_FOLDER%\numpy\ -y
 
 :: Fix
 call COMMON :FixMSCRT %UNPACK_FOLDER%\numpy\
@@ -846,7 +846,7 @@ setlocal ENABLEEXTENSIONS
 call COMMON :DownloadFile %PYCHARM_DOWNLOAD%
 
 :: Verify 
-call COMMON :VerifyFile %PYCHARM_FILE% MD5 %PYCHARM_MD5%
+call COMMON :VerifyFile %PYCHARM_FILE% SHA256 %PYCHARM_SHA256%
 
 :: Unpack files
 call COMMON :LogMessage "Extracting PyCharm files"
@@ -856,6 +856,7 @@ tools\uniextract16\UniExtract.exe "%BIN_FOLDER%\%PYCHARM_FILE%" %UNPACK_FOLDER%\
 call COMMON :LogMessage "Copy files to PyCharm folder"
 RD %UNPACK_FOLDER%\pycharm-temp\$PLUGINSDIR /S /Q
 RD %UNPACK_FOLDER%\pycharm-temp\bin\$PLUGINSDIR /S /Q
+RD "%UNPACK_FOLDER%\PyCharm" /S /Q
 mkdir %UNPACK_FOLDER%\PyCharm
 mkdir %UNPACK_FOLDER%\PyCharm\App
 move /Y "%UNPACK_FOLDER%\pycharm-temp" "%UNPACK_FOLDER%\PyCharm\App\PyCharm"
@@ -863,19 +864,20 @@ move /Y "%UNPACK_FOLDER%\pycharm-temp" "%UNPACK_FOLDER%\PyCharm\App\PyCharm"
 :: Patch PyCharm
 call COMMON :LogMessage "Patch PyCharm"
 del %UNPACK_FOLDER%\PyCharm\App\PyCharm\bin\idea.properties /Q
-tools\uniextract16\UniExtract.exe "patches\PyCharm.3.1.x.PPpatch" "%UNPACK_FOLDER%\PyCharm\App\PyCharm" >NUL
+tools\uniextract16\bin\7z.exe x patches\PyCharm.4.0.x.PPpatch -o%UNPACK_FOLDER%\PyCharm\App\PyCharm -y >NUL
 
 :: Replace @PY_VERSION@ in jdk.table.xml.tmp to %PY_VERSION% jdk.table.xml
 setlocal ENABLEDELAYEDEXPANSION
-set filein="%UNPACK_FOLDER%\PyCharm\App\PyCharm\.PyCharm30\config\options\jdk.table.xml.tmp"
-set fileout="%UNPACK_FOLDER%\PyCharm\App\PyCharm\.PyCharm30\config\options\jdk.table.xml"
+set filein="%UNPACK_FOLDER%\PyCharm\App\PyCharm\.PyCharm\config\options\jdk.table.xml.tmp"
+set fileout="%UNPACK_FOLDER%\PyCharm\App\PyCharm\.PyCharm\config\options\jdk.table.xml"
+echo write to "%fileout%"...
 set old=@PY_VERSION@
 set new=%PY_VERSION%
-for /f "tokens=* delims=¶" %%i in ( '"type %filein%"') do (
+(for /f "usebackq tokens=* delims=? " %%i in (`type %filein%`) do (
 	set str=%%i
 	set str=!str:%old%=%new%!
-	echo !str! >> %fileout%	
-)
+	echo !str! 
+)) > %fileout%
 del %filein%
 
 :: Build Shortcut

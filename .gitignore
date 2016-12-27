@@ -3,3 +3,13 @@
 #################
 
 shortcuts/*.exe
+
+# Temp dir
+build
+
+#################
+## chm doc index 
+#################
+
+tools/nsis/*.chw
+

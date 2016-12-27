@@ -22,24 +22,18 @@
 :: http://PortablePython.com
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-set PY_VERSION=3.2
-set PP_VERSION=5.1
-set PY_SHORT_VERSION=32
+set PY_VERSION=3.4
+set PP_VERSION=4.1
+set PY_SHORT_VERSION=34
 
 :: Modules
-set PY_MSI_DOWNLOAD="http://python.org/ftp/python/3.2.5/python-3.2.5.msi"
-set PY_MSI_FILE=python-3.2.5.msi
-set PY_MSI_MD5=cdd6fdc59461c968bd105fdf08f4a17d
+set PY_MSI_DOWNLOAD="https://www.python.org/ftp/python/3.4.4/python-3.4.4.amd64.msi"
+set PY_MSI_FILE=python-3.4.4.amd64.msi
+set PY_MSI_MD5=963f67116935447fad73e09cc561c713
 
-set PY_DISTRIBUTE_VERSION=distribute-0.6.34
-set PY_DISTRIBUTE_DOWNLOAD="http://pypi.python.org/packages/source/d/distribute/%PY_DISTRIBUTE_VERSION%.tar.gz"
-set PY_DISTRIBUTE_TAR=%PY_DISTRIBUTE_VERSION%.tar
-set PY_DISTRIBUTE_FILE=%PY_DISTRIBUTE_VERSION%.tar.gz
-set PY_DISTRIBUTE_MD5=4576ab843a6db5100fb22a72deadf56d
-
-set PY_SCRIPTER_DOWNLOAD="http://pyscripter.googlecode.com/files/PyScripter-v2.5.3.zip"
-set PY_SCRIPTER_FILE=PyScripter-v2.5.3.zip
-set PY_SCRIPTER_SHA1=363226a2dc708bc5dd83eda9ccc36339b79a7345
+set PY_SCRIPTER_DOWNLOAD="http://sourceforge.net/projects/pyscripter/files/PyScripter-v2.6.0-x64.zip"
+set PY_SCRIPTER_FILE=PyScripter-v2.6.0-x64.zip
+set PY_SCRIPTER_SHA1=ebdf3920a186a00d57a631aaa3aeefcfe099f88d
 
 set NUMPY_DOWNLOAD="http://sourceforge.net/projects/numpy/files/NumPy/1.7.1/numpy-1.7.1-win32-superpack-python3.2.exe"
 set NUMPY_FILE=numpy-1.7.1-win32-superpack-python3.2.exe
@@ -70,22 +64,23 @@ set PY_SERIAL_DOWNLOAD="http://pypi.python.org/packages/any/p/pyserial/pyserial-
 set PY_SERIAL_FILE=pyserial-py3k-2.5.win32.exe
 set PY_SERIAL_MD5=c7d770dede6f6c6197d9652a7658f18e
 
-set PYODBC_DOWNLOAD="http://pyodbc.googlecode.com/files/pyodbc-3.0.2.win32-py3.2.exe"
-set PYODBC_FILE=pyodbc-3.0.2.win32-py3.2.exe
-set PYODBC_SHA1=9abe8b36be9f3a2dbb427a4a049e9b70cd909c6d
+:: since pyodbc moved from google to github - installation via pip is required
+:: set PYODBC_DOWNLOAD="http://pyodbc.googlecode.com/files/pyodbc-3.0.2.win32-py3.2.exe"
+:: set PYODBC_FILE=pyodbc-3.0.2.win32-py3.2.exe
+:: set PYODBC_SHA1=9abe8b36be9f3a2dbb427a4a049e9b70cd909c6d
 
 set PYQT_DOWNLOAD="http://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.9.6/PyQt-Py3.2-x86-gpl-4.9.6-1.exe"
 set PYQT_FILE=PyQt-Py3.2-x86-gpl-4.9.6-1.exe
 set PYQT_MD5=9c4a1b3b1246e936c3439c0e8a1d5774
 
-set IPYTHON_DOWNLOAD="http://pypi.python.org/packages/any/i/ipython/ipython-0.13.1.py3-win32.exe"
-set IPYTHON_FILE=ipython-0.13.1.py3-win32.exe
-set IPYTHON_MD5=43c1c567b920b718a38fffd1866a4392
+set IPYTHON_DOWNLOAD="https://pypi.python.org/packages/3.4/i/ipython/ipython-3.1.0-py3-none-any.whl"
+set IPYTHON_FILE=ipython-3.1.0-py3-none-any.whl
+set IPYTHON_MD5=e149386e11472f9cf730773b2d824253
 
 set PANDAS_DOWNLOAD="https://pypi.python.org/packages/3.2/p/pandas/pandas-0.11.0.win32-py3.2.exe"
 set PANDAS_FILE=pandas-0.11.0.win32-py3.2.exe
 set PANDAS_MD5=7f11d2f59284c5ba64e7d781e1023f95
 
-set PYCHARM_DOWNLOAD="http://download-cf.jetbrains.com/python/pycharm-community-3.1.2.exe"
-set PYCHARM_FILE=pycharm-community-3.1.2.exe
-set PYCHARM_MD5=4707668758b044bf5a4214557e7a15fa
+set PYCHARM_DOWNLOAD="http://download.jetbrains.com/python/pycharm-community-2016.3.1.exe"
+set PYCHARM_FILE=pycharm-community-2016.3.1.exe
+set PYCHARM_SHA256=3546c3f68d142d85f6a5283f3a4ee4d1161238b82bc9c8296ad8010c4d8f11c1
