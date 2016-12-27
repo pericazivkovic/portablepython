@@ -26,7 +26,7 @@
 InstType "Full"
 InstType "Minimal"
 
-Section "!Python 3.4.3 core (x64)" PYTHON_CORE
+Section "!Python 3.4.4 core (x64)" PYTHON_CORE
 	SectionIn 1 2 RO
 	SetOutPath "$INSTDIR"
 	File /r "${SOURCESFOLDER}\python-core\*.*"

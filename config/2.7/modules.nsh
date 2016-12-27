@@ -93,12 +93,13 @@ SectionGroup "Modules"
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\pyserial\PURELIB\*.*"
 	SectionEnd
+/* 	since pyodbc moved from google to github - installation via pip is required
 	Section "PyODBC 3.0.7" MODULE_PYODBC
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\Lib\site-packages\"
 		File /r "${SOURCESFOLDER}\pyodbc\PLATLIB\*.*"
 	SectionEnd
-	Section "PyGame 1.9.1" MODULE_PYGAME
+ */	Section "PyGame 1.9.1" MODULE_PYGAME
 		SectionIn 1
 		SetOutPath "$INSTDIR\App\"
 		File /r "${SOURCESFOLDER}\pygame\*.*"
@@ -204,7 +205,7 @@ SectionGroup "`pip` packages"
         ; package versions.
         ;
         ; [1]: http://stackoverflow.com/questions/18230956/could-not-find-a-version-that-satisfies-the-requirement-pytz
-        StrCpy $PipInstallFlags ' --pre '
+        StrCpy $PipInstallFlags '--no-cache-dir'
     SectionEnd
 
     Section "Install pip"
@@ -219,7 +220,14 @@ SectionGroup "`pip` packages"
 		;known problem: 
 		; - with pip installed scripts App\Scripts\iXYZ-script.py incudes "hard coded" python path
 		; - if the pp installation moves, these paths must be adapted manually
-        nsExec::ExecToLog '$Pip install ipython $PipInstallFlags'
+        nsExec::ExecToLog '$Pip install $PipInstallFlags ipython'
+    SectionEnd
+    Section "Install PyODBC"  PIP_MODULE_PYODBC
+        SectionIn 1
+		;known problem: 
+		; - with pip installed scripts App\Scripts\iXYZ-script.py incudes "hard coded" python path
+		; - if the pp installation moves, these paths must be adapted manually
+        nsExec::ExecToLog '$Pip install $PipInstallFlags pyodbc'
     SectionEnd
 	
 SectionGroupEnd

@@ -54,6 +54,7 @@ LangString DESC_MODULE_XLWT ${LANG_ENGLISH} "Library to create spreadsheet files
 LangString DESC_MODULE_XLUTILS ${LANG_ENGLISH} "Utilities for working with Excel files that require both xlrd and xlwt"
 LangString DESC_MODULE_OPENPYXL ${LANG_ENGLISH} "A Python library to read/write Excel 2007 xlsx/xlsm files"
 LangString DESC_PIP_MODULE_IPYTHON ${LANG_ENGLISH} "Alternative pip installation for IPython. IPython provides a rich toolkit to help you make the most out of using Python interactively."
+LangString DESC_PIP_MODULE_PYODBC ${LANG_ENGLISH} "pip installation for PyODBC. Allows you to use ODBC to connect to almost any database from Windows, Linux, OS/X, and more."
 
 !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
   !insertmacro MUI_DESCRIPTION_TEXT ${PYTHON_CORE} $(DESC_PYTHON_CORE)
@@ -84,4 +85,6 @@ LangString DESC_PIP_MODULE_IPYTHON ${LANG_ENGLISH} "Alternative pip installation
   !insertmacro MUI_DESCRIPTION_TEXT ${MODULE_XLUTILS} $(DESC_MODULE_XLUTILS)
   !insertmacro MUI_DESCRIPTION_TEXT ${MODULE_OPENPYXL} $(DESC_MODULE_OPENPYXL)
   !insertmacro MUI_DESCRIPTION_TEXT ${PIP_MODULE_IPYTHON} $(DESC_PIP_MODULE_IPYTHON)
-!insertmacro MUI_FUNCTION_DESCRIPTION_END
+  !insertmacro MUI_DESCRIPTION_TEXT ${PIP_MODULE_PYODBC} $(DESC_PIP_MODULE_PYODBC)
+
+  !insertmacro MUI_FUNCTION_DESCRIPTION_END

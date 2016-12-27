@@ -95,9 +95,10 @@ set PY_SERIAL_DOWNLOAD="http://sourceforge.net/projects/pyserial/files/pyserial/
 set PY_SERIAL_FILE=pyserial-2.7.win32.exe
 set PY_SERIAL_MD5=21555387937eeb79126cde25abee4b35
 
-set PYODBC_DOWNLOAD="http://pyodbc.googlecode.com/files/pyodbc-3.0.7.win32-py2.7.exe"
-set PYODBC_FILE=pyodbc-3.0.7.win32-py2.7.exe
-set PYODBC_SHA1=e1992fe4d4983f16e33913e8162f89f50fcde2b0 
+:: since pyodbc moved from google to github - installation via pip is required
+:: set PYODBC_DOWNLOAD="http://pyodbc.googlecode.com/files/pyodbc-3.0.7.win32-py2.7.exe"
+:: set PYODBC_FILE=pyodbc-3.0.7.win32-py2.7.exe
+:: set PYODBC_SHA1=e1992fe4d4983f16e33913e8162f89f50fcde2b0 
 
 set PYGAME_DOWNLOAD="http://pygame.org/ftp/pygame-1.9.1.win32-py2.7.msi"
 set PYGAME_FILE=pygame-1.9.1.win32-py2.7.msi

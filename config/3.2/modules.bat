@@ -42,7 +42,8 @@ call :UnpackNetworkX
 call :UnpackMatplotlib
 call :UnpackLXML
 call :UnpackPySerial
-call :UnpackPyODBC
+:: since pyodbc moved from google to github - installation via pip is required
+:: call :UnpackPyODBC
 call :UnpackPyQT
 call :UnpackIPython
 call :UnpackPandas
