@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/pericazivkovic
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://PortablePython.com
+  * I am pericazivkovic (https://keybase.io/pericazivkovic) on keybase.
+  * I have a public key ASCNuRJFyTfliZ984FvmTR6pDoSdpDvYT5xdmxMasWktrQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120c1b6c9d12343436f46c66ad4d5a9eb1d0a43ccd81475f874ef4f24754da4facd0a",
+      "host": "keybase.io",
+      "kid": "01208db91245c937e5899f7ce05be64d1ea90e849da43bd84f9c5d9b131ab1692dad0a",
+      "uid": "91482964182f69924227ebd2cb79e719",
+      "username": "pericazivkovic"
+    },
+    "merkle_root": {
+      "ctime": 1509306848,
+      "hash": "9b4c4c52c370e4d60f13d7cc72b939a84dc5282337c52a24995bb6ba8254038b3792857219c90a4a05cc338c45033953ae3767b1a72e2a05c46c7083959ee7a6",
+      "hash_meta": "5d4be208a759100f1b968eaf1520e1e2dada307ffd632a01d6545f31448ba934",
+      "seqno": 1644258
+    },
+    "service": {
+      "hostname": "PortablePython.com",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.34"
+  },
+  "ctime": 1509307006,
+  "expire_in": 504576000,
+  "prev": "e3b5413c576061f6f453ed49377eebd7b2a94af0e2c11dc9a5cd9f521d6e0655",
+  "seqno": 42,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgjbkSRck35YmffOBb5k0eqQ6EnaQ72E+cXZsTGrFpLa0Kp3BheWxvYWTFA1B7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwYzFiNmM5ZDEyMzQzNDM2ZjQ2YzY2YWQ0ZDVhOWViMWQwYTQzY2NkODE0NzVmODc0ZWY0ZjI0NzU0ZGE0ZmFjZDBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwOGRiOTEyNDVjOTM3ZTU4OTlmN2NlMDViZTY0ZDFlYTkwZTg0OWRhNDNiZDg0ZjljNWQ5YjEzMWFiMTY5MmRhZDBhIiwidWlkIjoiOTE0ODI5NjQxODJmNjk5MjQyMjdlYmQyY2I3OWU3MTkiLCJ1c2VybmFtZSI6InBlcmljYXppdmtvdmljIn0sIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNTA5MzA2ODQ4LCJoYXNoIjoiOWI0YzRjNTJjMzcwZTRkNjBmMTNkN2NjNzJiOTM5YTg0ZGM1MjgyMzM3YzUyYTI0OTk1YmI2YmE4MjU0MDM4YjM3OTI4NTcyMTljOTBhNGEwNWNjMzM4YzQ1MDMzOTUzYWUzNzY3YjFhNzJlMmEwNWM0NmM3MDgzOTU5ZWU3YTYiLCJoYXNoX21ldGEiOiI1ZDRiZTIwOGE3NTkxMDBmMWI5NjhlYWYxNTIwZTFlMmRhZGEzMDdmZmQ2MzJhMDFkNjU0NWYzMTQ0OGJhOTM0Iiwic2Vxbm8iOjE2NDQyNTh9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoiUG9ydGFibGVQeXRob24uY29tIiwicHJvdG9jb2wiOiJodHRwOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4zNCJ9LCJjdGltZSI6MTUwOTMwNzAwNiwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsInByZXYiOiJlM2I1NDEzYzU3NjA2MWY2ZjQ1M2VkNDkzNzdlZWJkN2IyYTk0YWYwZTJjMTFkYzlhNWNkOWY1MjFkNmUwNjU1Iiwic2Vxbm8iOjQyLCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQFpXrFC3mUHdes6nfccoWAggfUI0Uj9gfy8kgSTrCQlH8NWQ+ab7URh8lXJVlYvjVxtko0+uaAG1gRIYNWf7LASoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCBKJXFeW8cXK2zwlH73GLSuExj1grW9T00THWFa6UQoGaN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/pericazivkovic
+
+==================================================================
